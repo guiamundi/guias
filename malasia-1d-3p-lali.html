@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GuiaMundi">
+<meta name="theme-color" content="#1A1A2E">
+<title>Guía de malasia · 1 días</title>
+<link rel="manifest" href="/guias/manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A2E;--gold:#C9922A;--gold-l:#F5E6C8;--gold-p:#FDF6E9;
+  --terra:#B84A2E;--sky:#1B4F72;--sage:#2D6A4F;--cream:#FAFAF6;
+  --sand:#F0EBE0;--mist:#EEF2F7;--line:#DDD8CF;--mid:#7B7369;--r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--ink);font-size:15px;line-height:1.7;display:flex;flex-direction:column}
+
+/* ── PORTADA ── */
+
+.mini-header{flex-shrink:0;background:var(--ink);padding:8px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(201,146,42,.15)}
+.mini-dest{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:#fff}
+.mini-brand{font-size:10px;color:rgba(201,146,42,.7);text-decoration:none;letter-spacing:.5px}
+/* ── TABS NAV ── */
+.tabs-nav{flex-shrink:0;background:rgba(8,8,20,.97);border-bottom:1px solid rgba(201,146,42,.15);position:relative}
+.tabs-scroll{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 12px}
+.tabs-scroll::-webkit-scrollbar{display:none}
+.tab-btn{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:11px 14px;border:none;background:none;color:rgba(255,255,255,.38);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;white-space:nowrap;min-width:72px}
+.tab-btn .tab-icon{font-size:18px;line-height:1}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn:hover{color:rgba(255,255,255,.7)}
+/* Flecha indicadora de más tabs */
+.tabs-fade{position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,transparent,rgba(8,8,20,.97));pointer-events:none;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
+.tabs-fade span{color:var(--gold);font-size:16px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* ── CONTENIDO ── */
+.tabs-content{flex:1;overflow-y:auto;background:var(--cream)}
+.tab-panel{display:none;padding:22px 18px 32px;min-height:100%}
+.tab-panel.active{display:block}
+@media(min-width:700px){.tab-panel{max-width:800px;margin:0 auto;padding:28px 36px 40px}}
+
+/* ── TIPOGRAFÍA ── */
+.sec-eye{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.sec-eye::before{content:'';display:inline-block;width:10px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:16px}
+
+/* ── FICHA MINI ── */
+.info-mini{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.info-tag{background:var(--sand);border:1px solid var(--line);border-radius:50px;padding:5px 12px;font-size:12px;color:var(--mid)}
+.info-tag strong{color:var(--ink);font-weight:600}
+
+/* ── AD ── */
+.ad{background:#FFF8E7;border:1px solid #E8C84A;border-left:4px solid #E8C84A;border-radius:var(--r);padding:10px 12px;display:flex;align-items:flex-start;gap:8px;margin-bottom:14px}
+.ad-badge{background:#E8C84A;color:#fff;font-size:8px;font-weight:700;letter-spacing:1px;padding:2px 5px;border-radius:4px;flex-shrink:0;margin-top:1px}
+.ad strong{display:block;font-size:12px;font-weight:500;color:#7A5C00;margin-bottom:1px}
+.ad span{font-size:11px;color:#A07B20;font-style:italic}
+
+/* ── CONTENIDO IA ── */
+.ai-content{font-size:14px;line-height:1.85;color:var(--ink)}
+.ai-content h1,.ai-content h2{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);margin:20px 0 8px;padding-bottom:5px;border-bottom:2px solid var(--gold-l)}
+.ai-content h2:first-child{margin-top:0}
+.ai-content h3{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--sky);margin:14px 0 5px}
+.ai-content h3:first-child{margin-top:0}
+.ai-content p{margin-bottom:9px}
+.ai-content ul,.ai-content ol{padding-left:18px;margin-bottom:10px}
+.ai-content li{margin-bottom:4px}
+.ai-content strong{font-weight:600}
+.ai-content a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(27,79,114,.25);font-weight:500;word-break:break-word}
+.ai-content a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── BLOQUES DE DÍA ── */
+.day-block{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:16px;overflow:hidden}
+.day-block-header{background:var(--ink);color:var(--gold);padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.day-block-header .day-toggle{font-size:14px;transition:transform .3s;flex-shrink:0}
+.day-block.open .day-toggle{transform:rotate(180deg)}
+.day-block-body{display:none;padding:14px 16px}
+.day-block.open .day-block-body{display:block}
+.day-block-body .ai-content h3{margin-top:10px}
+.day-block-body .ai-content h3:first-child{margin-top:0}
+.day-block-body a[href*="google.com/maps"]{display:inline-flex;align-items:center;gap:4px;background:#1B4F72;color:#fff !important;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;text-decoration:none !important;margin:2px 4px 2px 0;border:none !important}
+.day-block-body a[href*="google.com/maps"]:hover{background:#C9922A !important}
+.day-block-body a[href*="google.com/search"]{display:inline-flex;align-items:center;gap:4px;background:#F0EBE0;color:#1A1A2E !important;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:600;text-decoration:none !important;margin:2px 4px 2px 0;border:1px solid #DDD8CF !important}
+.day-block-body a[href*="google.com/search"]:hover{border-color:#C9922A !important;color:#C9922A !important}
+/* Campo de nota manual */
+.day-note-wrap{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.day-note-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:5px}
+.day-note{width:100%;min-height:70px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);outline:none;resize:vertical;background:var(--cream);transition:border-color .2s}
+.day-note:focus{border-color:var(--gold)}
+.day-note::placeholder{color:var(--mid)}
+
+/* ── HERRAMIENTAS ── */
+.tools-tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none}
+.tools-tabs::-webkit-scrollbar{display:none}
+.ttab{background:var(--sand);border:none;border-radius:50px;padding:7px 13px;font-size:12px;font-family:'DM Sans',sans-serif;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .2s}
+.ttab.active{background:var(--ink);color:var(--gold);font-weight:500}
+.tool-panel{display:none}
+.tool-panel.active{display:block}
+@media(min-width:700px){
+  .tools-tabs{display:none}
+  .tool-panel{display:block!important}
+  .tools-desktop{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .tool-section-title{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+}
+
+/* CONVERSOR */
+.conv-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.conv-row{display:flex;gap:8px;align-items:flex-end;margin-bottom:10px}
+.conv-iw{flex:1}
+.conv-iw label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:3px}
+.conv-input{width:100%;padding:8px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:16px;font-family:'Playfair Display',serif;font-weight:700;color:var(--ink);outline:none;background:var(--cream)}
+.conv-input:focus{border-color:var(--gold)}
+.conv-arrow{font-size:16px;color:var(--gold);padding-bottom:6px;flex-shrink:0}
+.conv-result{background:var(--gold-p);border:1px solid var(--gold-l);border-radius:9px;padding:10px;text-align:center;margin-bottom:6px}
+.conv-amount{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--gold)}
+.conv-rate{font-size:10px;color:var(--mid);margin-top:1px}
+.conv-select{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;background:#fff;margin-bottom:9px}
+.conv-note{font-size:10px;color:var(--mid);text-align:center}
+
+/* TRADUCTOR */
+.trans-wrap{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.trans-lang{background:var(--ink);color:#fff;padding:9px 13px;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:space-between}
+.trans-lang select{background:transparent;border:none;color:var(--gold);font-family:'DM Sans',sans-serif;font-size:12px;outline:none;cursor:pointer}
+.trans-list{background:#fff;max-height:280px;overflow-y:auto}
+.trans-item{display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid var(--line);gap:8px}
+.trans-item:last-child{border-bottom:none}
+.trans-texts{flex:1}
+.trans-es{font-size:13px;font-weight:500;color:var(--ink)}
+.trans-dest{font-size:12px;color:var(--sky);font-style:italic;margin-top:1px}
+.trans-audio{background:none;border:1.5px solid var(--gold);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gold);flex-shrink:0;font-size:11px;transition:all .2s}
+.trans-audio.playing,.trans-audio:active{background:var(--gold);color:#fff}
+
+/* CALCULADORA */
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.calc-row{margin-bottom:9px}
+.calc-row label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:3px}
+.calc-input{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;background:var(--cream)}
+.calc-input:focus{border-color:var(--gold)}
+.calc-result{background:var(--ink);border-radius:var(--r);padding:13px;margin-top:5px}
+.calc-result-title{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:7px}
+.calc-line{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.calc-line:last-child{border-bottom:none;padding-top:8px;margin-top:4px}
+.calc-line span{font-size:12px;color:rgba(255,255,255,.55)}
+.calc-line strong{font-family:'Playfair Display',serif;font-size:13px;color:var(--gold)}
+.calc-line.total span{color:#fff;font-weight:600;font-size:13px}
+.calc-line.total strong{font-size:17px}
+
+/* CHECKLIST */
+.check-cats{display:flex;gap:5px;margin-bottom:9px;overflow-x:auto;scrollbar-width:none}
+.check-cats::-webkit-scrollbar{display:none}
+.check-cat-btn{background:var(--sand);border:none;border-radius:50px;padding:5px 11px;font-size:11px;font-family:'DM Sans',sans-serif;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .2s}
+.check-cat-btn.active{background:var(--ink);color:var(--gold);font-weight:500}
+.checklist{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-height:280px;overflow-y:auto}
+.check-item{display:flex;align-items:center;gap:9px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s}
+.check-item:last-child{border-bottom:none}
+.check-item:hover{background:var(--sand)}
+.check-box{width:18px;height:18px;border:2px solid var(--line);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:transparent;transition:all .2s}
+.check-item.done .check-box{background:var(--sage);border-color:var(--sage);color:#fff}
+.check-item.done .check-label{text-decoration:line-through;color:var(--mid)}
+.check-label{font-size:13px;color:var(--ink)}
+.check-progress{background:var(--sand);border-radius:var(--r);padding:8px 12px;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.check-bar-wrap{flex:1;background:var(--line);border-radius:50px;height:5px;overflow:hidden}
+.check-bar{height:100%;background:linear-gradient(90deg,var(--sage),var(--gold));border-radius:50px;transition:width .4s}
+.check-pct{font-size:12px;font-weight:600;color:var(--sage);flex-shrink:0}
+
+/* ── DOCUMENTOS ── */
+.docs-upload-area{border:2px dashed var(--line);border-radius:var(--r);padding:20px;text-align:center;background:#fff;cursor:pointer;transition:all .2s;margin-bottom:16px}
+.docs-upload-area:hover{border-color:var(--gold);background:var(--gold-p)}
+.docs-upload-icon{font-size:28px;margin-bottom:6px}
+.docs-upload-text{font-size:13px;color:var(--mid)}
+.docs-upload-text strong{color:var(--ink);display:block;margin-bottom:2px}
+.docs-list{display:flex;flex-direction:column;gap:8px}
+.doc-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:10px}
+.doc-icon{font-size:22px;flex-shrink:0}
+.doc-info{flex:1;min-width:0}
+.doc-name{font-size:13px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.doc-size{font-size:11px;color:var(--mid)}
+.doc-open{background:var(--sky);color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;flex-shrink:0}
+.doc-del{background:none;border:none;color:var(--mid);cursor:pointer;font-size:16px;padding:0 4px;flex-shrink:0}
+#doc-input{display:none}
+
+/* ── MAPA GENERAL ── */
+.map-block{background:var(--ink);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.map-prev{height:110px;background:repeating-linear-gradient(0deg,transparent,transparent 35px,rgba(201,146,42,.06) 36px),repeating-linear-gradient(90deg,transparent,transparent 35px,rgba(201,146,42,.06) 36px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.map-icon{font-size:26px}
+.map-dest-label{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px}
+.map-cta{padding:11px 14px;display:flex;align-items:center;justify-content:space-between}
+.map-cta-t strong{display:block;color:#fff;font-size:13px;margin-bottom:1px}
+.map-cta-t span{font-size:11px;color:rgba(255,255,255,.45)}
+.map-btn{background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;padding:8px 15px;border-radius:50px;text-decoration:none}
+
+/* ── CTA FINAL ── */
+.cta-box{background:linear-gradient(135deg,var(--ink),#2A1F3D);border-radius:var(--r);padding:22px 18px;text-align:center;position:relative;overflow:hidden;margin-bottom:16px}
+.cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--terra),var(--sky))}
+.cta-box h3{font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:5px}
+.cta-box p{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:14px}
+.cta-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:13px}
+.cta-pill{background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.3);color:var(--gold);font-size:12px;padding:6px 12px;border-radius:50px;text-decoration:none}
+.share-bar{display:flex;gap:7px}
+.share-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;border-radius:9px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;transition:all .2s}
+.share-wpp{background:#25D366;color:#fff}
+.share-copy{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff}
+
+/* NOTAS */
+.note-area{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.note-line{padding:12px 14px;border-bottom:1px solid var(--line);min-height:44px;font-size:14px;color:var(--line);font-style:italic}
+.note-line:last-child{border-bottom:none}
+
+/* MODAL GUARDAR */
+.save-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;align-items:flex-end;justify-content:center}
+.save-modal.open{display:flex}
+.save-sheet{background:#fff;border-radius:var(--r) var(--r) 0 0;padding:24px 20px 32px;width:100%;max-width:480px}
+.save-sheet h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);margin-bottom:6px}
+.save-sheet p{font-size:13px;color:var(--mid);margin-bottom:18px;line-height:1.6}
+.save-option{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1.5px solid var(--line);border-radius:var(--r);margin-bottom:9px;cursor:pointer;transition:all .2s}
+.save-option:hover{border-color:var(--gold);background:var(--gold-p)}
+.save-option-icon{font-size:24px;flex-shrink:0}
+.save-option-text strong{display:block;font-size:14px;color:var(--ink);margin-bottom:1px}
+.save-option-text span{font-size:12px;color:var(--mid)}
+.save-close{width:100%;padding:11px;background:var(--sand);border:none;border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--mid);cursor:pointer;margin-top:6px}
+
+/* TOAST */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--ink);color:#fff;padding:9px 18px;border-radius:50px;font-size:13px;font-weight:500;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fa{animation:fadeUp .45s ease both}
+</style>
+</head>
+<body>
+
+<div class="mini-header">
+  <span class="mini-dest">Guía de malasia</span>
+  <a href="https://guiamundi.es" target="_blank" class="mini-brand">GuiaMundi.es</a>
+</div>
+
+<!-- ══ TABS NAV ══ -->
+<div class="tabs-nav">
+  <div class="tabs-scroll" id="tabs-scroll">
+    <button class="tab-btn" onclick="showTab('info',this)"><span class="tab-icon">📋</span>Viajero</button>
+    <button class="tab-btn active" onclick="showTab('itinerario',this)"><span class="tab-icon">🗓</span>Ruta</button>
+    <button class="tab-btn" onclick="showTab('experiencias',this)"><span class="tab-icon">⭐</span>Experiencias</button>
+<button class="tab-btn" onclick="showTab('consejos',this)"><span class="tab-icon">🌟</span>Consejos</button>
+    <button class="tab-btn" onclick="showTab('tools',this)"><span class="tab-icon">⚙️</span>Tools</button>
+    <button class="tab-btn" onclick="showTab('destino',this)"><span class="tab-icon">💡</span>Destino</button>
+    <button class="tab-btn" onclick="showTab('transporte',this)"><span class="tab-icon">🚗</span>Transporte</button>
+    <button class="tab-btn" onclick="showTab('recursos',this)"><span class="tab-icon">🔗</span>Recursos</button>
+    <button class="tab-btn" onclick="showTab('cultura',this)"><span class="tab-icon">🎬</span>Cultura</button>
+    <button class="tab-btn" onclick="showTab('curiosidades',this)"><span class="tab-icon">🤔</span>Curiosidades</button>
+    <button class="tab-btn" onclick="showTab('docs',this)"><span class="tab-icon">📁</span>Documentos</button>
+    <button class="tab-btn" onclick="showTab('notas',this)"><span class="tab-icon">📝</span>Notas</button>
+  </div>
+  <div class="tabs-fade"><span>›</span></div>
+</div>
+
+<!-- ══ CONTENIDO ══ -->
+<div class="tabs-content" id="tabs-content">
+
+  <!-- TAB VIAJERO -->
+  <div class="tab-panel" id="tab-info">
+    <div class="sec-eye">Tu viaje</div>
+    <div class="sec-title">Información del viajero</div>
+    <div class="info-mini">
+      <div class="info-tag"><strong>LALI</strong></div>
+      <div class="info-tag">📍 <strong>malasia</strong></div>
+      <div class="info-tag">🗓 <strong>1 días</strong></div>
+      <div class="info-tag">👥 <strong>3 viajero/s</strong></div>
+      <div class="info-tag">🧭 <strong>Aventura y naturaleza</strong></div>
+      <div class="info-tag">🚗 <strong>Transporte público</strong></div>
+    </div>
+    <div class="ad"><div class="ad-badge">AD</div><div><strong>Vuelos · Seguro de viaje</strong><span>→ Insertar banner afiliado aquí</span></div></div>
+    <div class="ad"><div class="ad-badge">AD</div><div><strong>Hoteles · Alojamiento</strong><span>→ Booking / Airbnb</span></div></div>
+    <div style="margin-top:16px">
+      <div class="map-block">
+        <div class="map-prev"><div class="map-icon">🗺️</div><div class="map-dest-label">malasia</div></div>
+        <div class="map-cta">
+          <div class="map-cta-t"><strong>Ver en Google Maps</strong><span>Explorar malasia</span></div>
+          <a class="map-btn" href="https://www.google.com/maps/search/malasia" target="_blank">Abrir →</a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-box">
+      <h3>¡Buen viaje, LALI!</h3>
+      <p>Tu aventura en malasia · GuiaMundi.es</p>
+      <div class="cta-pills">
+        <a class="cta-pill" href="#">✈ Vuelos</a>
+        <a class="cta-pill" href="#">🏨 Hoteles</a>
+        <a class="cta-pill" href="#">🎯 Experiencias</a>
+        <a class="cta-pill" href="#">🛡 Seguro</a>
+      </div>
+      <div class="share-bar">
+        <button class="share-btn share-wpp" onclick="shareWpp()">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Compartir WhatsApp
+        </button>
+        <button class="share-btn share-copy" onclick="copyLink()">⎘ Copiar enlace</button>
+      </div>
+    </div>
+  </div>
+<!-- TAB CONSEJOS GUIAMUNDI -->
+  <div class="tab-panel" id="tab-consejos">
+    <div class="sec-eye">Trucos del equipo</div>
+    <div class="sec-title">Consejos GuiaMundi</div>
+    <div class="ai-content"><ul>
+<li><strong>Alojamiento en KL con vistas y piscina panorámica</strong> — Elige un hotel que tenga vistas a las Torres Petronas y piscina en la azotea; no es caro y la experiencia de subir a la piscina al atardecer no tiene comparación.</li>
+<li><strong>Reserva la visita a las Petronas con anticipación</strong> — Si no compras entrada online antes, los turnos suelen agotarse y perderás horas buscando opciones o te quedarás sin poder subir.</li>
+<li><strong>Tour de snorkel en las Perhentians</strong> — No es habitual que lo recomienden, pero bucear con tiburones blancos pequeños y tortugas gigantes en aguas transparentes es algo único, no te lo pierdas.</li>
+<li><strong>Alojarse en Coral Bay en isla Kecil</strong> — Está más tranquilo que la zona de Long Beach, pero a 10 minutos andando tienes restaurantes y ambiente; perfecto para descansar sin estar aislado.</li>
+<li><strong>Caminata de Coral Bay a Fishing Village</strong> — Evita los tours masivos; hacer este paseo te permite ver playas prácticamente vírgenes y acabar en una aldea local auténtica, luego regresa en barca taxi para no cansarte vuelta.</li>
+<li><strong>Evita dar prioridad a Malaca si tienes poco tiempo</strong> — Es la opción más turística y un poco repetitiva. Mejor invertir horas en Cameron Highlands o Penang, que tienen más variedad y autenticidad.</li>
+<li><strong>Usa vuelos internos para trayectos largos</strong> — Autobuses son baratos pero lentos; con compañías low cost (Air Asia, Batik Air, Firefly) ganas tiempo y comodidad sin gastar mucho.</li>
+<li><strong>Grab es indispensable, pero ojo con precios demasiado bajos</strong> — Los taxistas suelen rechazar viajes muy largos con tarifas sospechosas; si la oferta es demasiado buena, seguro que no aceptan el trayecto.</li>
+</ul></div>
+  </div>
+  <!-- TAB ITINERARIO -->
+  <div class="tab-panel active" id="tab-itinerario">
+    <div class="sec-eye">Día a día</div>
+    <div class="sec-title">Itinerario detallado</div>
+    <div class="ad"><div class="ad-badge">AD</div><div><strong>Tours · Actividades</strong><span>→ Experiencias locales recomendadas</span></div></div>
+    <div id="itinerario-content" class="ai-content" style="margin-top:14px"><h2>DÍA 1 — Aventura en la naturaleza de Taman Negara</h2>
+<ul>
+<li><strong>Parque Nacional Taman Negara</strong> — Explora la selva tropical más antigua del mundo con caminatas guiadas por la selva profunda, duración recomendada 3-4 horas. <a href="https://www.google.com/search?q=Parque+Nacional+Taman+Negara+malasia" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Parque+Nacional+Taman+Negara+malasia" target="_blank">📍</a></li>
+<li><strong>Paseo por el canopy walk</strong> — Camina por los puentes colgantes entre las copas de los árboles para disfrutar de vistas impresionantes a 40 metros de altura, 1 hora. <a href="https://www.google.com/search?q=Canopy+Walk+Taman+Negara+malasia" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Canopy+Walk+Taman+Negara+malasia" target="_blank">📍</a></li>
+<li><strong>Río Tembeling</strong> — Navega en bote tradicional por el río para observar fauna y flora local, paseo de 1 hora. <a href="https://www.google.com/search?q=Río+Tembeling+malasia" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Río+Tembeling+malasia" target="_blank">📍</a></li>
+<li><strong>Cueva Gua Telinga</strong> — Admira formaciones de estalactitas y descubre murciélagos en esta cueva cercana al parque, visita de 45 minutos. <a href="https://www.google.com/search?q=Gua+Telinga+malasia" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Gua+Telinga+malasia" target="_blank">📍</a></li>
+<li><strong>Visita al pueblo Orang Asli</strong> — Conoce la cultura indígena local con una corta caminata y experiencia cultural en un poblado tradicional. <a href="https://www.google.com/search?q=Pueblo+Orang+Asli+malasia" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Pueblo+Orang+Asli+malasia" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Teratak Tepi Sungai — platos malayos tradicionales con vista al río.</p>
+<p><a href="https://www.jdoqocy.com/click-101767868-15734352?url=https://www.booking.com/search.html?ss=Taman+Negara" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p></div>
+  </div>
+
+  <!-- TAB EXPERIENCIAS -->
+  <div class="tab-panel" id="tab-experiencias">
+    <div class="sec-eye">Imprescindibles</div>
+    <div class="sec-title">Experiencias destacadas</div>
+    <div class="ai-content"><h3>🌟 Trekking en el Parque Nacional Taman Negara</h3>
+<p>Explorar uno de los bosques tropicales más antiguos del mundo es una aventura que no puedes perderte. Aquí podrás hacer senderismo, observar fauna salvaje y disfrutar de la canopy walk. Dedica al menos 2-3 días para apreciar su belleza. Lleva ropa adecuada y repelente de insectos.</p>
+
+<h3>🌟 Buceo en las Islas Perhentian</h3>
+<p>Consideradas como uno de los mejores destinos de buceo en Malasia, las aguas cristalinas y los coloridos arrecifes de coral te dejarán sin aliento. Dedica al menos un par de días para disfrutar de las inmersiones. Asegúrate de llevar tu equipo o alquilar uno de calidad.</p>
+
+<h3>🌟 Safari en el Parque Nacional Bako</h3>
+<p>Un lugar perfecto para observar la vida silvestre, incluyendo el famoso langur de nariz larga. El parque ofrece varias rutas de senderismo y playas vírgenes. Un día completo es suficiente para explorar sus senderos. Lleva agua y snacks para el camino.</p>
+
+<h3>🌟 Visita a la Cueva de Batu</h3>
+<p>Un impresionante complejo de cuevas y templos hindúes situado en una colina. Además de admirar la arquitectura, podrás experimentar la cultura local. Una visita de medio día es ideal. Ve temprano para evitar las multitudes y lleva calzado cómodo.</p>
+
+<h3>🌟 Paseo por los Arrozales de Bukit Mertajam</h3>
+<p>Descubre la belleza de los arrozales en un tour en bicicleta o caminando. Podrás aprender sobre las técnicas de cultivo tradicionales y disfrutar de la tranquilidad de la naturaleza. Dedica un día entero para una experiencia completa. Lleva cámara para capturar el paisaje.</p>
+
+<h3>🌟 Exploración de las Cuevas de Mulu</h3>
+<p>Un sitio declarado Patrimonio de la Humanidad que ofrece impresionantes formaciones de cuevas y un ecosistema único. Realiza un tour de 3-4 horas para ver las cuevas más famosas y flujos subterráneos. No olvides llevar una linterna y ropa adecuada para la aventura.</p>
+
+<h3>🌟 Aventura en el río Kiulu</h3>
+<p>Experimenta el rafting en aguas bravas mientras disfrutas de la belleza del paisaje borneo. Ideal para quienes buscan adrenalina sin un nivel excesivo de dificultad. Un día completo es perfecto para esta actividad. Lleva tu traje de baño y protector solar.</p>
+
+<h3>🌟 Noche en una Aldea Cultural</h3>
+<p>Pasa una noche en una aldea local para sumergirte en las tradiciones y estilos de vida de los malasios. Comparte una comida típica y conoce las costumbres de la comunidad. Planifica al menos una noche para disfrutar de esta inmersión cultural. Respeta las costumbres locales y participa activamente.</p></div>
+  </div>
+
+  <!-- TAB TOOLS -->
+  <div class="tab-panel" id="tab-tools">
+    <div class="sec-eye">Herramientas interactivas</div>
+    <div class="sec-title">Para tu viaje</div>
+    <div class="tools-tabs">
+      <button class="ttab active" onclick="switchTool(this,'conv')">💱 Moneda</button>
+      <button class="ttab" onclick="switchTool(this,'trans')">🗣 Frases</button>
+      <button class="ttab" onclick="switchTool(this,'calc')">💶 Presupuesto</button>
+      <button class="ttab" onclick="switchTool(this,'check')">🧳 Equipaje</button>
+    </div>
+    <div class="tools-desktop">
+      <div>
+        <div class="tool-section-title">💱 Conversor de moneda en tiempo real</div>
+        <div class="tool-panel active" id="conv">
+          <div class="conv-box">
+            <select class="conv-select" id="conv-to" onchange="convertCurrency()">
+              <option value="USD">$ Dólar USD</option><option value="GBP">£ Libra</option>
+              <option value="JPY">¥ Yen</option><option value="MXN">$ Peso MX</option>
+              <option value="BRL">R$ Real</option><option value="MAD">MAD Dírham</option>
+              <option value="TRY">₺ Lira turca</option><option value="THB">฿ Baht</option>
+              <option value="IDR">Rp Rupia</option><option value="AED">AED Dírham</option>
+              <option value="SGD">S$ Dólar SG</option><option value="PLN">zł Esloti</option>
+              <option value="CZK">Kč Corona CZ</option><option value="HUF">Ft Forinto</option>
+              <option value="RON">RON Leu</option><option value="DKK">kr Danesa</option>
+              <option value="SEK">kr Sueca</option><option value="NOK">kr Noruega</option>
+            </select>
+            <div class="conv-row">
+              <div class="conv-iw"><label>Euros €</label><input class="conv-input" type="number" id="conv-eur" value="100" oninput="convertCurrency()"></div>
+              <div class="conv-arrow">⇄</div>
+              <div class="conv-iw"><label id="conv-to-label">Destino</label><input class="conv-input" type="number" id="conv-foreign" oninput="convertBack()"></div>
+            </div>
+            <div class="conv-result"><div class="conv-amount" id="conv-display">—</div><div class="conv-rate" id="conv-rate">Cargando…</div></div>
+            <div class="conv-note">Tiempo real · open.er-api.com</div>
+          </div>
+        </div>
+        <br>
+        <div class="tool-section-title">🗣 Frases útiles con audio</div>
+        <div class="tool-panel" id="trans">
+          <div class="trans-wrap">
+            <div class="trans-lang"><span>Idioma:</span>
+              <select id="trans-lang-sel" onchange="updatePhrases()">
+                <option value="it">🇮🇹 Italiano</option><option value="fr">🇫🇷 Francés</option>
+                <option value="de">🇩🇪 Alemán</option><option value="pt">🇵🇹 Portugués</option>
+                <option value="ja">🇯🇵 Japonés</option><option value="ar">🇲🇦 Árabe</option>
+                <option value="tr">🇹🇷 Turco</option><option value="th">🇹🇭 Tailandés</option>
+                <option value="zh">🇨🇳 Chino</option><option value="el">🇬🇷 Griego</option>
+                <option value="pl">🇵🇱 Polaco</option><option value="nl">🇳🇱 Neerlandés</option>
+                <option value="ru">🇷🇺 Ruso</option><option value="cs">🇨🇿 Checo</option>
+                <option value="ro">🇷🇴 Rumano</option><option value="hr">🇭🇷 Croata</option>
+              </select>
+            </div>
+            <div class="trans-list" id="phrases-list"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tool-section-title">💶 Calculadora de presupuesto</div>
+        <div class="tool-panel" id="calc">
+          <div class="calc-box">
+            <div class="calc-row"><label>Días</label><input class="calc-input" type="number" id="c-dias" value="1" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Viajeros</label><input class="calc-input" type="number" id="c-viaj" value="3" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Alojamiento / noche €</label><input class="calc-input" type="number" id="c-aloj" value="80" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Comida / persona / día €</label><input class="calc-input" type="number" id="c-com" value="35" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Transporte total €</label><input class="calc-input" type="number" id="c-transp" value="200" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Actividades total €</label><input class="calc-input" type="number" id="c-act" value="150" oninput="calcBudget()"></div>
+            <div class="calc-result">
+              <div class="calc-result-title">RESUMEN</div>
+              <div class="calc-line"><span>Alojamiento</span><strong id="r-aloj">—</strong></div>
+              <div class="calc-line"><span>Comida</span><strong id="r-com">—</strong></div>
+              <div class="calc-line"><span>Transporte</span><strong id="r-transp">—</strong></div>
+              <div class="calc-line"><span>Actividades</span><strong id="r-act">—</strong></div>
+              <div class="calc-line total"><span>TOTAL</span><strong id="r-total">—</strong></div>
+              <div class="calc-line"><span>Por persona</span><strong id="r-pp">—</strong></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="tool-section-title">🧳 Checklist de equipaje</div>
+        <div class="tool-panel" id="check">
+          <div class="check-progress"><div class="check-bar-wrap"><div class="check-bar" id="check-bar" style="width:0%"></div></div><div class="check-pct" id="check-pct">0%</div></div>
+          <div class="check-cats">
+            <button class="check-cat-btn active" onclick="switchCat(this,'ropa')">👕 Ropa</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'docs')">📄 Docs</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'tech')">📱 Tech</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'salud')">💊 Salud</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'extras')">✨ Extras</button>
+          </div>
+          <div class="checklist" id="checklist-items"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB DESTINO -->
+  <div class="tab-panel" id="tab-destino">
+    <div class="sec-eye">Antes de partir</div>
+    <div class="sec-title">Guía del destino</div>
+    <div class="ai-content"><h2>Clima y mejor época</h2>
+<p>Malasia tiene un clima ecuatorial, cálido y húmedo durante todo el año. Las temperaturas oscilan entre 25°C y 32°C.</p>
+<ul>
+  <li><strong>Enero - Marzo:</strong> Temporada relativamente seca, buena para viajar.</li>
+  <li><strong>Abril - Mayo:</strong> Aumento de lluvias leves, clima cálido.</li>
+  <li><strong>Junio - Agosto:</strong> Temporada seca en la costa oeste, lluvias en la este.</li>
+  <li><strong>Septiembre - Noviembre:</strong> Temporada de monzones con lluvias intensas.</li>
+  <li><strong>Diciembre:</strong> Clima variable y lluvias frecuentes.</li>
+</ul>
+<p><strong>Qué ropa llevar:</strong> ropa ligera, transpirable, protección solar, impermeable ligera o paraguas.</p>
+
+<h2>Moneda y pagos</h2>
+<p>La moneda oficial es el Ringgit malayo (MYR).</p>
+<p>El tipo de cambio aproximado es 1 EUR ≈ 4.7 MYR (puede variar).</p>
+<p>Las tarjetas de crédito y débito son ampliamente aceptadas en ciudades y zonas turísticas, pero es recomendable llevar efectivo para mercados y zonas rurales.</p>
+
+<h2>Electricidad y adaptadores</h2>
+<p>El tipo de enchufe más común es el tipo G (tres clavijas rectangulares en forma de triángulo).</p>
+<p>El voltaje estándar es 240 V y la frecuencia 50 Hz.</p>
+<p>Se recomienda llevar adaptador para enchufe tipo G si no se dispone de uno.</p>
+
+<h2>Idioma y comunicación</h2>
+<p>El idioma oficial es el malayo (bahasa melayu).</p>
+<p>El inglés es ampliamente hablado, especialmente en zonas turísticas, hoteles y negocios.</p>
+<p>Apps útiles: <a href="https://translate.google.com" target="_blank">Google Translate</a>, <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a> para comunicación local, <a href="https://grab.com" target="_blank">Grab</a> para transporte.</p>
+
+<h2>Visado y entrada</h2>
+<p>Ciudadanos españoles y de la Unión Europea no necesitan visado para estancias turísticas de hasta 90 días.</p>
+<p>Se debe contar con pasaporte con al menos 6 meses de validez desde la fecha de entrada.</p>
+<p>Es posible que soliciten billete de salida y prueba de fondos suficientes.</p>
+
+<h2>Vacunas y salud</h2>
+<p>No hay vacunas obligatorias para viajeros procedentes de Europa.</p>
+<p>Se recomienda tener las vacunas estándar al día: tétanos, hepatitis A y B.</p>
+<p>El agua potable en hoteles suele ser segura, pero se recomienda consumir agua embotellada en zonas rurales.</p>
+<p>Se recomienda contratar un seguro médico que cubra accidentes y enfermedades.</p>
+
+<h2>Seguridad</h2>
+<p>Malasia es en general un país seguro para turistas.</p>
+<p>Se recomienda precaución en áreas muy concurridas para evitar carteristas.</p>
+<p>Zonas a evitar: algunos barrios periféricos en grandes ciudades por la noche.</p>
+<p>Consejos básicos: mantener objetos personales vigilados, usar taxis oficiales o apps como Grab, respetar normas locales.</p>
+
+<h2>Costumbres y etiqueta</h2>
+<p>La sociedad malaya es respetuosa y conservadora.</p>
+<p>Se recomienda vestir de forma recatada en templos y lugares religiosos: hombros y rodillas cubiertos.</p>
+<p>Es habitual dar propina en restaurantes y servicios turísticos, aunque no obligatoria: 5-10% está bien.</p>
+<p>Saludar con una ligera inclinación de cabeza y usar la mano derecha para dar o recibir objetos es respetuoso.</p>
+
+<h2>Apps imprescindibles</h2>
+<ul>
+  <li><a href="https://grab.com" target="_blank">Grab</a> – Transporte privado y entrega de comida.</li>
+  <li><a href="https://maps.google.com" target="_blank">Google Maps</a> – Mapas y navegación.</li>
+  <li><a href="https://translate.google.com" target="_blank">Google Translate</a> – Traducción instantánea.</li>
+  <li><a href="https://www.paypal.com" target="_blank">PayPal</a> o apps bancarias locales – Pagos electrónicos.</li>
+</ul></div>
+  </div>
+
+  <!-- TAB TRANSPORTE -->
+  <div class="tab-panel" id="tab-transporte">
+    <div class="sec-eye">Moverse por malasia</div>
+    <div class="sec-title">Transporte</div>
+    <div class="ad"><div class="ad-badge">AD</div><div><strong>Alquiler de coche</strong><span>→ Rent a car · comparativa</span></div></div>
+    <div class="ai-content" style="margin-top:12px"><h2>Cómo llegar desde España</h2>
+<p>Desde España no existen vuelos directos a Malasia; la mayoría de las rutas incluyen una escala en ciudades como Dubái, Doha o Singapur. El tiempo de vuelo varía entre 14 y 18 horas dependiendo de la ciudad de escala. Los principales aeropuertos internacionales en Malasia son:</p>
+<ul>
+  <li><strong>Aeropuerto Internacional de Kuala Lumpur (KUL)</strong> - Principal aeropuerto y hub internacional.</li>
+  <li><strong>Aeropuerto Internacional de Penang (PEN)</strong></li>
+  <li><strong>Aeropuerto Internacional de Kota Kinabalu (BKI)</strong></li>
+</ul>
+
+<h2>Transporte desde el aeropuerto</h2>
+<p>Desde el Aeropuerto Internacional de Kuala Lumpur (KLIA), las opciones principales para llegar al centro de la ciudad son:</p>
+<ul>
+  <li><strong>KLIA Ekspres:</strong> tren rápido directo al centro (Estación KL Sentral). Precio aproximado: 55 MYR (~12 EUR). Tiempo: 28 minutos. Más info en <a href="https://www.kliaekspres.com/" target="_blank">KLIA Ekspres</a>.</li>
+  <li><strong>Autobús AeroLine:</strong> opciones de bus económico con paradas en el centro. Precio aproximado: 12 MYR (~2.5 EUR). Tiempo: 1 hora.</li>
+  <li><strong>Taxi:</strong> disponible 24h con tarifa fija entre 75-100 MYR (~15-20 EUR) al centro. Tiempo: 45-60 minutos.</li>
+</ul>
+
+<h2>Moverse por el destino</h2>
+<p>En ciudades principales como Kuala Lumpur, Malaca o Penang el sistema de transporte público es eficiente y económico:</p>
+<ul>
+  <li><strong>MRT y LRT (Metro y tren ligero):</strong> cubren gran parte de Kuala Lumpur y alrededores. Precio por trayecto: entre 1.20 y 4 MYR (~0.25-0.8 EUR). Más detalles en <a href="https://myrapid.com.my/" target="_blank">Rapid KL</a>.</li>
+  <li><strong>Autobuses urbanos:</strong> operados por RapidKL con rutas extensas. Precio desde 1 MYR (~0.20 EUR) por trayecto.</li>
+  <li><strong>Tren ETS:</strong> para rutas interurbanas, conecta Kuala Lumpur con ciudades del norte, pasando por Ipoh y Penang.</li>
+</ul>
+
+<h2>Alquiler de coche</h2>
+<p>Alquilar un coche en Malasia es viable para explorar zonas rurales o estados con menos opciones de transporte público, pero en ciudades grandes no es recomendable debido al tráfico y el buen sistema público disponible.</p>
+<ul>
+  <li>Empresas internacionales como <a href="https://www.enterprise.com/en/home.html" target="_blank">Enterprise</a>, <a href="https://www.hertz.com/rentacar/reservation/" target="_blank">Hertz</a>, y locales disponibles.</li>
+  <li>Precio medio: desde 100 MYR (~20 EUR) por día para coches económicos.</li>
+  <li>Es conveniente llevar un carnet de conducir internacional además del nacional para el alquiler.</li>
+</ul>
+
+<h2>Taxis y apps de movilidad</h2>
+<p>Las opciones de taxis y apps en Malasia para moverse con facilidad incluyen:</p>
+<ul>
+  <li><strong>Grab:</strong> la app más popular similar a Uber, ofrece taxis, ride-hailing y motos. Tarifas variables desde 5 MYR (~1 EUR) por trayecto corto. Más info en <a href="https://www.grab.com/my/" target="_blank">Grab Malasia</a>.</li>
+  <li><strong>MyCar:</strong> app local alternativa con tarifas competitivas.</li>
+  <li>Taxis tradicionales disponibles, aunque se recomienda usar apps por comodidad y precios estimados.</li>
+</ul>
+
+<h2>Consejos de conducción</h2>
+<ul>
+  <li>En Malasia se conduce por la izquierda.</li>
+  <li>El límite de velocidad varía entre 50 km/h en ciudad y 110 km/h en autopistas.</li>
+  <li>Las autopistas (conocidas como North-South Expressway) tienen peajes. Se puede pagar en efectivo o mediante tarjeta Touch 'n Go.</li>
+  <li>En zonas urbanas el aparcamiento suele ser de pago; hay parqueos automáticos y de monedas con tarifas desde 1 MYR por hora.</li>
+</ul>
+
+<h2>Transporte entre ciudades</h2>
+<p>Para viajar entre ciudades en Malasia el transporte público es seguro y económico:</p>
+<ul>
+  <li><strong>Tren ETS:</strong> conecta Kuala Lumpur con Ipoh, Butterworth (Penang) y hasta Padang Besar (frontera con Tailandia). Precio: desde 30 MYR (~6 EUR) por trayecto.</li>
+  <li><strong>Autobuses interurbanos:</strong> numerosas compañías operan desde terminales principales. Precio: desde 15 MYR (~3 EUR) para trayectos de 2-3 horas.</li>
+  <li><strong>Vuelos internos:</strong> Malasia Airlines y AirAsia ofrecen vuelos económicos para rutas como Kuala Lumpur-Kota Kinabalu o Kuala Lumpur-Penang. Precio medio: 80-150 MYR (~16-30 EUR).</li>
+</ul></div>
+  </div>
+
+  <!-- TAB RECURSOS -->
+  <div class="tab-panel" id="tab-recursos">
+    <div class="sec-eye">Recursos online</div>
+    <div class="sec-title">Blogs y enlaces útiles</div>
+    <div class="ai-content">```html
+<h2>Web oficial de turismo</h2>
+<p><a href="https://www.matic.gov.my/en/">Malaysia Tourism Centre (MaTiC) Official Portal</a></p>
+
+<h2>Blogs de viaje en español</h2>
+<p><a href="https://www.losviajeros.com/Blogs.php?b=15232">Aventura mochilera por MALASIA (18 días) - Los Viajeros</a></p>
+<p><a href="https://viajaramalasia.com/">Viajar a Malasia - Guía completa</a></p>
+
+<h2>Foros y comunidades</h2>
+<p><a href="https://www.tripadvisor.es/ShowForum-g293951-i7006-Malaysia.html">Foro de Malasia en TripAdvisor</a></p>
+<p><a href="https://www.reddit.com/r/malaysia/">Subreddit de Malasia</a></p>
+
+<h2>Canales de YouTube</h2>
+<p><a href="https://www.youtube.com/watch?v=lF6rHiRJ0I8">MINI GUÍA: Consejos y trucos para viajar a Malasia por libre - Chilliplanet</a></p>
+<p><a href="https://www.youtube.com/watch?v=9WDwQ3cIRRs">Guía Definitiva para viajar por MALASIA 🌴 Información y tips 2025 - Welcome to el Mundo</a></p>
+
+<h2>Recursos para rutas</h2>
+<p><a href="https://www.wikiloc.com/">Wikiloc</a></p>
+<p><a href="https://www.alltrails.com/">AllTrails</a></p>
+<p><a href="https://www.google.com/maps">Google Maps</a></p>
+
+<h2>Apps imprescindibles</h2>
+<ul>
+  <li><a href="https://www.google.com/maps">Google Maps</a></li>
+  <li><a href="https://www.airbnb.com/">Airbnb</a></li>
+  <li><a href="https://www.booking.com/">Booking.com</a></li>
+  <li><a href="https://www.klook.com/">Klook</a></li>
+  <li><a href="https://www.grab.com/my/">Grab</a></li>
+</ul>
+
+<h2>Webs de reservas</h2>
+<p><a href="https://www.dpbolvw.net/click-101767868-14398623" target="_blank">Booking.com — Hoteles en Malasia</a></p>
+<p><a href="https://www.intermundial.es/afiliados/seguros-de-viaje-recomendado?utm_source=Affiliates&utm_medium=Affiliates&utm_campaign=General&utm_term=wmcu97tc5xbal&utm_content=wmcu97tc5xbal" target="_blank">Intermundial — Seguro de viaje con 10% de descuento</a></p>
+<p><a href="https://www.airbnb.com/">Airbnb</a></p>
+<p><a href="https://www.klook.com/">Klook</a></p>
+<p><a href="https://www.agoda.com/">Agoda</a></p>
+``` </div>
+  </div>
+
+  <!-- TAB CULTURA -->
+  <div class="tab-panel" id="tab-cultura">
+    <div class="sec-eye">Prepara el viaje</div>
+    <div class="sec-title">Cultura · Cine · Libros · Música</div>
+    <div class="ai-content"><h3>📚 El jardín de la luna – Tan Twan Eng</h3>
+<p><strong>Por qué leerlo:</strong> Esta novela histórica está ambientada en Penang durante la ocupación japonesa en Malasia. Ofrece una profunda mirada a la mezcla cultural y la historia turbulenta del país, ideal para entender el contexto histórico y emocional antes de visitar.</p>
+
+<h3>📚 Malaysia: A Traveller's Literary Companion – Edited by Edmund Yee</h3>
+<p><strong>Por qué leerlo:</strong> Una colección de relatos y ensayos escritos por autores malayos y extranjeros que exploran diferentes rincones y culturas de Malasia. Perfecto para una inmersión literaria auténtica y variada sobre el país.</p>
+
+<h3>📚 Lonely Planet Malaysia, Singapore & Brunei</h3>
+<p><strong>Por qué leerlo:</strong> Guía práctica que cubre los aspectos esenciales para viajar por Malasia, desde consejos de transporte hasta recomendaciones culinarias y culturales. Imprescindible para planificar itinerarios con confianza.</p>
+
+<h3>📚 When the Night Falls – Preeta Samarasan</h3>
+<p><strong>Por qué leerlo:</strong> Esta novela explora la vida de una familia malaya tradicional, revelando tensiones culturales y sociales en la Malasia contemporánea. Ideal para comprender las dinámicas familiares y culturales del país.</p>
+
+<h3>📚 Shadowplay: The Inside Story of Malaysia's Broken Democracy – Joshua Chaffin & Kirsten Han</h3>
+<p><strong>Por qué leerlo:</strong> Un ensayo incisivo sobre la política contemporánea de Malasia, proporcionando contexto sobre la compleja realidad social y política del país, fundamental para viajeros interesados en su actualidad y desafíos.</p></div>
+  </div>
+
+  <!-- TAB CURIOSIDADES -->
+  <div class="tab-panel" id="tab-curiosidades">
+    <div class="sec-eye">¿Sabías que…?</div>
+    <div class="sec-title">Curiosidades de malasia</div>
+    <div class="ai-content"><h3>💡 Planifica tu visita a los parques nacionales en la temporada seca</h3>
+<p>Malasia tiene una temporada de lluvias intensa entre noviembre y febrero, especialmente en la península. Para aprovechar al máximo las excursiones de aventura y naturaleza en lugares como Taman Negara o las islas Perhentian, visita entre marzo y octubre, cuando el clima es más seco y los caminos menos resbaladizos.</p>
+
+<h3>💡 Lleva suficiente efectivo en moneda local (ringgit) para zonas remotas</h3>
+<p>En áreas rurales y parques nacionales, los cajeros automáticos son escasos y no aceptan tarjetas internacionales. Cambia dinero en ciudades grandes como Kuala Lumpur y lleva efectivo para transporte, comidas y entradas a parques.</p>
+
+<h3>💡 Prepárate para la humedad y protege tu equipo fotográfico</h3>
+<p>El clima tropical implica alta humedad que puede dañar cámaras y móviles. Usa fundas impermeables y bolsas selladas para proteger tu equipo, especialmente durante excursiones en la selva o paseos en bote.</p>
+
+<h3>💡 Prueba la gastronomía local en puestos callejeros seguros</h3>
+<p>La comida callejera malaya es deliciosa y un must para los amantes de la aventura culinaria. Opta por puestos concurridos y con alta rotación para garantizar frescura, y prueba platos típicos como nasi lemak o laksa mientras exploras.</p>
+
+<h3>💡 Aprende a regatear en mercados y tiendas locales</h3>
+<p>En mercados de artesanías y souvenirs, el regateo es común y esperado. Comienza ofreciendo un 50-60% del precio inicial y negocia con respeto, ayudándote del lenguaje corporal y una sonrisa para evitar faltar al respeto.</p>
+
+<h3>💡 Respeta la naturaleza y sigue las normas locales de conservación</h3>
+<p>Para mantener intactos los ecosistemas, no dejes basura y sigue las indicaciones de los guardaparques. Evita molestar a la fauna y no recolectes plantas ni corales, ayudando a preservar Malasia para futuras aventuras.</p>
+
+<h3>💡 Usa repelente de insectos potente y viste ropa adecuada</h3>
+<p>Los mosquitos son abundantes en zonas selváticas y costeras, y algunos pueden transmitir dengue o malaria. Aplica repelente frecuentemente y usa camisas de manga larga y pantalones ligeros para minimizar picaduras.</p>
+
+<h3>💡 Da propina según el servicio y contexto local</h3>
+<p>En Malasia no es obligatorio dejar propina, pero es bien recibida en guías turísticos, conductores o restaurantes de precio medio-alto. Un 5-10% es adecuado; en puestos callejeros no es común ni esperado.</p>
+
+<h3>💡 Contrata guías locales para excursiones especializadas</h3>
+<p>Para explorar la jungla o hacer trekking en áreas protegidas, es recomendable contratar guías autorizados que conocen las rutas y pueden maximizar tu seguridad y experiencia, además de contribuir a la economía local.</p>
+
+<h3>💡 Mantente hidratado y lleva snacks energéticos durante las caminatas</h3>
+<p>Las actividades de aventura pueden ser extenuantes bajo el clima cálido y húmedo. Lleva suficiente agua y alimentos energéticos para mantener tu nivel de energía y evitar golpes de calor o fatiga, especialmente en rutas largas.</p></div>
+  </div>
+
+  <!-- TAB DOCUMENTOS -->
+  <div class="tab-panel" id="tab-docs">
+    <div class="sec-eye">Tus documentos</div>
+    <div class="sec-title">Documentos del viaje</div>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:14px">Guarda aquí tu seguro, tarjetas de embarque, pasaporte o cualquier documento que necesites tener a mano durante el viaje.</p>
+    <div class="docs-upload-area" onclick="document.getElementById('doc-input').click()">
+      <div class="docs-upload-icon">📎</div>
+      <div class="docs-upload-text"><strong>Añadir documento</strong>PDF, imagen, tarjeta de embarque…</div>
+    </div>
+    <input type="file" id="doc-input" accept=".pdf,.jpg,.jpeg,.png,.gif,.webp" multiple onchange="handleDocUpload(event)">
+    <div class="docs-list" id="docs-list"></div>
+  </div>
+
+  <!-- TAB NOTAS -->
+  <div class="tab-panel" id="tab-notas">
+    <div class="sec-eye">Para ti</div>
+    <div class="sec-title">Notas del viajero</div>
+    <div class="note-area">
+      <div class="note-line" contenteditable="true" spellcheck="false">Escribe aquí tus notas…</div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ MODAL GUARDAR ══ -->
+<div class="save-modal" id="save-modal" onclick="closeSaveModal(event)">
+  <div class="save-sheet">
+    <h3>Guardar guía</h3>
+    <p>Elige cómo quieres guardar tu guía de malasia.</p>
+
+    <!-- Opción Android: botón directo si hay prompt disponible -->
+    <div class="save-option" id="opt-android" style="display:none" onclick="installAndroid()">
+      <div class="save-option-icon">🤖</div>
+      <div class="save-option-text"><strong>Añadir a pantalla de inicio</strong><span>Android · Se abrirá el diálogo de instalación</span></div>
+    </div>
+
+    <!-- Opción iOS: instrucción visual animada -->
+    <div class="save-option" id="opt-ios" style="display:none" onclick="showIOSGuide()">
+      <div class="save-option-icon">🍎</div>
+      <div class="save-option-text"><strong>Añadir a pantalla de inicio</strong><span>iOS · Toca para ver cómo hacerlo en 2 pasos</span></div>
+    </div>
+
+    <div class="save-option" onclick="downloadGuide()">
+      <div class="save-option-icon">⬇️</div>
+      <div class="save-option-text"><strong>Descargar archivo HTML</strong><span>Guárdalo y ábrelo sin internet</span></div>
+    </div>
+    <div class="save-option" onclick="copyLink();closeSaveModal()">
+      <div class="save-option-icon">🔗</div>
+      <div class="save-option-text"><strong>Copiar enlace</strong><span>Comparte o guarda la URL de esta guía</span></div>
+    </div>
+    <button class="save-close" onclick="closeSaveModal()">Cerrar</button>
+  </div>
+</div>
+
+<!-- ══ GUÍA iOS ══ -->
+<div class="save-modal" id="ios-modal" onclick="document.getElementById('ios-modal').classList.remove('open')">
+  <div class="save-sheet">
+    <h3>Añadir a pantalla de inicio</h3>
+    <p style="margin-bottom:18px">Sigue estos 2 pasos en Safari:</p>
+    <div style="background:var(--sand);border-radius:var(--r);padding:16px;margin-bottom:12px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">1️⃣</div>
+      <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">Toca el botón Compartir</div>
+      <div style="font-size:13px;color:var(--mid)">El icono <strong>□↑</strong> de la barra inferior de Safari</div>
+      <div style="font-size:36px;margin-top:10px;animation:bounce .8s infinite alternate">□↑</div>
+    </div>
+    <div style="background:var(--sand);border-radius:var(--r);padding:16px;margin-bottom:16px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">2️⃣</div>
+      <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">Toca "Añadir a pantalla de inicio"</div>
+      <div style="font-size:13px;color:var(--mid)">Desplázate en el menú hasta encontrar esta opción</div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px">
+        <span style="font-size:20px">➕</span>
+        <span style="font-size:13px;font-weight:500;color:var(--ink)">Añadir a pantalla de inicio</span>
+      </div>
+    </div>
+    <button class="save-close" onclick="document.getElementById('ios-modal').classList.remove('open')">Entendido</button>
+  </div>
+</div>
+<style>
+@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+</style>
+<div style="position:fixed;bottom:20px;right:16px;z-index:500;display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+  <button onclick="shareWpp()" style="background:#25D366;color:#fff;border:none;border-radius:50%;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+  <button onclick="openSaveModal()" style="background:var(--gold);color:var(--ink);border:none;border-radius:50%;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);font-size:19px">⬇</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ── TABS ──
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  document.getElementById('tabs-content').scrollTop=0;
+  // Scroll tab visible
+  btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  // Ocultar flecha si llegamos al final
+  const scroll=document.getElementById('tabs-scroll');
+  const fade=document.querySelector('.tabs-fade');
+  if(fade)fade.style.display=scroll.scrollLeft+scroll.clientWidth>=scroll.scrollWidth-10?'none':'flex';
+}
+// Ocultar flecha al llegar al final del scroll
+document.getElementById('tabs-scroll').addEventListener('scroll',function(){
+  const fade=document.querySelector('.tabs-fade');
+  if(fade)fade.style.display=this.scrollLeft+this.clientWidth>=this.scrollWidth-10?'none':'flex';
+});
+
+// ── TOAST ──
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
+
+// ── COMPARTIR ──
+function shareWpp(){
+  const t=encodeURIComponent('¡Mira mi guía de viaje para malasia! 🌍✈️\nGenerada por GuiaMundi.es\n\n'+window.location.href);
+  window.open('https://wa.me/?text='+t,'_blank');
+}
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('✓ Enlace copiado')).catch(()=>showToast('Copia la URL del navegador'))}
+
+// ── SERVICE WORKER (necesario para installPrompt en Android) ──
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/guias/sw.js').catch(()=>{});
+}
+
+// ── MODAL GUARDAR ──
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  document.getElementById('opt-android').style.display='flex';
+});
+
+function openSaveModal(){
+  // Detectar iOS
+  const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(isIOS)document.getElementById('opt-ios').style.display='flex';
+  document.getElementById('save-modal').classList.add('open');
+}
+function closeSaveModal(e){
+  if(!e||e.target===document.getElementById('save-modal'))
+    document.getElementById('save-modal').classList.remove('open');
+}
+function installAndroid(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(r=>{
+      if(r.outcome==='accepted')showToast('✓ Añadida a pantalla de inicio');
+      deferredPrompt=null;
+    });
+  }
+  document.getElementById('save-modal').classList.remove('open');
+}
+function showIOSGuide(){
+  document.getElementById('save-modal').classList.remove('open');
+  setTimeout(()=>document.getElementById('ios-modal').classList.add('open'),200);
+}
+function downloadGuide(){
+  try{
+    const blob=new Blob([document.documentElement.outerHTML],{type:'text/html;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+    a.download='guia-malasia-1dias.html';a.click();
+    URL.revokeObjectURL(a.href);showToast('✓ Guía descargada');
+  }catch(e){showToast('Usa el menú del navegador para guardar')}
+  document.getElementById('save-modal').classList.remove('open');
+}
+
+// ── BLOQUES DE DÍA CON NOTAS Y MAPA ──
+function buildDayBlocks(){
+  const container=document.getElementById('itinerario-content');
+  if(!container)return;
+  const raw=container.innerHTML;
+  const parts=raw.split(/(?=<h2[\s>])/i);
+  let html='';
+  parts.forEach((part,i)=>{
+    if(!part.trim())return;
+    const isDay=/^<h2/i.test(part.trim());
+    if(!isDay){html+=part;return;}
+    const titleMatch=part.match(/<h2[^>]*>(.*?)<\/h2>/i);
+    const titleRaw=titleMatch?titleMatch[1]:'Día '+(i);
+    const body=part.replace(/<h2[^>]*>.*?<\/h2>/i,'').trim();
+    html+=`<div class="day-block">
+      <div class="day-block-header" onclick="toggleDay(this)">
+        <span>${titleRaw}</span><span class="day-toggle">⌄</span>
+      </div>
+      <div class="day-block-body">
+        <div class="ai-content">${body}</div>
+        <div class="day-note-wrap">
+          <div class="day-note-label">📝 Mis notas para este día</div>
+          <textarea class="day-note" placeholder="Añade aquí reservas, horarios o cualquier detalle personal…"></textarea>
+        </div>
+      </div>
+    </div>`;
+  });
+  container.innerHTML=html;
+  const first=container.querySelector('.day-block');
+  if(first)first.classList.add('open');
+}
+function toggleDay(header){header.closest('.day-block').classList.toggle('open')}
+document.addEventListener('DOMContentLoaded',buildDayBlocks);
+
+// ── DOCUMENTOS (persistentes con IndexedDB) ──
+const DOCS_DB='guiamundi_docs',DOCS_STORE='files';
+const guideKey=window.location.pathname;
+let uploadedDocs=[];
+
+function openDocsDB(){
+  return new Promise((resolve,reject)=>{
+    const req=indexedDB.open(DOCS_DB,1);
+    req.onupgradeneeded=e=>{
+      const db=e.target.result;
+      if(!db.objectStoreNames.contains(DOCS_STORE)){
+        const store=db.createObjectStore(DOCS_STORE,{keyPath:'id'});
+        store.createIndex('guideKey','guideKey',{unique:false});
+      }
+    };
+    req.onsuccess=e=>resolve(e.target.result);
+    req.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbSaveDoc(doc){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readwrite');
+    tx.objectStore(DOCS_STORE).put(doc);
+    tx.oncomplete=()=>resolve();tx.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbDeleteDoc(id){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readwrite');
+    tx.objectStore(DOCS_STORE).delete(id);
+    tx.oncomplete=()=>resolve();tx.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbLoadDocs(){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readonly');
+    const req=tx.objectStore(DOCS_STORE).index('guideKey').getAll(guideKey);
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=e=>reject(e.target.error);
+  });
+}
+
+function handleDocUpload(e){
+  Array.from(e.target.files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=async ev=>{
+      const doc={id:Date.now()+Math.random(),guideKey,name:file.name,size:formatSize(file.size),type:file.type,url:ev.target.result};
+      try{await dbSaveDoc(doc);uploadedDocs.push(doc);renderDocs();}
+      catch(err){showToast('No se pudo guardar el documento')}
+    };
+    reader.readAsDataURL(file);
+  });
+  e.target.value='';
+}
+function formatSize(b){if(b<1024)return b+'B';if(b<1048576)return(b/1024).toFixed(1)+'KB';return(b/1048576).toFixed(1)+'MB'}
+function getDocIcon(type){if(type==='application/pdf')return '📄';if(type.startsWith('image/'))return '🖼️';return '📎'}
+function renderDocs(){
+  const list=document.getElementById('docs-list');
+  if(!uploadedDocs.length){list.innerHTML='';return;}
+  list.innerHTML=uploadedDocs.map(doc=>`
+    <div class="doc-item">
+      <div class="doc-icon">${getDocIcon(doc.type)}</div>
+      <div class="doc-info"><div class="doc-name">${doc.name}</div><div class="doc-size">${doc.size}</div></div>
+      <button class="doc-open" onclick="openDoc('${doc.id}')">Abrir</button>
+      <button class="doc-del" onclick="deleteDoc('${doc.id}')">✕</button>
+    </div>`).join('');
+}
+function openDoc(id){const d=uploadedDocs.find(d=>d.id==id);if(d)window.open(d.url,'_blank')}
+async function deleteDoc(id){
+  await dbDeleteDoc(parseFloat(id));
+  uploadedDocs=uploadedDocs.filter(d=>d.id!=id);
+  renderDocs();
+}
+(async()=>{try{uploadedDocs=await dbLoadDocs();renderDocs();}catch(e){}})();
+
+// ── HERRAMIENTAS TABS ──
+function switchTool(btn,id){
+  document.querySelectorAll('.ttab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById(id).classList.add('active');
+}
+
+// ── CONVERSOR ──
+const rates={};let ratesLoaded=false;
+const cNames={USD:'Dólar USD',GBP:'Libra',JPY:'Yen',MXN:'Peso MX',BRL:'Real',MAD:'Dírham',TRY:'Lira',THB:'Baht',IDR:'Rupia',AED:'Dírham AE',SGD:'Dólar SG',PLN:'Esloti',CZK:'Corona CZ',HUF:'Forinto',RON:'Leu',DKK:'Corona DK',SEK:'Corona SE',NOK:'Corona NO'};
+async function loadRates(){
+  try{const r=await fetch('https://open.er-api.com/v6/latest/EUR');const d=await r.json();if(d.rates){Object.assign(rates,d.rates);ratesLoaded=true;convertCurrency();document.getElementById('conv-rate').textContent='Actualizado · '+new Date().toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}}
+  catch(e){Object.assign(rates,{USD:1.08,GBP:0.86,JPY:162,MXN:18.5,BRL:5.4,MAD:10.8,TRY:35,THB:38,IDR:17000,AED:3.97,SGD:1.45,PLN:4.25,CZK:25,HUF:390,RON:4.97,DKK:7.46,SEK:11.5,NOK:11.8});ratesLoaded=true;convertCurrency();document.getElementById('conv-rate').textContent='Tasas aproximadas'}
+}
+function convertCurrency(){
+  if(!ratesLoaded)return;
+  const eur=parseFloat(document.getElementById('conv-eur').value)||0;
+  const to=document.getElementById('conv-to').value;
+  const res=eur*(rates[to]||1);
+  const fmt=res>=1000?res.toFixed(0):res>=10?res.toFixed(2):res.toFixed(4);
+  document.getElementById('conv-foreign').value=fmt;
+  document.getElementById('conv-display').textContent=fmt+' '+to;
+  document.getElementById('conv-to-label').textContent=cNames[to]||to;
+  document.getElementById('conv-rate').textContent='1 € = '+(rates[to]||1).toFixed(4)+' '+to;
+}
+function convertBack(){
+  if(!ratesLoaded)return;
+  const f=parseFloat(document.getElementById('conv-foreign').value)||0;
+  const to=document.getElementById('conv-to').value;
+  document.getElementById('conv-eur').value=(f/(rates[to]||1)).toFixed(2);convertCurrency();
+}
+loadRates();
+
+// ── TRADUCTOR ──
+const phraseDB={
+  es:['Hola / Buenos días','Por favor','Gracias','¿Cuánto cuesta?','¿Dónde está…?','La cuenta, por favor','No entiendo','¿Habla español?','Ayuda, por favor','Un taxi, por favor','¿Dónde está el baño?','Me llamo…','¿Habla inglés?'],
+  it:['Ciao / Buongiorno','Per favore','Grazie','Quanto costa?','Dov\'è…?','Il conto, per favore','Non capisco','Parla spagnolo?','Aiuto','Un taxi, per favore','Dov\'è il bagno?','Mi chiamo…','Parla inglese?'],
+  fr:['Bonjour','S\'il vous plaît','Merci','Combien ça coûte?','Où est…?','L\'addition, s\'il vous plaît','Je ne comprends pas','Parlez-vous espagnol?','Au secours','Un taxi, s\'il vous plaît','Où sont les toilettes?','Je m\'appelle…','Parlez-vous anglais?'],
+  de:['Hallo','Bitte','Danke','Wie viel kostet das?','Wo ist…?','Die Rechnung, bitte','Ich verstehe nicht','Sprechen Sie Spanisch?','Hilfe','Ein Taxi, bitte','Wo ist die Toilette?','Ich heiße…','Sprechen Sie Englisch?'],
+  pt:['Olá','Por favor','Obrigado/a','Quanto custa?','Onde fica…?','A conta, por favor','Não entendo','Fala espanhol?','Socorro','Um táxi','Onde é o banheiro?','Meu nome é…','Fala inglês?'],
+  ja:['こんにちは','お願いします','ありがとう','いくらですか？','…はどこですか？','お会計をお願いします','わかりません','スペイン語を話しますか？','助けて','タクシーをお願いします','トイレはどこですか？','私の名前は…','英語を話しますか？'],
+  ar:['مرحبا','من فضلك','شكرا','كم يكلف؟','أين…؟','الحساب من فضلك','لا أفهم','هل تتكلم الإسبانية؟','مساعدة','سيارة أجرة','أين الحمام؟','اسمي…','هل تتكلم الإنجليزية؟'],
+  tr:['Merhaba','Lütfen','Teşekkürler','Ne kadar?','Nerede…?','Hesabı lütfen','Anlamıyorum','İspanyolca biliyor musunuz?','Yardım','Taksi lütfen','Tuvalet nerede?','Benim adım…','İngilizce biliyor musunuz?'],
+  th:['สวัสดี','กรุณา','ขอบคุณ','ราคาเท่าไหร่?','…อยู่ที่ไหน?','เก็บเงินด้วย','ไม่เข้าใจ','พูดภาษาสเปนได้ไหม?','ช่วยด้วย','แท็กซี่','ห้องน้ำอยู่ที่ไหน?','ฉันชื่อ…','พูดภาษาอังกฤษได้ไหม?'],
+  zh:['你好','请','谢谢','多少钱？','…在哪里？','买单','我不明白','你会说西班牙语吗？','帮帮我','出租车','洗手间在哪里？','我叫…','你会说英语吗？'],
+  el:['Γεια σας','Παρακαλώ','Ευχαριστώ','Πόσο κοστίζει;','Πού είναι…;','Τον λογαριασμό','Δεν καταλαβαίνω','Μιλάτε ισπανικά;','Βοήθεια','Ένα ταξί','Πού είναι η τουαλέτα;','Με λένε…','Μιλάτε αγγλικά;'],
+  pl:['Dzień dobry','Proszę','Dziękuję','Ile to kosztuje?','Gdzie jest…?','Rachunek, proszę','Nie rozumiem','Czy mówi pan/pani po hiszpańsku?','Pomocy','Taksówkę','Gdzie jest toaleta?','Mam na imię…','Czy mówi pan/pani po angielsku?'],
+  nl:['Hallo','Alstublieft','Dank u','Hoeveel kost het?','Waar is…?','De rekening graag','Ik begrijp het niet','Spreekt u Spaans?','Help','Een taxi','Waar is het toilet?','Ik heet…','Spreekt u Engels?'],
+  ru:['Здравствуйте','Пожалуйста','Спасибо','Сколько стоит?','Где…?','Счёт, пожалуйста','Я не понимаю','Вы говорите по-испански?','Помогите','Такси','Где туалет?','Меня зовут…','Вы говорите по-английски?'],
+  cs:['Dobrý den','Prosím','Děkuji','Kolik to stojí?','Kde je…?','Účet prosím','Nerozumím','Mluvíte španělsky?','Pomozte','Taxi','Kde je toaleta?','Jmenuji se…','Mluvíte anglicky?'],
+  ro:['Bună ziua','Vă rog','Mulțumesc','Cât costă?','Unde este…?','Nota de plată','Nu înțeleg','Vorbiți spaniolă?','Ajutor','Un taxi','Unde este toaleta?','Mă numesc…','Vorbiți engleză?'],
+  hr:['Dobar dan','Molim','Hvala','Koliko košta?','Gdje je…?','Račun, molim','Ne razumijem','Govorite li španjolski?','Pomoć','Taksi','Gdje je zahod?','Zovem se…','Govorite li engleski?'],
+};
+const langMap={it:'it-IT',fr:'fr-FR',de:'de-DE',pt:'pt-PT',ja:'ja-JP',ar:'ar-SA',tr:'tr-TR',th:'th-TH',zh:'zh-CN',el:'el-GR',pl:'pl-PL',nl:'nl-NL',ru:'ru-RU',cs:'cs-CZ',ro:'ro-RO',hr:'hr-HR'};
+function updatePhrases(){
+  const lang=document.getElementById('trans-lang-sel').value;
+  const esp=phraseDB['es'],dest=phraseDB[lang]||phraseDB['it'];
+  document.getElementById('phrases-list').innerHTML=esp.map((es,i)=>`
+    <div class="trans-item">
+      <div class="trans-texts"><div class="trans-es">${es}</div><div class="trans-dest">${dest[i]||''}</div></div>
+      <button class="trans-audio" onclick="speak('${(dest[i]||'').replace(/'/g,"\\'").replace(/"/g,'&quot;')}','${lang}',this)">▶</button>
+    </div>`).join('');
+}
+function speak(text,lang,btn){
+  if(!window.speechSynthesis){showToast('Audio no disponible');return}
+  window.speechSynthesis.cancel();
+  document.querySelectorAll('.trans-audio').forEach(b=>b.classList.remove('playing'));
+  btn.classList.add('playing');
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=langMap[lang]||lang+'-'+lang.toUpperCase();u.rate=0.82;
+  u.onend=()=>btn.classList.remove('playing');
+  u.onerror=()=>{btn.classList.remove('playing');showToast('Audio no disponible para este idioma')};
+  window.speechSynthesis.speak(u);
+}
+updatePhrases();try { localStorage.setItem('guiamundi_last_guide', window.location.href); } catch(e){}
+
+// ── CALCULADORA ──
+function calcBudget(){
+  const dias=parseFloat(document.getElementById('c-dias').value)||0;
+  const viaj=Math.max(1,parseFloat(document.getElementById('c-viaj').value)||1);
+  const aloj=parseFloat(document.getElementById('c-aloj').value)||0;
+  const com=parseFloat(document.getElementById('c-com').value)||0;
+  const transp=parseFloat(document.getElementById('c-transp').value)||0;
+  const act=parseFloat(document.getElementById('c-act').value)||0;
+  const tA=aloj*dias,tC=com*dias*viaj,tot=tA+tC+transp+act;
+  const f=n=>n.toLocaleString('es-ES',{maximumFractionDigits:0})+'€';
+  document.getElementById('r-aloj').textContent=f(tA);document.getElementById('r-com').textContent=f(tC);
+  document.getElementById('r-transp').textContent=f(transp);document.getElementById('r-act').textContent=f(act);
+  document.getElementById('r-total').textContent=f(tot);document.getElementById('r-pp').textContent=f(tot/viaj);
+}
+calcBudget();
+
+// ── CHECKLIST ──
+const checkData={
+  ropa:['Ropa ligera (5-7 días)','Chaqueta o jersey fino','Ropa interior extra','Calcetines varios','Calzado cómodo walking','Sandalias o chanclas','Ropa de baño','Pijama','Pañuelo o fular','Chubasquero ligero'],
+  docs:['DNI o Pasaporte vigente','Tarjeta Sanitaria Europea','Seguro de viaje','Reservas alojamiento','Confirmación de vuelo','2 tarjetas bancarias','Efectivo moneda local','Carné de conducir','Visado si aplica','Fotos de pasaporte'],
+  tech:['Móvil cargado','Cargador del móvil','Adaptador de enchufe','Power bank','Auriculares','Cámara de fotos','Tarjeta memoria extra','Cable USB extra','Mapas offline','Cargador laptop'],
+  salud:['Protector solar 50+','Repelente mosquitos','Medicación habitual x2','Botiquín básico','Antihistamínico','Ibuprofeno/paracetamol','Tiritas y venda','Pastillas estómago','Mascarillas','Termómetro'],
+  extras:['Botella reutilizable','Guía de conversación','Bolsa tela mercados','Candado equipaje','Funda impermeable móvil','Snacks viaje','Almohada viaje','Antifaz dormir','Tapones oídos','Colonia pequeña'],
+};
+const checkState={};let currentCat='ropa';
+function initCheck(){Object.keys(checkData).forEach(c=>checkState[c]=checkData[c].map(()=>false));renderCheck()}
+function switchCat(btn,cat){document.querySelectorAll('.check-cat-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentCat=cat;renderCheck()}
+function renderCheck(){
+  const items=checkData[currentCat],states=checkState[currentCat];
+  document.getElementById('checklist-items').innerHTML=items.map((item,i)=>`
+    <div class="check-item${states[i]?' done':''}" onclick="toggleCheck('${currentCat}',${i},this)">
+      <div class="check-box">${states[i]?'✓':''}</div>
+      <div class="check-label">${item}</div>
+    </div>`).join('');
+  updateProgress();
+}
+function toggleCheck(cat,idx,el){checkState[cat][idx]=!checkState[cat][idx];el.classList.toggle('done');el.querySelector('.check-box').textContent=checkState[cat][idx]?'✓':'';updateProgress()}
+function updateProgress(){let d=0,t=0;Object.values(checkState).forEach(a=>{t+=a.length;d+=a.filter(Boolean).length});const p=t?Math.round(d/t*100):0;document.getElementById('check-bar').style.width=p+'%';document.getElementById('check-pct').textContent=p+'%'}
+initCheck();
+</script>
+</body>
+</html>
