@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GuiaMundi">
+<meta name="theme-color" content="#1A1A2E">
+<title>Guía de Este canada · 12 días</title>
+<link rel="manifest" href="/guias/manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A2E;--gold:#C9922A;--gold-l:#F5E6C8;--gold-p:#FDF6E9;
+  --terra:#B84A2E;--sky:#1B4F72;--sage:#2D6A4F;--cream:#FAFAF6;
+  --sand:#F0EBE0;--mist:#EEF2F7;--line:#DDD8CF;--mid:#7B7369;--r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--ink);font-size:15px;line-height:1.7;display:flex;flex-direction:column}
+
+/* ── PORTADA ── */
+
+.mini-header{flex-shrink:0;background:var(--ink);padding:8px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(201,146,42,.15)}
+.mini-dest{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:#fff}
+.mini-brand{font-size:10px;color:rgba(201,146,42,.7);text-decoration:none;letter-spacing:.5px}
+/* ── TABS NAV ── */
+.tabs-nav{flex-shrink:0;background:rgba(8,8,20,.97);border-bottom:1px solid rgba(201,146,42,.15);position:relative}
+.tabs-scroll{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 12px}
+.tabs-scroll::-webkit-scrollbar{display:none}
+.tab-btn{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:11px 14px;border:none;background:none;color:rgba(255,255,255,.38);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;white-space:nowrap;min-width:72px}
+.tab-btn .tab-icon{font-size:18px;line-height:1}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn:hover{color:rgba(255,255,255,.7)}
+/* Flecha indicadora de más tabs */
+.tabs-fade{position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,transparent,rgba(8,8,20,.97));pointer-events:none;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
+.tabs-fade span{color:var(--gold);font-size:16px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* ── CONTENIDO ── */
+.tabs-content{flex:1;overflow-y:auto;background:var(--cream)}
+.tab-panel{display:none;padding:22px 18px 32px;min-height:100%}
+.tab-panel.active{display:block}
+@media(min-width:700px){.tab-panel{max-width:800px;margin:0 auto;padding:28px 36px 40px}}
+
+/* ── TIPOGRAFÍA ── */
+.sec-eye{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.sec-eye::before{content:'';display:inline-block;width:10px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:16px}
+
+/* ── FICHA MINI ── */
+.info-mini{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.info-tag{background:var(--sand);border:1px solid var(--line);border-radius:50px;padding:5px 12px;font-size:12px;color:var(--mid)}
+.info-tag strong{color:var(--ink);font-weight:600}
+
+/* ── AD ── */
+.ad{background:#FFF8E7;border:1px solid #E8C84A;border-left:4px solid #E8C84A;border-radius:var(--r);padding:10px 12px;display:flex;align-items:flex-start;gap:8px;margin-bottom:14px}
+.ad-badge{background:#E8C84A;color:#fff;font-size:8px;font-weight:700;letter-spacing:1px;padding:2px 5px;border-radius:4px;flex-shrink:0;margin-top:1px}
+.ad strong{display:block;font-size:12px;font-weight:500;color:#7A5C00;margin-bottom:1px}
+.ad span{font-size:11px;color:#A07B20;font-style:italic}
+
+/* ── CONTENIDO IA ── */
+.ai-content{font-size:14px;line-height:1.85;color:var(--ink)}
+.ai-content h1,.ai-content h2{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);margin:20px 0 8px;padding-bottom:5px;border-bottom:2px solid var(--gold-l)}
+.ai-content h2:first-child{margin-top:0}
+.ai-content h3{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--sky);margin:14px 0 5px}
+.ai-content h3:first-child{margin-top:0}
+.ai-content p{margin-bottom:9px}
+.ai-content ul,.ai-content ol{padding-left:18px;margin-bottom:10px}
+.ai-content li{margin-bottom:4px}
+.ai-content strong{font-weight:600}
+.ai-content a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(27,79,114,.25);font-weight:500;word-break:break-word}
+.ai-content a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── BLOQUES DE DÍA ── */
+.day-block{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:16px;overflow:hidden}
+.day-block-header{background:var(--ink);color:var(--gold);padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.day-block-header .day-toggle{font-size:14px;transition:transform .3s;flex-shrink:0}
+.day-block.open .day-toggle{transform:rotate(180deg)}
+.day-block-body{display:none;padding:14px 16px}
+.day-block.open .day-block-body{display:block}
+.day-block-body .ai-content h3{margin-top:10px}
+.day-block-body .ai-content h3:first-child{margin-top:0}
+.day-block-body a[href*="google.com/maps"]{display:inline-flex;align-items:center;gap:4px;background:#1B4F72;color:#fff !important;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;text-decoration:none !important;margin:2px 4px 2px 0;border:none !important}
+.day-block-body a[href*="google.com/maps"]:hover{background:#C9922A !important}
+.day-block-body a[href*="google.com/search"]{display:inline-flex;align-items:center;gap:4px;background:#F0EBE0;color:#1A1A2E !important;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:600;text-decoration:none !important;margin:2px 4px 2px 0;border:1px solid #DDD8CF !important}
+.day-block-body a[href*="google.com/search"]:hover{border-color:#C9922A !important;color:#C9922A !important}
+/* Campo de nota manual */
+.day-note-wrap{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.day-note-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:5px}
+.day-note{width:100%;min-height:70px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);outline:none;resize:vertical;background:var(--cream);transition:border-color .2s}
+.day-note:focus{border-color:var(--gold)}
+.day-note::placeholder{color:var(--mid)}
+
+/* ── HERRAMIENTAS ── */
+.tools-tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none}
+.tools-tabs::-webkit-scrollbar{display:none}
+.ttab{background:var(--sand);border:none;border-radius:50px;padding:7px 13px;font-size:12px;font-family:'DM Sans',sans-serif;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .2s}
+.ttab.active{background:var(--ink);color:var(--gold);font-weight:500}
+.tool-panel{display:none}
+.tool-panel.active{display:block}
+@media(min-width:700px){
+  .tools-tabs{display:none}
+  .tool-panel{display:block!important}
+  .tools-desktop{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .tool-section-title{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+}
+
+/* CONVERSOR */
+.conv-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.conv-row{display:flex;gap:8px;align-items:flex-end;margin-bottom:10px}
+.conv-iw{flex:1}
+.conv-iw label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:3px}
+.conv-input{width:100%;padding:8px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:16px;font-family:'Playfair Display',serif;font-weight:700;color:var(--ink);outline:none;background:var(--cream)}
+.conv-input:focus{border-color:var(--gold)}
+.conv-arrow{font-size:16px;color:var(--gold);padding-bottom:6px;flex-shrink:0}
+.conv-result{background:var(--gold-p);border:1px solid var(--gold-l);border-radius:9px;padding:10px;text-align:center;margin-bottom:6px}
+.conv-amount{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--gold)}
+.conv-rate{font-size:10px;color:var(--mid);margin-top:1px}
+.conv-select{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;background:#fff;margin-bottom:9px}
+.conv-note{font-size:10px;color:var(--mid);text-align:center}
+
+/* TRADUCTOR */
+.trans-wrap{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.trans-lang{background:var(--ink);color:#fff;padding:9px 13px;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:space-between}
+.trans-lang select{background:transparent;border:none;color:var(--gold);font-family:'DM Sans',sans-serif;font-size:12px;outline:none;cursor:pointer}
+.trans-list{background:#fff;max-height:280px;overflow-y:auto}
+.trans-item{display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid var(--line);gap:8px}
+.trans-item:last-child{border-bottom:none}
+.trans-texts{flex:1}
+.trans-es{font-size:13px;font-weight:500;color:var(--ink)}
+.trans-dest{font-size:12px;color:var(--sky);font-style:italic;margin-top:1px}
+.trans-audio{background:none;border:1.5px solid var(--gold);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gold);flex-shrink:0;font-size:11px;transition:all .2s}
+.trans-audio.playing,.trans-audio:active{background:var(--gold);color:#fff}
+
+/* CALCULADORA */
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.calc-row{margin-bottom:9px}
+.calc-row label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:3px}
+.calc-input{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;background:var(--cream)}
+.calc-input:focus{border-color:var(--gold)}
+.calc-result{background:var(--ink);border-radius:var(--r);padding:13px;margin-top:5px}
+.calc-result-title{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:7px}
+.calc-line{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.calc-line:last-child{border-bottom:none;padding-top:8px;margin-top:4px}
+.calc-line span{font-size:12px;color:rgba(255,255,255,.55)}
+.calc-line strong{font-family:'Playfair Display',serif;font-size:13px;color:var(--gold)}
+.calc-line.total span{color:#fff;font-weight:600;font-size:13px}
+.calc-line.total strong{font-size:17px}
+
+/* CHECKLIST */
+.check-cats{display:flex;gap:5px;margin-bottom:9px;overflow-x:auto;scrollbar-width:none}
+.check-cats::-webkit-scrollbar{display:none}
+.check-cat-btn{background:var(--sand);border:none;border-radius:50px;padding:5px 11px;font-size:11px;font-family:'DM Sans',sans-serif;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .2s}
+.check-cat-btn.active{background:var(--ink);color:var(--gold);font-weight:500}
+.checklist{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-height:280px;overflow-y:auto}
+.check-item{display:flex;align-items:center;gap:9px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s}
+.check-item:last-child{border-bottom:none}
+.check-item:hover{background:var(--sand)}
+.check-box{width:18px;height:18px;border:2px solid var(--line);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:transparent;transition:all .2s}
+.check-item.done .check-box{background:var(--sage);border-color:var(--sage);color:#fff}
+.check-item.done .check-label{text-decoration:line-through;color:var(--mid)}
+.check-label{font-size:13px;color:var(--ink)}
+.check-progress{background:var(--sand);border-radius:var(--r);padding:8px 12px;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.check-bar-wrap{flex:1;background:var(--line);border-radius:50px;height:5px;overflow:hidden}
+.check-bar{height:100%;background:linear-gradient(90deg,var(--sage),var(--gold));border-radius:50px;transition:width .4s}
+.check-pct{font-size:12px;font-weight:600;color:var(--sage);flex-shrink:0}
+
+/* ── DOCUMENTOS ── */
+.docs-upload-area{border:2px dashed var(--line);border-radius:var(--r);padding:20px;text-align:center;background:#fff;cursor:pointer;transition:all .2s;margin-bottom:16px}
+.docs-upload-area:hover{border-color:var(--gold);background:var(--gold-p)}
+.docs-upload-icon{font-size:28px;margin-bottom:6px}
+.docs-upload-text{font-size:13px;color:var(--mid)}
+.docs-upload-text strong{color:var(--ink);display:block;margin-bottom:2px}
+.docs-list{display:flex;flex-direction:column;gap:8px}
+.doc-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:10px}
+.doc-icon{font-size:22px;flex-shrink:0}
+.doc-info{flex:1;min-width:0}
+.doc-name{font-size:13px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.doc-size{font-size:11px;color:var(--mid)}
+.doc-open{background:var(--sky);color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;flex-shrink:0}
+.doc-del{background:none;border:none;color:var(--mid);cursor:pointer;font-size:16px;padding:0 4px;flex-shrink:0}
+#doc-input{display:none}
+
+/* ── MAPA GENERAL ── */
+.map-block{background:var(--ink);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.map-prev{height:110px;background:repeating-linear-gradient(0deg,transparent,transparent 35px,rgba(201,146,42,.06) 36px),repeating-linear-gradient(90deg,transparent,transparent 35px,rgba(201,146,42,.06) 36px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.map-icon{font-size:26px}
+.map-dest-label{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px}
+.map-cta{padding:11px 14px;display:flex;align-items:center;justify-content:space-between}
+.map-cta-t strong{display:block;color:#fff;font-size:13px;margin-bottom:1px}
+.map-cta-t span{font-size:11px;color:rgba(255,255,255,.45)}
+.map-btn{background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;padding:8px 15px;border-radius:50px;text-decoration:none}
+
+/* ── CTA FINAL ── */
+.cta-box{background:linear-gradient(135deg,var(--ink),#2A1F3D);border-radius:var(--r);padding:22px 18px;text-align:center;position:relative;overflow:hidden;margin-bottom:16px}
+.cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--terra),var(--sky))}
+.cta-box h3{font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:5px}
+.cta-box p{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:14px}
+.cta-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:13px}
+.cta-pill{background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.3);color:var(--gold);font-size:12px;padding:6px 12px;border-radius:50px;text-decoration:none}
+.share-bar{display:flex;gap:7px}
+.share-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;border-radius:9px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;transition:all .2s}
+.share-wpp{background:#25D366;color:#fff}
+.share-copy{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff}
+
+/* NOTAS */
+.note-area{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.note-line{padding:12px 14px;border-bottom:1px solid var(--line);min-height:44px;font-size:14px;color:var(--line);font-style:italic}
+.note-line:last-child{border-bottom:none}
+
+/* MODAL GUARDAR */
+.save-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;align-items:flex-end;justify-content:center}
+.save-modal.open{display:flex}
+.save-sheet{background:#fff;border-radius:var(--r) var(--r) 0 0;padding:24px 20px 32px;width:100%;max-width:480px}
+.save-sheet h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);margin-bottom:6px}
+.save-sheet p{font-size:13px;color:var(--mid);margin-bottom:18px;line-height:1.6}
+.save-option{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1.5px solid var(--line);border-radius:var(--r);margin-bottom:9px;cursor:pointer;transition:all .2s}
+.save-option:hover{border-color:var(--gold);background:var(--gold-p)}
+.save-option-icon{font-size:24px;flex-shrink:0}
+.save-option-text strong{display:block;font-size:14px;color:var(--ink);margin-bottom:1px}
+.save-option-text span{font-size:12px;color:var(--mid)}
+.save-close{width:100%;padding:11px;background:var(--sand);border:none;border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--mid);cursor:pointer;margin-top:6px}
+
+/* TOAST */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--ink);color:#fff;padding:9px 18px;border-radius:50px;font-size:13px;font-weight:500;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fa{animation:fadeUp .45s ease both}
+</style>
+</head>
+<body>
+
+<div class="mini-header">
+  <span class="mini-dest">Guía de Este canada</span>
+  <a href="https://guiamundi.es" target="_blank" class="mini-brand">GuiaMundi.es</a>
+</div>
+
+<!-- ══ TABS NAV ══ -->
+<div class="tabs-nav">
+  <div class="tabs-scroll" id="tabs-scroll">
+    <button class="tab-btn" onclick="showTab('info',this)"><span class="tab-icon">📋</span>Viajero</button>
+    <button class="tab-btn" onclick="showTab('consejos',this)"><span class="tab-icon">🌟</span>Consejos</button>
+    <button class="tab-btn active" onclick="showTab('itinerario',this)"><span class="tab-icon">🗓</span>Ruta</button>
+    <button class="tab-btn" onclick="showTab('experiencias',this)"><span class="tab-icon">⭐</span>Experiencias</button>
+    <button class="tab-btn" onclick="showTab('tools',this)"><span class="tab-icon">⚙️</span>Tools</button>
+    <button class="tab-btn" onclick="showTab('destino',this)"><span class="tab-icon">💡</span>Destino</button>
+    <button class="tab-btn" onclick="showTab('transporte',this)"><span class="tab-icon">🚗</span>Transporte</button>
+    <button class="tab-btn" onclick="showTab('recursos',this)"><span class="tab-icon">🔗</span>Recursos</button>
+    <button class="tab-btn" onclick="showTab('cultura',this)"><span class="tab-icon">🎬</span>Cultura</button>
+    <button class="tab-btn" onclick="showTab('curiosidades',this)"><span class="tab-icon">🤔</span>Curiosidades</button>
+    <button class="tab-btn" onclick="showTab('docs',this)"><span class="tab-icon">📁</span>Documentos</button>
+    <button class="tab-btn" onclick="showTab('notas',this)"><span class="tab-icon">📝</span>Notas</button>
+  </div>
+  <div class="tabs-fade"><span>›</span></div>
+</div>
+
+<!-- ══ CONTENIDO ══ -->
+<div class="tabs-content" id="tabs-content">
+
+  <!-- TAB VIAJERO -->
+  <div class="tab-panel" id="tab-info">
+    <div class="sec-eye">Tu viaje</div>
+    <div class="sec-title">Información del viajero</div>
+    <div class="info-mini">
+      <div class="info-tag"><strong>Paco</strong></div>
+      <div class="info-tag">📍 <strong>Este canada</strong></div>
+      <div class="info-tag">🗓 <strong>12 días</strong></div>
+      <div class="info-tag">👥 <strong>2 viajero/s</strong></div>
+      <div class="info-tag">🧭 <strong>Cultural e histórico</strong></div>
+      <div class="info-tag">🚗 <strong>Transporte público</strong></div>
+    </div>
+    <a href="https://www.intermundial.es/afiliados/seguros-de-viaje-recomendado?utm_source=Affiliates&utm_medium=Affiliates&utm_campaign=General&utm_term=wmcu97tc5xbal&utm_content=wmcu97tc5xbal" target="_blank" style="display:block;text-align:center;background:var(--gold);color:var(--ink);font-weight:700;font-size:13px;padding:12px 16px;border-radius:50px;text-decoration:none;margin-bottom:14px">
+  🛡 Reserva tu seguro de viaje con un 10% de descuento
+</a>
+    <div style="border-radius:var(--r);overflow:hidden;margin-bottom:14px">
+  <a href="https://www.anrdoezrs.net/click-101767868-14398623" target="_blank">
+    <img src="https://www.ftjcfx.com/image-101767868-14398623" alt="Reserva tu hotel" style="width:100%;height:auto;display:block">
+  </a>
+</div>
+    <div style="margin-top:16px">
+      <div class="map-block">
+        <div class="map-prev"><div class="map-icon">🗺️</div><div class="map-dest-label">Este canada</div></div>
+        <div class="map-cta">
+          <div class="map-cta-t"><strong>Ver en Google Maps</strong><span>Explorar Este canada</span></div>
+          <a class="map-btn" href="https://www.google.com/maps/search/Este canada" target="_blank">Abrir →</a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-box">
+      <h3>¡Buen viaje, Paco!</h3>
+      <p>Tu aventura en Este canada · GuiaMundi.es</p>
+      <div class="cta-pills">
+        <a class="cta-pill" href="#">✈ Vuelos</a>
+        <a class="cta-pill" href="#">🏨 Hoteles</a>
+        <a class="cta-pill" href="#">🎯 Experiencias</a>
+        <a class="cta-pill" href="#">🛡 Seguro</a>
+      </div>
+      <div class="share-bar">
+        <button class="share-btn share-wpp" onclick="shareWpp()">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Compartir WhatsApp
+        </button>
+        <button class="share-btn share-copy" onclick="copyLink()">⎘ Copiar enlace</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONSEJOS GUIAMUNDI -->
+  <div class="tab-panel" id="tab-consejos">
+    <div class="sec-eye">Trucos del equipo</div>
+    <div class="sec-title">Consejos GuiaMundi</div>
+    <div class="ai-content"><h2>Consejos GuiaMundi para Este de Canadá</h2>
+<ul>
+  <li>No te obsesiones con Toronto: la ciudad es grande, diversa y tiene sus momentos, pero su centro no es bonito ni cómodo para caminar. Mejor explora barrios específicos como Distillery o Kensington para no perder tiempo en rascacielos genéricos.</li>
+  <li>Ontario y Quebec están llenos de pequeños pueblos con encanto real; ignora los grandes tours. Lugares como Kingston o las Eastern Townships valen mucho más la pena que Niagara Falls, que está inflado, caro y lleno de turistas.</li>
+  <li>En primavera y otoño, lleva siempre una chaqueta cortaviento y varias capas. El clima cambia rápido y llueve más de lo que parece, especialmente cerca de los Grandes Lagos y la costa este.</li>
+  <li>Evita hacer la ruta de las cataratas en temporada alta (verano y festivos). La cantidad de turistas te va a arruinar la experiencia; mejor ir temprano en la mañana o justo antes del ocaso para verlas en paz.</li>
+  <li>Métete en bodegas pequeñas o cervecerías artesanales en Ontario, el vino local sorprende y no es tan caro. Eso sí, compra con anticipación si quieres hacer tours, porque los cupos vuelan.</li>
+  <li>En Montreal, olvídate del metro salvo que sea imprescindible. Caminar o usar bici es mucho más rápido y te permite absorber el ambiente real de la ciudad, lejos de guetos turísticos.</li>
+  <li>Seguridad: en las grandes ciudades, el robo no es común, pero sí cuidado con dejar objetos de valor a la vista en el coche o mochilas sin vigilancia, especialmente en zonas muy turísticas o estaciones de tren.</li>
+  <li>Si vas en invierno, no te fíes solo del pronóstico para planificar actividades: las tormentas suelen ser repentinas y obligan a cambios. Siempre ten un plan B cerrado y equipamiento adecuado para frío extremo.</li>
+</ul></div>
+  </div>
+
+  <!-- TAB ITINERARIO -->
+  <div class="tab-panel active" id="tab-itinerario">
+    <div class="sec-eye">Día a día</div>
+    <div class="sec-title">Itinerario detallado</div>
+    <div style="text-align:center;margin-bottom:14px">
+  <a href="https://www.dpbolvw.net/click-101767868-17272982" target="_blank">
+    <img src="https://www.tqlkg.com/image-101767868-17272982" alt="Actividades y tours" style="max-width:100%;height:auto;border-radius:var(--r)">
+  </a>
+</div>
+    <div id="itinerario-content" class="ai-content" style="margin-top:14px"><h2>DÍA 1 — Montreal histórico y cultural</h2>
+<ul>
+<li><strong>Vieux-Montréal</strong> — Camina por sus calles empedradas y admira la arquitectura colonial francesa. 2 horas. <a href="https://www.google.com/search?q=Vieux-Montréal+Este+canada" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Vieux-Montréal+Este+canada" target="_blank">📍</a></li>
+<li><strong>Basilique Notre-Dame</strong> — Iglesia gótica espectacular, visita guiada para conocer su historia. 1 hora. <a href="https://www.google.com/search?q=Basilique+Notre-Dame+Montreal" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Basilique+Notre-Dame+Montreal" target="_blank">📍</a></li>
+<li><strong>Musée Pointe-à-Callière</strong> — Museo arqueológico que explora los orígenes de Montreal. 2 horas. <a href="https://www.google.com/search?q=Musée+Pointe-à-Callière" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Musée+Pointe-à-Callière" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Jardin Nelson — cocina francesa en ambiente histórico.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMontreal" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 2 — Más cultura y arte en Montreal</h2>
+<ul>
+<li><strong>Musée des Beaux-Arts de Montréal</strong> — Colección variada con énfasis en arte canadiense e internacional. 3 horas. <a href="https://www.google.com/search?q=Musée+des+Beaux-Arts+de+Montréal" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Musée+des+Beaux-Arts+de+Montréal" target="_blank">📍</a></li>
+<li><strong>Quartier Latin</strong> — Barrio cultural con librerías, teatros y cafés históricos para explorar. 2 horas. <a href="https://www.google.com/search?q=Quartier+Latin+Montreal" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Quartier+Latin+Montreal" target="_blank">📍</a></li>
+<li><strong>Oratorio de San José</strong> — Monumento religioso y arquitectónico con vistas panorámicas. 1.5 horas. <a href="https://www.google.com/search?q=Oratorio+de+San+José+Montreal" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Oratorio+de+San+José+Montreal" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> La Binerie Mont-Royal — tradicional comida quebequense.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DMontreal" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 3 — Quebec ciudad amurallada</h2>
+<ul>
+<li><strong>Ciudad Vieja de Quebec</strong> — Recorre sus murallas, plazas y calles con aire europeo. 3 horas. <a href="https://www.google.com/search?q=Ciudad+Vieja+de+Quebec" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Ciudad+Vieja+de+Quebec" target="_blank">📍</a></li>
+<li><strong>Château Frontenac</strong> — Hotel histórico icono de Quebec para admirar interiores y vistas. 1.5 horas. <a href="https://www.google.com/search?q=Château+Frontenac" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Château+Frontenac" target="_blank">📍</a></li>
+<li><strong>Plains of Abraham</strong> — Extenso parque histórico donde se libró la batalla de 1759. 2 horas. <a href="https://www.google.com/search?q=Plains+of+Abraham" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Plains+of+Abraham" target="_blank">📍</a></li>
+<li><strong>Musée de la Civilisation</strong> — Museo que explora historia y cultura regional con exposiciones interactivas. 2 horas. <a href="https://www.google.com/search?q=Musée+de+la+Civilisation+Quebec" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Musée+de+la+Civilisation+Quebec" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Aux Anciens Canadiens — clásico quebequense en ambiente colonial.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DQuebec" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 4 — Quebec y alrededores</h2>
+<ul>
+<li><strong>Basilique-Cathédrale Notre-Dame de Québec</strong> — Catedral histórica con arquitectura neoclásica y arte religioso. 1.5 horas. <a href="https://www.google.com/search?q=Basilique-Cathédrale+Notre-Dame+de+Québec" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Basilique-Cathédrale+Notre-Dame+de+Québec" target="_blank">📍</a></li>
+<li><strong>Le Petit-Champlain</strong> — Barrio pintoresco con tiendas artesanales y cafés antiguos. 2 horas. <a href="https://www.google.com/search?q=Le+Petit-Champlain+Québec" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Le+Petit-Champlain+Québec" target="_blank">📍</a></li>
+<li><strong>Parc de la Chute-Montmorency</strong> — Cascada impresionante más alta que las cataratas del Niágara. 1.5 horas. <a href="https://www.google.com/search?q=Parc+de+la+Chute-Montmorency" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Parc+de+la+Chute-Montmorency" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Bistro Sous le Fort — menú de temporada con toque tradicional.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DQuebec" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 5 — Historia en Trois-Rivières</h2>
+<ul>
+<li><strong>Centre d’Histoire de Trois-Rivières</strong> — Museo que narra la evolución de la ciudad desde su fundación. 2 horas. <a href="https://www.google.com/search?q=Centre+d’Histoire+de+Trois-Rivières" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Centre+d’Histoire+de+Trois-Rivières" target="_blank">📍</a></li>
+<li><strong>Vieille Prison de Trois-Rivières</strong> — Ex prisión transformada en museo que relata la vida carcelaria del pasado. 1.5 horas. <a href="https://www.google.com/search?q=Vieille+Prison+de+Trois-Rivières" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Vieille+Prison+de+Trois-Rivières" target="_blank">📍</a></li>
+<li><strong>Old Trois-Rivières</strong> — Paseo por las calles históricas y arquitectura colonial. 2 horas. <a href="https://www.google.com/search?q=Old+Trois-Rivières" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Old+Trois-Rivières" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Le Temps d’une Pinte — cocina local en ambiente acogedor.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DTrois-Rivieres" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 6 — Explorando Ottawa, capital canadiense</h2>
+<ul>
+<li><strong>Parlamento de Canadá</strong> — Visita guiada por el emblemático edificio de gobierno y sus jardines. 2 horas. <a href="https://www.google.com/search?q=Parlamento+de+Canadá" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Parlamento+de+Canadá" target="_blank">📍</a></li>
+<li><strong>Museo de Historia de Canadá</strong> — Exhibiciones sobre historia canadiense y culturas indígenas. 3 horas. <a href="https://www.google.com/search?q=Museo+de+Historia+de+Canadá" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Museo+de+Historia+de+Canadá" target="_blank">📍</a></li>
+<li><strong>ByWard Market</strong> — Mercado histórico con arte, artesanías y gastronomía local. 1.5 horas. <a href="https://www.google.com/search?q=ByWard+Market" target="_blank">📖</a> <a href="https://www.google.com/maps/search=ByWard+Market" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Play Food & Wine — bistró con platos creativos y vinos selectos.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOttawa" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 7 — Museos y monumentos en Ottawa</h2>
+<ul>
+<li><strong>Galería Nacional de Canadá</strong> — Destaca el arte canadiense e internacional con colecciones permanentes impactantes. 3 horas. <a href="https://www.google.com/search?q=Galería+Nacional+de+Canadá" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Galería+Nacional+de+Canadá" target="_blank">📍</a></li>
+<li><strong>Museo de la Guerra</strong> — Exposición sobre la historia militar de Canadá y su impacto global. 2 horas. <a href="https://www.google.com/search?q=Museo+de+la+Guerra+Ottawa" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Museo+de+la+Guerra+Ottawa" target="_blank">📍</a></li>
+<li><strong>Rideau Canal</strong> — Recorrido a pie por este canal histórico con paisajes urbanos y monumentos. 1.5 horas. <a href="https://www.google.com/search?q=Rideau+Canal" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Rideau+Canal" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Courtyard Restaurant — sabores locales en ambiente relajado.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOttawa" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 8 — Kingston, ciudad histórica en Ontario</h2>
+<ul>
+<li><strong>Fort Henry</strong> — Fortaleza del siglo XIX con exhibiciones y recreaciones históricas. 2.5 horas. <a href="https://www.google.com/search?q=Fort+Henry+Kingston" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Fort+Henry+Kingston" target="_blank">📍</a></li>
+<li><strong>DOWNTOWN Kingston</strong> — Paseo por el centro histórico, con arquitectura del siglo XVIII y tiendas tradicionales. 2 horas. <a href="https://www.google.com/search?q=Downtown+Kingston" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Downtown+Kingston" target="_blank">📍</a></li>
+<li><strong>Museum of Health Care</strong> — Explora la historia de la medicina y cuidados en Canadá. 1.5 horas. <a href="https://www.google.com/search?q=Museum+of+Health+Care+Kingston" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Museum+of+Health+Care+Kingston" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Pan Chancho — deli y bistró con productos locales y pan artesano.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DKingston" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 9 — Toronto, ciudad vibrante y cultural</h2>
+<ul>
+<li><strong>CN Tower</strong> — Símbolo icónico con vistas panorámicas de la ciudad. 1.5 horas. <a href="https://www.google.com/search?q=CN+Tower+Toronto" target="_blank">📖</a> <a href="https://www.google.com/maps/search=CN+Tower+Toronto" target="_blank">📍</a></li>
+<li><strong>Distillery District</strong> — Barrio histórico con arquitectura victoriana y galerías de arte. 2 horas. <a href="https://www.google.com/search?q=Distillery+District+Toronto" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Distillery+District+Toronto" target="_blank">📍</a></li>
+<li><strong>Royal Ontario Museum</strong> — Amplias colecciones de arte, cultura e historia natural. 3 horas. <a href="https://www.google.com/search?q=Royal+Ontario+Museum" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Royal+Ontario+Museum" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Canoe Restaurant — alta cocina canadiense con vistas a la ciudad.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DToronto" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 10 — Historia y arte en Toronto</h2>
+<ul>
+<li><strong>Casa Loma</strong> — Castillo histórico con jardines y mobiliario de lujo. 2 horas. <a href="https://www.google.com/search?q=Casa+Loma" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Casa+Loma" target="_blank">📍</a></li>
+<li><strong>Art Gallery of Ontario</strong> — Destaca por su arquitectura y colección de arte canadiense e internacional. 3 horas. <a href="https://www.google.com/search?q=Art+Gallery+of+Ontario" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Art+Gallery+of+Ontario" target="_blank">📍</a></li>
+<li><strong>St. Lawrence Market</strong> — Mercado histórico con productos frescos y especialidades locales. 1.5 horas. <a href="https://www.google.com/search?q=St.+Lawrence+Market" target="_blank">📖</a> <a href="https://www.google.com/maps/search=St.+Lawrence+Market" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Richmond Station — sabores contemporáneos con producto local.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DToronto" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 11 — Explorando Kingston hacia Ottawa</h2>
+<ul>
+<li><strong>Kingston City Hall</strong> — Edificio histórico emblemático del siglo XIX en el centro de la ciudad. 1 hora. <a href="https://www.google.com/search?q=Kingston+City+Hall" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Kingston+City+Hall" target="_blank">📍</a></li>
+<li><strong>St. George’s Cathedral</strong> — Iglesia anglicana con impresionante arquitectura y arte. 1.5 horas. <a href="https://www.google.com/search?q=St.+George’s+Cathedral+Kingston" target="_blank">📖</a> <a href="https://www.google.com/maps/search=St.+George’s+Cathedral+Kingston" target="_blank">📍</a></li>
+<li><strong>Viaje en transporte público de Kingston a Ottawa</strong> — Aprecia el paisaje regional durante el traslado. 3 horas.</li>
+</ul>
+<p>🍽️ <strong>Restaurante en Ottawa:</strong> Beckta Dining & Wine — cocina contemporánea en ambiente elegante.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOttawa" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 12 — Últimos momentos en Ottawa</h2>
+<ul>
+<li><strong>Museo de Bell</strong> — Historia de las telecomunicaciones con colecciones interactivas. 2 horas. <a href="https://www.google.com/search?q=Museo+de+Bell+Ottawa" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Museo+de+Bell+Ottawa" target="_blank">📍</a></li>
+<li><strong>Supreme Court of Canada</strong> — Tour por la corte suprema y sus instalaciones modernas. 1.5 horas. <a href="https://www.google.com/search?q=Supreme+Court+of+Canada" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Supreme+Court+of+Canada" target="_blank">📍</a></li>
+<li><strong>Confederation Park</strong> — Espacio tranquilo para relajarse y reflexionar sobre la historia nacional. 1 hora. <a href="https://www.google.com/search?q=Confederation+Park+Ottawa" target="_blank">📖</a> <a href="https://www.google.com/maps/search=Confederation+Park+Ottawa" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> The Whalesbone Oyster House — mariscos frescos y ambiente único.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DOttawa" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p></div>
+  </div>
+
+  <!-- TAB EXPERIENCIAS -->
+  <div class="tab-panel" id="tab-experiencias">
+    <div class="sec-eye">Imprescindibles</div>
+    <div class="sec-title">Experiencias destacadas</div>
+    <div class="ai-content"><h3>🌟 Visita a la Ciudad Vieja de Quebec</h3>
+<p>Explorar la Ciudad Vieja de Quebec es como retroceder en el tiempo. Sus calles empedradas y arquitectura histórica hacen que cada rincón cuente una historia. Dedica al menos medio día para disfrutar de los cafés, tiendas de artesanías y la impresionante arquitectura. Consejo práctico: lleva calzado cómodo para caminar.</p>
+
+<h3>🌟 Museo Canadiense de Historia</h3>
+<p>Este museo, situado en Gatineau, ofrece una visión fascinante de la historia de Canadá desde sus orígenes hasta el presente. Dedica unas 2-3 horas a explorar sus exposiciones interactivas y aprender sobre la diversidad cultural del país. Consejo práctico: aprovecha las audioguías para una experiencia más enriquecedora.</p>
+
+<h3>🌟 Experiencia Gastronómica en Toronto</h3>
+<p>Toronto es un crisol de culturas, lo que se refleja en su diversa oferta gastronómica. Desde comida callejera hasta restaurantes de alta cocina, dedicar un día a probar platos de diferentes nacionalidades es imprescindible. Consejo práctico: únete a un tour gastronómico para descubrir los mejores lugares.</p>
+
+<h3>🌟 Parque Nacional de Banff</h3>
+<p>Aunque es conocido por su belleza natural, Banff también es un lugar donde la historia se entrelaza con la naturaleza. Considera pasar un día explorando los senderos y aprendiendo sobre la creación del parque. Consejo práctico: visita el Centro de Visitantes para obtener información sobre rutas y guías locales.</p>
+
+<h3>🌟 Exploración de las Primeras Naciones en Ottawa</h3>
+<p>Aprender sobre la historia y cultura de las Primeras Naciones es esencial en Canadá. Visita el Museo de la Civilización para encontrar exposiciones dedicadas a estas culturas únicas. Dedica cerca de 2 horas para una experiencia completa. Consejo práctico: verifica los horarios de las presentaciones culturales en vivo.</p>
+
+<h3>🌟 Festival Internacional de Jazz de Montreal</h3>
+<p>Este festival es uno de los más grandes del mundo y celebra la rica herencia musical de Canadá. Asistir durante su celebración es una experiencia vibrante y única. Dedica un día para disfrutar de conciertos al aire libre y sesiones en locales íntimos. Consejo práctico: compra las entradas con anticipación para los conciertos más populares.</p>
+
+<h3>🌟 Tour en bicicleta por la Isla de Montreal</h3>
+<p>Explorar la Isla de Montreal en bicicleta es una manera activa de conocer su historia. Puedes recorrer el antiguo puerto y el barrio de Le Plateau, viendo murales y disfrutando de la cultura local. Dedica unas 3-4 horas para un recorrido agradable. Consejo práctico: alquila una bicicleta en un puesto local para mayor comodidad.</p>
+
+<h3>🌟 Visita a la Casa de la Cultura de Toronto</h3>
+<p>Este espacio es crucial para entender el arte y la cultura contemporánea de Canadá. Aquí se realizan exposiciones, proyecciones de cine y conciertos. Considera pasar al menos 2 horas explorando sus actividades. Consejo práctico: consulta la agenda para ver si hay eventos especiales durante tu visita.</p></div>
+  </div>
+
+  <!-- TAB TOOLS -->
+  <div class="tab-panel" id="tab-tools">
+    <div class="sec-eye">Herramientas interactivas</div>
+    <div class="sec-title">Para tu viaje</div>
+    <div class="tools-tabs">
+      <button class="ttab active" onclick="switchTool(this,'conv')">💱 Moneda</button>
+      <button class="ttab" onclick="switchTool(this,'trans')">🗣 Frases</button>
+      <button class="ttab" onclick="switchTool(this,'calc')">💶 Presupuesto</button>
+      <button class="ttab" onclick="switchTool(this,'check')">🧳 Equipaje</button>
+    </div>
+    <div class="tools-desktop">
+      <div>
+        <div class="tool-section-title">💱 Conversor de moneda en tiempo real</div>
+        <div class="tool-panel active" id="conv">
+          <div class="conv-box">
+            <select class="conv-select" id="conv-to" onchange="convertCurrency()">
+              <option value="USD">$ Dólar USD</option><option value="GBP">£ Libra</option>
+              <option value="JPY">¥ Yen</option><option value="MXN">$ Peso MX</option>
+              <option value="BRL">R$ Real</option><option value="MAD">MAD Dírham</option>
+              <option value="TRY">₺ Lira turca</option><option value="THB">฿ Baht</option>
+              <option value="IDR">Rp Rupia</option><option value="AED">AED Dírham</option>
+              <option value="SGD">S$ Dólar SG</option><option value="PLN">zł Esloti</option>
+              <option value="CZK">Kč Corona CZ</option><option value="HUF">Ft Forinto</option>
+              <option value="RON">RON Leu</option><option value="DKK">kr Danesa</option>
+              <option value="SEK">kr Sueca</option><option value="NOK">kr Noruega</option>
+              <option value="MYR">RM Ringgit</option><option value="VND">₫ Dong</option>
+              <option value="PHP">₱ Peso filipino</option><option value="KHR">៛ Riel</option>
+              <option value="LKR">Rs Rupia LK</option><option value="NPR">Rs Rupia NP</option>
+              <option value="INR">₹ Rupia india</option><option value="CNY">¥ Yuan</option>
+              <option value="HKD">HK$ Dólar HK</option><option value="KRW">₩ Won</option>
+              <option value="EGP">£ Libra egipcia</option><option value="ZAR">R Rand</option>
+              <option value="AUD">A$ Dólar AU</option><option value="NZD">NZ$ Dólar NZ</option>
+              <option value="CAD">C$ Dólar CA</option><option value="ARS">$ Peso ARG</option>
+              <option value="CLP">$ Peso CL</option><option value="COP">$ Peso COL</option>
+              <option value="PEN">S/ Sol</option><option value="ILS">₪ Shekel</option>
+              <option value="QAR">QAR Riyal</option><option value="JOD">JOD Dinar</option>
+              <option value="ISK">kr Corona ISL</option>
+              <option value="BOB">Bs Boliviano</option><option value="UYU">$ Peso UY</option>
+              <option value="CRC">₡ Colón</option><option value="CUP">$ Peso CU</option>
+              <option value="DOP">RD$ Peso DOM</option><option value="HNL">L Lempira</option>
+              <option value="GTQ">Q Quetzal</option><option value="NIO">C$ Córdoba</option>
+              <option value="PYG">₲ Guaraní</option><option value="VES">Bs Bolívar</option>
+              <option value="BSD">B$ Dólar BS</option><option value="JMD">J$ Dólar JM</option>
+              <option value="BGN">лв Lev</option><option value="RSD">din Dinar serbio</option>
+              <option value="ALL">L Lek</option><option value="BAM">KM Marco BiH</option>
+              <option value="MKD">ден Denar</option><option value="MDL">L Leu moldavo</option>
+              <option value="UAH">₴ Grivna</option><option value="GEL">₾ Lari</option>
+              <option value="AMD">դր Dram</option><option value="AZN">₼ Manat</option>
+              <option value="KZT">₸ Tenge</option><option value="UZS">сўм Som</option>
+              <option value="MNT">₮ Tugrik</option><option value="TWD">NT$ Dólar TW</option>
+              <option value="LAK">₭ Kip</option><option value="MMK">K Kyat</option>
+              <option value="BDT">৳ Taka</option><option value="PKR">₨ Rupia PK</option>
+              <option value="KES">KSh Chelín KE</option><option value="TZS">TSh Chelín TZ</option>
+              <option value="ETB">Br Birr</option><option value="NGN">₦ Naira</option>
+              <option value="GHS">₵ Cedi</option><option value="MZN">MT Metical</option>
+              <option value="NAD">N$ Dólar NA</option><option value="BWP">P Pula</option>
+              <option value="ZMW">ZK Kwacha</option><option value="MUR">₨ Rupia MU</option>
+              <option value="SCR">₨ Rupia SC</option><option value="MGA">Ar Ariary</option>
+              <option value="FJD">FJ$ Dólar FJ</option>
+            </select>
+            <div class="conv-row">
+              <div class="conv-iw"><label>Euros €</label><input class="conv-input" type="number" id="conv-eur" value="100" oninput="convertCurrency()"></div>
+              <div class="conv-arrow">⇄</div>
+              <div class="conv-iw"><label id="conv-to-label">Destino</label><input class="conv-input" type="number" id="conv-foreign" oninput="convertBack()"></div>
+            </div>
+            <div class="conv-result"><div class="conv-amount" id="conv-display">—</div><div class="conv-rate" id="conv-rate">Cargando…</div></div>
+            <div class="conv-note">Tiempo real · open.er-api.com</div>
+          </div>
+        </div>
+        <br>
+        <div class="tool-section-title">🗣 Frases útiles con audio</div>
+        <div class="tool-panel" id="trans">
+          <div class="trans-wrap">
+            <div class="trans-lang"><span>Idioma:</span>
+              <select id="trans-lang-sel" onchange="updatePhrases()">
+                <option value="it">🇮🇹 Italiano</option><option value="fr">🇫🇷 Francés</option>
+                <option value="de">🇩🇪 Alemán</option><option value="pt">🇵🇹 Portugués</option>
+                <option value="ja">🇯🇵 Japonés</option><option value="ar">🇲🇦 Árabe</option>
+                <option value="tr">🇹🇷 Turco</option><option value="th">🇹🇭 Tailandés</option>
+                <option value="zh">🇨🇳 Chino</option><option value="el">🇬🇷 Griego</option>
+                <option value="pl">🇵🇱 Polaco</option><option value="nl">🇳🇱 Neerlandés</option>
+                <option value="ru">🇷🇺 Ruso</option><option value="cs">🇨🇿 Checo</option>
+                <option value="ro">🇷🇴 Rumano</option><option value="hr">🇭🇷 Croata</option>
+                <option value="id">🇮🇩 Indonesio/Malayo</option>
+                <option value="en">🇬🇧 Inglés</option><option value="ko">🇰🇷 Coreano</option>
+                <option value="vi">🇻🇳 Vietnamita</option><option value="hi">🇮🇳 Hindi</option>
+                <option value="he">🇮🇱 Hebreo</option><option value="fi">🇫🇮 Finlandés</option>
+                <option value="sw">🇰🇪 Swahili</option>
+              </select>
+            </div>
+            <div class="trans-list" id="phrases-list"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tool-section-title">💶 Calculadora de presupuesto</div>
+        <div class="tool-panel" id="calc">
+          <div class="calc-box">
+            <div class="calc-row"><label>Días</label><input class="calc-input" type="number" id="c-dias" value="12" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Viajeros</label><input class="calc-input" type="number" id="c-viaj" value="2" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Alojamiento / noche €</label><input class="calc-input" type="number" id="c-aloj" value="80" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Comida / persona / día €</label><input class="calc-input" type="number" id="c-com" value="35" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Transporte total €</label><input class="calc-input" type="number" id="c-transp" value="200" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Actividades total €</label><input class="calc-input" type="number" id="c-act" value="150" oninput="calcBudget()"></div>
+            <div class="calc-result">
+              <div class="calc-result-title">RESUMEN</div>
+              <div class="calc-line"><span>Alojamiento</span><strong id="r-aloj">—</strong></div>
+              <div class="calc-line"><span>Comida</span><strong id="r-com">—</strong></div>
+              <div class="calc-line"><span>Transporte</span><strong id="r-transp">—</strong></div>
+              <div class="calc-line"><span>Actividades</span><strong id="r-act">—</strong></div>
+              <div class="calc-line total"><span>TOTAL</span><strong id="r-total">—</strong></div>
+              <div class="calc-line"><span>Por persona</span><strong id="r-pp">—</strong></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="tool-section-title">🧳 Checklist de equipaje</div>
+        <div class="tool-panel" id="check">
+          <div class="check-progress"><div class="check-bar-wrap"><div class="check-bar" id="check-bar" style="width:0%"></div></div><div class="check-pct" id="check-pct">0%</div></div>
+          <div class="check-cats">
+            <button class="check-cat-btn active" onclick="switchCat(this,'ropa')">👕 Ropa</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'docs')">📄 Docs</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'tech')">📱 Tech</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'salud')">💊 Salud</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'extras')">✨ Extras</button>
+          </div>
+          <div class="checklist" id="checklist-items"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB DESTINO -->
+  <div class="tab-panel" id="tab-destino">
+    <div class="sec-eye">Antes de partir</div>
+    <div class="sec-title">Guía del destino</div>
+    <div class="ai-content"><h2>Clima y mejor época</h2>
+<p>El clima en Este de Canadá varía durante el año. Enero y febrero son meses muy fríos, con temperaturas que oscilan entre -10°C y -20°C. De marzo a mayo, las temperaturas suben gradualmente hasta 10°C-15°C. El verano, de junio a agosto, es templado con temperaturas entre 20°C y 25°C. Septiembre y octubre ofrecen un clima agradable y fresco, ideal para turismo. En noviembre y diciembre vuelven las bajas temperaturas y nevadas en algunas zonas.</p>
+<ul>
+  <li><strong>Ropa recomendada:</strong> Ropa de abrigo para invierno (abrigo, gorro, guantes), ropa ligera y cómoda para verano, además de capas para primavera y otoño.</li>
+  <li><strong>Mejor época para viajar:</strong> De junio a septiembre para disfrutar del clima agradable y actividades al aire libre.</li>
+</ul>
+
+<h2>Moneda y pagos</h2>
+<p>La moneda oficial es el dólar canadiense (CAD). El tipo de cambio aproximado suele estar alrededor de 1 EUR = 1.40 CAD, aunque varía según el mercado.</p>
+<p>Las tarjetas de crédito y débito son ampliamente aceptadas en ciudades y zonas turísticas. Es recomendable llevar algo de efectivo para pequeñas compras o lugares rurales.</p>
+
+<h2>Electricidad y adaptadores</h2>
+<p>El voltaje estándar en Este de Canadá es de 120 V a 60 Hz. Los enchufes son de tipo A y B, con clavijas planas.</p>
+<p>Si viajas desde España o Europa, necesitarás un adaptador para enchufes de tipo A/B y un convertidor de voltaje si tu dispositivo no es compatible con 120 V.</p>
+
+<h2>Idioma y comunicación</h2>
+<p>La región este de Canadá es principalmente bilingüe, con inglés y francés como idiomas oficiales. En Quebec se habla mayoritariamente francés, mientras que en Ontario predomina el inglés.</p>
+<p>La mayoría de personas en áreas turísticas hablan inglés. Para facilitar la comunicación, es útil descargar apps como <a href="https://translate.google.com/" target="_blank">Google Translate</a>, <a href="https://www.tripadvisor.es/mobile" target="_blank">TripAdvisor</a> y aplicaciones locales de transporte o mapas.</p>
+
+<h2>Visado y entrada</h2>
+<p>Para ciudadanos españoles y de la Unión Europea, no se requiere visado para visitas turísticas menores a 6 meses. Sin embargo, es obligatorio obtener una <strong>eTA (Electronic Travel Authorization)</strong> antes de embarcar.</p>
+<p>Se recomienda tener pasaporte con al menos 6 meses de validez desde la fecha de entrada.</p>
+
+<h2>Vacunas y salud</h2>
+<ul>
+  <li>No hay vacunas obligatorias para viajeros procedentes de España o Europa.</li>
+  <li>Se recomienda estar al día con vacunas habituales como tétanos, tosferina y gripe.</li>
+  <li>El agua del grifo es potable en todo el este de Canadá.</li>
+  <li>Es aconsejable contratar un seguro médico internacional que cubra atención sanitaria y accidentes.</li>
+</ul>
+
+<h2>Seguridad</h2>
+<p>El este de Canadá es una región segura para turistas, con bajos índices de criminalidad. Sin embargo, se recomienda precaución en áreas urbanas por la noche y evitar zonas aisladas o mal iluminadas.</p>
+<ul>
+  <li>Zonas como ciertos barrios alejados en grandes ciudades pueden ser menos seguras.</li>
+  <li>Guarda tus pertenencias y evita mostrar objetos de valor en público.</li>
+  <li>En caso de emergencia, llama al 911.</li>
+</ul>
+
+<h2>Costumbres y etiqueta</h2>
+<p>Los canadienses valoran la cortesía y el respeto. Saluda con un apretón de manos y evita temas polémicos como política o religión.</p>
+<ul>
+  <li><strong>Propinas:</strong> Se deja entre 15-20% en restaurantes si el servicio no está incluido.</li>
+  <li><strong>Vestimenta:</strong> Casual pero ordenada en ciudades; para templos y sitios religiosos se recomienda ropa recatada y respetuosa.</li>
+</ul>
+
+<h2>Apps imprescindibles</h2>
+<ul>
+  <li><a href="https://www.translink.ca" target="_blank">TransLink</a> (transporte público en ciudades como Vancouver y Toronto)</li>
+  <li><a href="https://maps.google.com" target="_blank">Google Maps</a> (mapas y navegación)</li>
+  <li><a href="https://translate.google.com/" target="_blank">Google Translate</a> (traducción inmediata)</li>
+  <li><a href="https://www.abbypay.com/" target="_blank">AbbyPay</a> o aplicaciones de pago móvil locales (para pagos fáciles y sin tarjeta física)</li>
+</ul></div>
+  </div>
+
+  <!-- TAB TRANSPORTE -->
+  <div class="tab-panel" id="tab-transporte">
+    <div class="sec-eye">Moverse por Este canada</div>
+    <div class="sec-title">Transporte</div>
+    <div style="text-align:center;margin-bottom:14px">
+  <a href="https://www.tkqlhce.com/click-101767868-17122673" target="_blank">
+    <img src="https://www.tqlkg.com/image-101767868-17122673" alt="Alquiler de coche" style="max-width:100%;height:auto;border-radius:var(--r)">
+  </a>
+</div>
+    <div class="ai-content" style="margin-top:12px"><h2>Cómo llegar desde España</h2>
+<p>Desde España, existen vuelos directos hacia Este de Canadá principalmente a través de dos aeropuertos internacionales:</p>
+<ul>
+  <li><strong>Aeropuerto Internacional de Montreal-Trudeau (YUL)</strong>: Principal puerta aérea de Quebec. Tiempo aproximado de vuelo directo desde Madrid o Barcelona: 7 a 8 horas.</li>
+  <li><strong>Aeropuerto Internacional Toronto Pearson (YYZ)</strong>: Aunque está más al oeste, es una opción por su conectividad con vuelos directos desde España (7 a 8 horas). Desde Toronto, se accede fácilmente a Este de Canadá por tren o vuelos internos.</li>
+</ul>
+<p>Empresas aéreas como Air Canada, Iberia y Air Transat ofrecen vuelos directos o con escalas mínimas.</p>
+
+<h2>Transporte desde el aeropuerto</h2>
+<p><strong>Desde Aeropuerto de Montreal-Trudeau (YUL):</strong></p>
+<ul>
+  <li><strong>Autobús 747 EXPRESS:</strong> Servicio rápido que conecta el aeropuerto con el centro de Montreal. Precio aproximado: 10 CAD. Tiempo: 45 minutos.</li>
+  <li><strong>Taxi:</strong> Tarifa fija hacia el centro de Montreal: 41 CAD. Tiempo: 20 a 30 minutos dependiendo del tráfico.</li>
+  <li><strong>Servicios de coche privado o shuttles:</strong> Disponibles bajo reserva, precios desde 50 CAD.</li>
+</ul>
+
+<p><strong>Desde Aeropuerto Toronto Pearson (YYZ):</strong></p>
+<ul>
+  <li><strong>UP Express:</strong> Tren rápido hasta la estación Union en Toronto. Precio: 12.35 CAD. Tiempo: 25 minutos.</li>
+  <li><strong>Taxi:</strong> Desde 60 CAD dependiendo del destino en el área metropolitana. Tiempo variable.</li>
+  <li><strong>Autobuses públicos y shuttles:</strong> Opciones variadas con precios más económicos pero mayor tiempo de viaje.</li>
+</ul>
+
+<h2>Moverse por el destino</h2>
+<p>El transporte público en este Canadá es muy eficiente y recomendado para viajeros:</p>
+<ul>
+  <li><strong>Metro en Montreal:</strong> Cuenta con 4 líneas que cubren gran parte de la ciudad. Precio de billete sencillo: 3.50 CAD.</li>
+  <li><strong>Autobuses urbanos:</strong> Gestionados por STM (Société de transport de Montréal). Precio sencillo: 3.50 CAD, billetes diarios y semanales disponibles.</li>
+  <li><strong>Trenes urbanos:</strong> Existen servicios de trenes de cercanías para conectar Montreal con ciudades cercanas, operados por Exo. Precio variable según distancia, desde 4 CAD.</li>
+  <li><strong>Toronto:</strong> Cuenta con TTC que ofrece metro y autobuses. Billete sencillo: 3.35 CAD. Puedes consultar tarifas y rutas en la web oficial.</li>
+</ul>
+<p>Más información y compra de billetes:</p>
+<ul>
+  <li><a href="http://www.stm.info" target="_blank">STM Montreal</a></li>
+  <li><a href="https://www.ttc.ca" target="_blank">TTC Toronto</a></li>
+  <li><a href="https://exo.quebec" target="_blank">Exo trenes de cercanías</a></li>
+</ul>
+
+<h2>Alquiler de coche</h2>
+<p>El alquiler de coche puede ser útil para explorar áreas rurales o parques naturales del Este canadiense. Sin embargo, para moverse dentro de las ciudades y para viajeros que prefieren transporte público, no es estrictamente necesario.</p>
+<p>Empresas populares con buena presencia incluyen:</p>
+<ul>
+  <li>Enterprise Rent-A-Car</li>
+  <li>Hertz</li>
+  <li>Avis</li>
+</ul>
+<p>Precio medio diario: Entre 40 y 70 CAD dependiendo de la temporada y tipo de vehículo.</p>
+<p>Se recomienda portar <strong>permiso de conducir internacional</strong> además del español para evitar problemas.</p>
+
+<h2>Taxis y apps de movilidad</h2>
+<p>En grandes ciudades como Montreal y Toronto, funcionan las siguientes opciones:</p>
+<ul>
+  <li><strong>Uber:</strong> Disponible en Toronto y Montreal. Precio orientativo mínimo de viaje: 8-10 CAD, variable según distancia.</li>
+  <li><strong>Bolt:</strong> Disponible en Montreal con precios similares a Uber.</li>
+  <li><strong>Taxis tradicionales:</strong> Paradas en calles principales y aeropuertos. Tarifa aproximada de inicio: 3.50 CAD, más 1.75 CAD por km.</li>
+</ul>
+<p>Recomendamos descargar las apps oficiales para consultar precios en tiempo real.</p>
+
+<h2>Consejos de conducción</h2>
+<ul>
+  <li>Se conduce por la derecha.</li>
+  <li>Límites de velocidad: Generalmente 50 km/h en zonas urbanas, 90-100 km/h en carreteras provinciales.</li>
+  <li>Uso obligatorio del cinturón de seguridad para todos los ocupantes.</li>
+  <li>Permiso de conducir internacional recomendado.</li>
+  <li>Peajes: Algunas autopistas tienen peajes electrónicos (sin cabinas). Los vehículos de alquiler suelen incluir el sistema allí donde es obligatorio.</li>
+  <li>Aparcamiento: En centros urbanos suele ser caro y limitado. Revisar señales para zonas de pago o tiempo limitado.</li>
+</ul>
+
+<h2>Transporte entre ciudades</h2>
+<p>Entre las principales ciudades del Este canadiense puede utilizarse:</p>
+<ul>
+  <li><strong>Trenes:</strong> Operados por VIA Rail Canada, con servicios que conectan Montreal, Ottawa, Quebec y Toronto. Precios desde 30 CAD según ruta y anticipación. Más info en <a href="https://www.viarail.ca" target="_blank">Via Rail</a>.</li>
+  <li><strong>Autobuses interurbanos:</strong> Empresas como Greyhound y Orléans Express (más común en Quebec) operan rutas regulares. Precio aproximado entre ciudades: 20-50 CAD.</li>
+  <li><strong>Vuelos internos:</strong> Air Canada y Porter Airlines ofrecen vuelos rápidos entre ciudades importantes. Precios variables, suelen ser más caros que tren o bus.</li>
+</ul></div>
+  </div>
+
+  <!-- TAB RECURSOS -->
+  <div class="tab-panel" id="tab-recursos">
+    <div class="sec-eye">Recursos online</div>
+    <div class="sec-title">Blogs y enlaces útiles</div>
+    <div class="ai-content"><html>
+  <h2>Web oficial de turismo</h2>
+  <p><a href="https://travel.gc.ca/canadian-tourism">Gobierno de Canadá - Turismo en Canadá</a></p>
+
+  <h2>Blogs de viaje en español</h2>
+  <p><a href="https://www.losviajeros.com/Blogs.php?b=15375">3.000 km por el este de Canadá - Los Viajeros</a></p>
+  <p><a href="https://mevoyacanada.org/">MeVoyACanada.org</a></p>
+
+  <h2>Foros y comunidades</h2>
+  <p><a href="https://www.tripadvisor.es/ShowForum-g153339-i49-Canada.html">TripAdvisor - Foro de Canadá</a></p>
+  <p><a href="https://www.reddit.com/r/Canada/">Reddit - r/Canada</a></p>
+
+  <h2>Canales de YouTube</h2>
+  <p><a href="https://www.youtube.com/watch?v=abc123">Viaje al Este de Canadá - Canal de Viajes</a></p>
+  <p><a href="https://www.youtube.com/watch?v=def456">Explorando Toronto y Montreal - Viajero Anónimo</a></p>
+
+  <h2>Recursos para rutas</h2>
+  <p><a href="https://www.wikiloc.com/trails/canada/este-canada">Wikiloc - Rutas en el Este de Canadá</a></p>
+  <p><a href="https://www.alltrails.com/es/us/canada/ontario/toronto">AllTrails - Senderismo en Toronto</a></p>
+  <p><a href="https://www.google.com/maps/d/u/0/viewer?mid=1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3k4l5m0n1o2p3q4r5s6t7u8 </div>
+  </div>
+
+  <!-- TAB CULTURA -->
+  <div class="tab-panel" id="tab-cultura">
+    <div class="sec-eye">Prepara el viaje</div>
+    <div class="sec-title">Cultura · Cine · Libros · Música</div>
+    <div class="ai-content"><h3>📚 "The Outlander" – Gil Adamson</h3>
+<p><strong>Por qué leerlo:</strong> Esta novela histórica está ambientada en el este de Canadá a principios del siglo XX y ofrece una mirada profunda a la naturaleza salvaje y la historia de la región. Es ideal para sumergirse en la atmósfera de la zona y comprender la conexión de sus habitantes con el entorno natural.</p>
+
+<h3>📚 "The Lonely Planet Canada East" – Lonely Planet</h3>
+<p><strong>Por qué leerlo:</strong> Esta guía es perfecta para planificar un viaje detallado por el este de Canadá, incluyendo Quebec, Nueva Escocia y Terranova. Proporciona información práctica sobre alojamiento, gastronomía y atracciones culturales, perfecta para viajeros que buscan una experiencia completa.</p>
+
+<h3>📚 "Two Solitudes" – Hugh MacLennan</h3>
+<p><strong>Por qué leerlo:</strong> Un clásico de la literatura canadiense que explora las tensiones culturales entre las comunidades anglófona y francófona en Quebec. Ideal para entender el trasfondo sociocultural y las complejidades históricas del este canadiense.</p>
+
+<h3>📚 "A Traveller's History of Quebec" – William Hoch</h3>
+<p><strong>Por qué leerlo:</strong> Ensayo que ofrece un recorrido histórico y cultural por Quebec, una de las joyas del este canadiense. Es de gran ayuda para quienes desean profundizar en la historia local y comprender mejor el contexto de sus monumentos y ciudades.</p>
+
+<h3>📚 "Coastal Lives: Newfoundland and Labrador" – Jean Graham</h3>
+<p><strong>Por qué leerlo:</strong> Libro que mezcla relatos de viajes y ensayos culturales sobre la vida en la costa este de Canadá. Es excelente para conocer la identidad única de esta región y encontrar inspiración para un viaje que vaya más allá de lo turístico.</p></div>
+  </div>
+
+  <!-- TAB CURIOSIDADES -->
+  <div class="tab-panel" id="tab-curiosidades">
+    <div class="sec-eye">¿Sabías que…?</div>
+    <div class="sec-title">Curiosidades de Este canada</div>
+    <div class="ai-content"><h3>💡 Planifica tu presupuesto para museos y sitios históricos</h3>
+<p>En el Este de Canadá, muchos museos y sitios históricos cobran entrada. Investiga si ofrecen pases combinados o días con entrada gratuita para ahorrar. Esto te permitirá visitar más lugares sin sobrepasar tu presupuesto.</p>
+
+<h3>💡 Lleva equipo adecuado para fotografía en climas variables</h3>
+<p>El clima en el Este de Canadá puede cambiar rápidamente, especialmente cerca de la costa. Usa una cámara o móvil con buena resistencia al agua y protege tu equipo con fundas impermeables para capturar momentos sin preocupación.</p>
+
+<h3>💡 Prueba la gastronomía local en mercados y bistrós tradicionales</h3>
+<p>No te pierdas platos emblemáticos como la poutine en Quebec o el jarabe de arce en postres locales. Comer en mercados o bistrós familiares suele ser más barato y auténtico que en restaurantes turísticos.</p>
+
+<h3>💡 Aprende sobre la historia local para enriquecer tus visitas</h3>
+<p>Antes de visitar sitios históricos, investiga la historia de la región, como la influencia francesa y británica, y la cultura indígena. Esto te ayudará a entender mejor las exposiciones y disfrutar más profundamente tu experiencia.</p>
+
+<h3>💡 Viaja en temporada baja para evitar multitudes y precios altos</h3>
+<p>El verano es la temporada alta y puede ser costosa y concurrida. Opta por viajar en primavera u otoño para disfrutar de eventos culturales y paisajes vibrantes, con menos turistas y mejores tarifas en alojamiento.</p>
+
+<h3>💡 Respeta las costumbres locales en cuanto a propinas</h3>
+<p>En Canadá es común dejar una propina del 15-20% en restaurantes y taxis. Preparar efectivo para propinas facilitará tus pagos y mostrará respeto por el buen servicio recibido.</p>
+
+<h3>💡 Evita errores al usar transporte público y tours guiados</h3>
+<p>El Este canadiense tiene un buen sistema de transporte, pero en zonas rurales o históricas puede ser limitado. Reserva tours con anticipación y verifica los horarios para maximizar tu tiempo y no perder experiencias clave.</p>
+
+<h3>💡 No esperes poder regatear precios en tiendas y restaurantes</h3>
+<p>En Canadá, el regateo no es una práctica común, especialmente en establecimientos culturales o turísticos. Los precios suelen ser fijos, así que planifica tu presupuesto sin contar con descuentos negociables.</p>
+
+<h3>💡 Lleva ropa cómoda y adecuada para caminatas culturales</h3>
+<p>Muchos sitios históricos se recorren a pie o en recorridos guiados. Usa calzado cómodo y ropa casual que se adapte a cambios de clima para que puedas explorar sin molestias y aprovechar al máximo cada lugar.</p>
+
+<h3>💡 Descarga aplicaciones culturales y mapas offline</h3>
+<p>En algunas áreas del Este canadiense la señal puede ser débil. Descarga con anticipación guías, audiotours y mapas offline para no perder detalles culturales y orientarte fácilmente durante tus paseos históricos.</p></div>
+  </div>
+
+  <!-- TAB DOCUMENTOS -->
+  <div class="tab-panel" id="tab-docs">
+    <div class="sec-eye">Tus documentos</div>
+    <div class="sec-title">Documentos del viaje</div>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:14px">Guarda aquí tu seguro, tarjetas de embarque, pasaporte o cualquier documento que necesites tener a mano durante el viaje.</p>
+    <div class="docs-upload-area" onclick="document.getElementById('doc-input').click()">
+      <div class="docs-upload-icon">📎</div>
+      <div class="docs-upload-text"><strong>Añadir documento</strong>PDF, imagen, tarjeta de embarque…</div>
+    </div>
+    <input type="file" id="doc-input" accept=".pdf,.jpg,.jpeg,.png,.gif,.webp" multiple onchange="handleDocUpload(event)">
+    <div class="docs-list" id="docs-list"></div>
+  </div>
+
+  <!-- TAB NOTAS -->
+  <div class="tab-panel" id="tab-notas">
+    <div class="sec-eye">Para ti</div>
+    <div class="sec-title">Notas del viajero</div>
+    <div class="note-area">
+      <div class="note-line" contenteditable="true" spellcheck="false">Escribe aquí tus notas…</div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ MODAL GUARDAR ══ -->
+<div class="save-modal" id="save-modal" onclick="closeSaveModal(event)">
+  <div class="save-sheet">
+    <h3>Guardar guía</h3>
+    <p>Elige cómo quieres guardar tu guía de Este canada.</p>
+
+    <!-- Opción Android: botón directo si hay prompt disponible -->
+    <div class="save-option" id="opt-android" style="display:none" onclick="installAndroid()">
+      <div class="save-option-icon">🤖</div>
+      <div class="save-option-text"><strong>Añadir a pantalla de inicio</strong><span>Android · Se abrirá el diálogo de instalación</span></div>
+    </div>
+
+    <!-- Opción iOS: instrucción visual animada -->
+    <div class="save-option" id="opt-ios" style="display:none" onclick="showIOSGuide()">
+      <div class="save-option-icon">🍎</div>
+      <div class="save-option-text"><strong>Añadir a pantalla de inicio</strong><span>iOS · Toca para ver cómo hacerlo en 2 pasos</span></div>
+    </div>
+
+    <div class="save-option" onclick="downloadGuide()">
+      <div class="save-option-icon">⬇️</div>
+      <div class="save-option-text"><strong>Descargar archivo HTML</strong><span>Guárdalo y ábrelo sin internet</span></div>
+    </div>
+    <div class="save-option" onclick="copyLink();closeSaveModal()">
+      <div class="save-option-icon">🔗</div>
+      <div class="save-option-text"><strong>Copiar enlace</strong><span>Comparte o guarda la URL de esta guía</span></div>
+    </div>
+    <button class="save-close" onclick="closeSaveModal()">Cerrar</button>
+  </div>
+</div>
+
+<!-- ══ GUÍA iOS ══ -->
+<div class="save-modal" id="ios-modal" onclick="document.getElementById('ios-modal').classList.remove('open')">
+  <div class="save-sheet">
+    <h3>Añadir a pantalla de inicio</h3>
+    <p style="margin-bottom:18px">Sigue estos 2 pasos en Safari:</p>
+    <div style="background:var(--sand);border-radius:var(--r);padding:16px;margin-bottom:12px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">1️⃣</div>
+      <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">Toca el botón Compartir</div>
+      <div style="font-size:13px;color:var(--mid)">El icono <strong>□↑</strong> de la barra inferior de Safari</div>
+      <div style="font-size:36px;margin-top:10px;animation:bounce .8s infinite alternate">□↑</div>
+    </div>
+    <div style="background:var(--sand);border-radius:var(--r);padding:16px;margin-bottom:16px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">2️⃣</div>
+      <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">Toca "Añadir a pantalla de inicio"</div>
+      <div style="font-size:13px;color:var(--mid)">Desplázate en el menú hasta encontrar esta opción</div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px">
+        <span style="font-size:20px">➕</span>
+        <span style="font-size:13px;font-weight:500;color:var(--ink)">Añadir a pantalla de inicio</span>
+      </div>
+    </div>
+    <button class="save-close" onclick="document.getElementById('ios-modal').classList.remove('open')">Entendido</button>
+  </div>
+</div>
+<style>
+@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+</style>
+<div style="position:fixed;bottom:20px;right:16px;z-index:500;display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+  <button onclick="shareWpp()" style="background:#25D366;color:#fff;border:none;border-radius:50%;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+  <button onclick="openSaveModal()" style="background:var(--gold);color:var(--ink);border:none;border-radius:50%;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);font-size:19px">⬇</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ── DETECCIÓN AUTOMÁTICA DE MONEDA E IDIOMA SEGÚN DESTINO ──
+const DESTINO_RAW = "Este canada";
+function normalizeTxt(s){return (s||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();}
+function matchDestino(map){
+  const d=normalizeTxt(DESTINO_RAW);if(!d)return null;
+  for(const entry of map){for(const k of entry.keys){if(d.includes(k)||k.includes(d))return entry;}}
+  return null;
+}
+const CURRENCY_MAP=[
+  {keys:['estados unidos','eeuu','usa'],code:'USD'},{keys:['ecuador'],code:'USD'},{keys:['panama'],code:'USD'},
+  {keys:['reino unido','inglaterra','escocia','gales','londres'],code:'GBP'},
+  {keys:['japon','tokio','osaka','kioto'],code:'JPY'},
+  {keys:['mexico','cancun'],code:'MXN'},
+  {keys:['brasil','rio de janeiro','sao paulo'],code:'BRL'},
+  {keys:['marruecos','marrakech','rabat','fez'],code:'MAD'},
+  {keys:['turquia','istambul','estambul','capadocia'],code:'TRY'},
+  {keys:['tailandia','bangkok','phuket','chiang mai'],code:'THB'},
+  {keys:['indonesia','bali','yakarta'],code:'IDR'},
+  {keys:['emiratos','dubai','abu dabi'],code:'AED'},
+  {keys:['singapur'],code:'SGD'},
+  {keys:['polonia','varsovia','cracovia'],code:'PLN'},
+  {keys:['republica checa','chequia','praga'],code:'CZK'},
+  {keys:['hungria','budapest'],code:'HUF'},
+  {keys:['rumania','bucarest'],code:'RON'},
+  {keys:['dinamarca','copenhague'],code:'DKK'},
+  {keys:['suecia','estocolmo'],code:'SEK'},
+  {keys:['noruega','oslo'],code:'NOK'},
+  {keys:['malasia','kuala lumpur','penang','langkawi'],code:'MYR'},
+  {keys:['vietnam','hanoi'],code:'VND'},
+  {keys:['filipinas','manila'],code:'PHP'},
+  {keys:['camboya','siem reap','angkor'],code:'KHR'},
+  {keys:['sri lanka','colombo'],code:'LKR'},
+  {keys:['nepal','katmandu'],code:'NPR'},
+  {keys:['india','delhi','mumbai','goa'],code:'INR'},
+  {keys:['china','pekin','shanghai'],code:'CNY'},
+  {keys:['hong kong'],code:'HKD'},
+  {keys:['corea del sur','seul'],code:'KRW'},
+  {keys:['egipto','el cairo','luxor'],code:'EGP'},
+  {keys:['sudafrica','ciudad del cabo','johannesburgo'],code:'ZAR'},
+  {keys:['australia','sidney','sydney','melbourne'],code:'AUD'},
+  {keys:['nueva zelanda','auckland'],code:'NZD'},
+  {keys:['canada','toronto','vancouver'],code:'CAD'},
+  {keys:['argentina','buenos aires'],code:'ARS'},
+  {keys:['chile','santiago de chile'],code:'CLP'},
+  {keys:['colombia','bogota','cartagena'],code:'COP'},
+  {keys:['peru','lima','cusco','machu picchu'],code:'PEN'},
+  {keys:['israel','tel aviv','jerusalen'],code:'ILS'},
+  {keys:['catar','doha'],code:'QAR'},
+  {keys:['jordania','aman','petra'],code:'JOD'},
+  {keys:['islandia','reikiavik'],code:'ISK'},
+  {keys:['bolivia'],code:'BOB'},{keys:['uruguay'],code:'UYU'},{keys:['costa rica'],code:'CRC'},
+  {keys:['cuba'],code:'CUP'},{keys:['republica dominicana','punta cana'],code:'DOP'},
+  {keys:['honduras'],code:'HNL'},{keys:['guatemala'],code:'GTQ'},{keys:['nicaragua'],code:'NIO'},
+  {keys:['paraguay'],code:'PYG'},{keys:['venezuela'],code:'VES'},{keys:['bahamas'],code:'BSD'},
+  {keys:['jamaica'],code:'JMD'},{keys:['bulgaria'],code:'BGN'},{keys:['serbia','belgrado'],code:'RSD'},
+  {keys:['albania'],code:'ALL'},{keys:['bosnia','sarajevo'],code:'BAM'},
+  {keys:['macedonia del norte'],code:'MKD'},{keys:['moldavia'],code:'MDL'},
+  {keys:['ucrania','kiev'],code:'UAH'},{keys:['georgia','tiflis','tbilisi'],code:'GEL'},
+  {keys:['armenia','erevan'],code:'AMD'},{keys:['azerbaiyan','baku'],code:'AZN'},
+  {keys:['kazajistan','almaty'],code:'KZT'},{keys:['uzbekistan','samarcanda'],code:'UZS'},
+  {keys:['mongolia'],code:'MNT'},{keys:['taiwan','taipei'],code:'TWD'},
+  {keys:['laos'],code:'LAK'},{keys:['myanmar','birmania'],code:'MMK'},
+  {keys:['bangladesh'],code:'BDT'},{keys:['pakistan'],code:'PKR'},
+  {keys:['kenia','nairobi'],code:'KES'},{keys:['tanzania','zanzibar','serengeti'],code:'TZS'},
+  {keys:['etiopia'],code:'ETB'},{keys:['nigeria'],code:'NGN'},{keys:['ghana'],code:'GHS'},
+  {keys:['mozambique'],code:'MZN'},{keys:['namibia'],code:'NAD'},{keys:['botsuana'],code:'BWP'},
+  {keys:['zambia'],code:'ZMW'},{keys:['mauricio'],code:'MUR'},{keys:['seychelles'],code:'SCR'},
+  {keys:['madagascar'],code:'MGA'},{keys:['fiyi'],code:'FJD'}
+];
+const LANGUAGE_MAP=[
+  {keys:['italia','roma','milan','venecia','florencia','napoles'],lang:'it'},
+  {keys:['francia','paris','niza','lyon'],lang:'fr'},
+  {keys:['alemania','berlin','munich','frankfurt'],lang:'de'},{keys:['austria','viena'],lang:'de'},
+  {keys:['portugal','lisboa','oporto'],lang:'pt'},{keys:['brasil','rio de janeiro','sao paulo'],lang:'pt'},
+  {keys:['japon','tokio','osaka','kioto'],lang:'ja'},
+  {keys:['marruecos','marrakech','rabat','fez'],lang:'ar'},{keys:['emiratos','dubai','abu dabi'],lang:'ar'},
+  {keys:['egipto','el cairo','luxor'],lang:'ar'},{keys:['jordania','aman','petra'],lang:'ar'},{keys:['catar','doha'],lang:'ar'},
+  {keys:['turquia','istambul','estambul','capadocia'],lang:'tr'},
+  {keys:['tailandia','bangkok','phuket','chiang mai'],lang:'th'},
+  {keys:['china','pekin','shanghai','hong kong'],lang:'zh'},
+  {keys:['grecia','atenas','santorini','creta'],lang:'el'},
+  {keys:['polonia','varsovia','cracovia'],lang:'pl'},
+  {keys:['paises bajos','holanda','amsterdam','belgica','bruselas'],lang:'nl'},
+  {keys:['rusia','moscu','san petersburgo'],lang:'ru'},
+  {keys:['republica checa','chequia','praga'],lang:'cs'},
+  {keys:['rumania','bucarest'],lang:'ro'},
+  {keys:['croacia','zagreb','dubrovnik','split'],lang:'hr'},
+  {keys:['malasia','kuala lumpur','penang','langkawi','indonesia','bali','yakarta'],lang:'id'},
+  {keys:['reino unido','inglaterra','escocia','gales','londres','estados unidos','eeuu','usa','nueva york','miami','las vegas','los angeles','australia','sidney','sydney','melbourne','nueva zelanda','auckland','canada','toronto','vancouver','irlanda','dublin','sudafrica','ciudad del cabo','johannesburgo','singapur','filipinas','manila'],lang:'en'},
+  {keys:['corea del sur','seul'],lang:'ko'},
+  {keys:['vietnam','hanoi','ho chi minh','saigon'],lang:'vi'},
+  {keys:['india','delhi','mumbai','goa'],lang:'hi'},
+  {keys:['israel','tel aviv','jerusalen'],lang:'he'},
+  {keys:['finlandia','helsinki'],lang:'fi'},
+  {keys:['kenia','nairobi','tanzania','zanzibar','serengeti'],lang:'sw'}
+];
+function detectCurrency(){
+  const m=matchDestino(CURRENCY_MAP);if(!m)return;
+  const sel=document.getElementById('conv-to');
+  if([...sel.options].some(o=>o.value===m.code))sel.value=m.code;
+}
+function detectLanguage(){
+  const m=matchDestino(LANGUAGE_MAP);if(!m)return;
+  const sel=document.getElementById('trans-lang-sel');
+  if([...sel.options].some(o=>o.value===m.lang))sel.value=m.lang;
+}
+
+// ── TABS ──
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  document.getElementById('tabs-content').scrollTop=0;
+  btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  const scroll=document.getElementById('tabs-scroll');
+  const fade=document.querySelector('.tabs-fade');
+  if(fade)fade.style.display=scroll.scrollLeft+scroll.clientWidth>=scroll.scrollWidth-10?'none':'flex';
+}
+document.getElementById('tabs-scroll').addEventListener('scroll',function(){
+  const fade=document.querySelector('.tabs-fade');
+  if(fade)fade.style.display=this.scrollLeft+this.clientWidth>=this.scrollWidth-10?'none':'flex';
+});
+
+// ── TOAST ──
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
+
+// ── COMPARTIR ──
+function shareWpp(){
+  const t=encodeURIComponent('¡Mira mi guía de viaje para Este canada! 🌍✈️\nGenerada por GuiaMundi.es\n\n'+window.location.href);
+  window.open('https://wa.me/?text='+t,'_blank');
+}
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('✓ Enlace copiado')).catch(()=>showToast('Copia la URL del navegador'))}
+
+// ── SERVICE WORKER (necesario para installPrompt en Android) ──
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/guias/sw.js').catch(()=>{});
+}
+
+// ── MODAL GUARDAR ──
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  document.getElementById('opt-android').style.display='flex';
+});
+
+function openSaveModal(){
+  const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(isIOS)document.getElementById('opt-ios').style.display='flex';
+  document.getElementById('save-modal').classList.add('open');
+}
+function closeSaveModal(e){
+  if(!e||e.target===document.getElementById('save-modal'))
+    document.getElementById('save-modal').classList.remove('open');
+}
+function installAndroid(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(r=>{
+      if(r.outcome==='accepted')showToast('✓ Añadida a pantalla de inicio');
+      deferredPrompt=null;
+    });
+  }
+  document.getElementById('save-modal').classList.remove('open');
+}
+function showIOSGuide(){
+  document.getElementById('save-modal').classList.remove('open');
+  setTimeout(()=>document.getElementById('ios-modal').classList.add('open'),200);
+}
+function downloadGuide(){
+  try{
+    const blob=new Blob([document.documentElement.outerHTML],{type:'text/html;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+    a.download='guia-Este canada-12dias.html';a.click();
+    URL.revokeObjectURL(a.href);showToast('✓ Guía descargada');
+  }catch(e){showToast('Usa el menú del navegador para guardar')}
+  document.getElementById('save-modal').classList.remove('open');
+}
+
+// ── BLOQUES DE DÍA CON NOTAS Y MAPA ──
+function buildDayBlocks(){
+  const container=document.getElementById('itinerario-content');
+  if(!container)return;
+  const raw=container.innerHTML;
+  const parts=raw.split(/(?=<h2[\s>])/i);
+  let html='';
+  parts.forEach((part,i)=>{
+    if(!part.trim())return;
+    const isDay=/^<h2/i.test(part.trim());
+    if(!isDay){html+=part;return;}
+    const titleMatch=part.match(/<h2[^>]*>(.*?)<\/h2>/i);
+    const titleRaw=titleMatch?titleMatch[1]:'Día '+(i);
+    const body=part.replace(/<h2[^>]*>.*?<\/h2>/i,'').trim();
+    html+=`<div class="day-block">
+      <div class="day-block-header" onclick="toggleDay(this)">
+        <span>${titleRaw}</span><span class="day-toggle">⌄</span>
+      </div>
+      <div class="day-block-body">
+        <div class="ai-content">${body}</div>
+        <div class="day-note-wrap">
+          <div class="day-note-label">📝 Mis notas para este día</div>
+          <textarea class="day-note" placeholder="Añade aquí reservas, horarios o cualquier detalle personal…"></textarea>
+        </div>
+      </div>
+    </div>`;
+  });
+  container.innerHTML=html;
+  const first=container.querySelector('.day-block');
+  if(first)first.classList.add('open');
+}
+function toggleDay(header){header.closest('.day-block').classList.toggle('open')}
+document.addEventListener('DOMContentLoaded',buildDayBlocks);
+
+// ── DOCUMENTOS (persistentes con IndexedDB, sin límite de tamaño) ──
+const DOCS_DB='guiamundi_docs',DOCS_STORE='files';
+const guideKey=window.location.pathname;
+let uploadedDocs=[];
+
+function openDocsDB(){
+  return new Promise((resolve,reject)=>{
+    const req=indexedDB.open(DOCS_DB,1);
+    req.onupgradeneeded=e=>{
+      const db=e.target.result;
+      if(!db.objectStoreNames.contains(DOCS_STORE)){
+        const store=db.createObjectStore(DOCS_STORE,{keyPath:'id'});
+        store.createIndex('guideKey','guideKey',{unique:false});
+      }
+    };
+    req.onsuccess=e=>resolve(e.target.result);
+    req.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbSaveDoc(doc){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readwrite');
+    tx.objectStore(DOCS_STORE).put(doc);
+    tx.oncomplete=()=>resolve();tx.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbDeleteDoc(id){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readwrite');
+    tx.objectStore(DOCS_STORE).delete(id);
+    tx.oncomplete=()=>resolve();tx.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbLoadDocs(){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readonly');
+    const req=tx.objectStore(DOCS_STORE).index('guideKey').getAll(guideKey);
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=e=>reject(e.target.error);
+  });
+}
+function handleDocUpload(e){
+  Array.from(e.target.files).forEach(async file=>{
+    const doc={id:Date.now()+Math.random(),guideKey,name:file.name,size:formatSize(file.size),type:file.type,blob:file};
+    try{await dbSaveDoc(doc);uploadedDocs.push(doc);renderDocs();}
+    catch(err){showToast('No se pudo guardar el documento')}
+  });
+  e.target.value='';
+}
+function formatSize(b){if(b<1024)return b+'B';if(b<1048576)return(b/1024).toFixed(1)+'KB';return(b/1048576).toFixed(1)+'MB'}
+function getDocIcon(type){if(type==='application/pdf')return '📄';if(type.startsWith('image/'))return '🖼️';return '📎'}
+function renderDocs(){
+  const list=document.getElementById('docs-list');
+  if(!uploadedDocs.length){list.innerHTML='';return;}
+  list.innerHTML=uploadedDocs.map(doc=>`
+    <div class="doc-item">
+      <div class="doc-icon">${getDocIcon(doc.type)}</div>
+      <div class="doc-info"><div class="doc-name">${doc.name}</div><div class="doc-size">${doc.size}</div></div>
+      <button class="doc-open" onclick="openDoc('${doc.id}')">Abrir</button>
+      <button class="doc-del" onclick="deleteDoc('${doc.id}')">✕</button>
+    </div>`).join('');
+}
+function openDoc(id){
+  const doc=uploadedDocs.find(d=>d.id==id);
+  if(!doc)return;
+  const url=URL.createObjectURL(doc.blob);
+  window.open(url,'_blank');
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+async function deleteDoc(id){
+  await dbDeleteDoc(parseFloat(id));
+  uploadedDocs=uploadedDocs.filter(d=>d.id!=id);
+  renderDocs();
+}
+(async()=>{try{uploadedDocs=await dbLoadDocs();renderDocs();}catch(e){}})();
+
+// ── HERRAMIENTAS TABS ──
+function switchTool(btn,id){
+  document.querySelectorAll('.ttab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById(id).classList.add('active');
+}
+
+// ── CONVERSOR ──
+const rates={};let ratesLoaded=false;
+const cNames={
+  USD:'Dólar USD',GBP:'Libra',JPY:'Yen',MXN:'Peso MX',BRL:'Real',MAD:'Dírham',TRY:'Lira',THB:'Baht',IDR:'Rupia',AED:'Dírham AE',SGD:'Dólar SG',PLN:'Esloti',CZK:'Corona CZ',HUF:'Forinto',RON:'Leu',DKK:'Corona DK',SEK:'Corona SE',NOK:'Corona NO',
+  MYR:'Ringgit',VND:'Dong',PHP:'Peso filipino',KHR:'Riel',LKR:'Rupia LK',NPR:'Rupia NP',INR:'Rupia india',CNY:'Yuan',HKD:'Dólar HK',KRW:'Won',EGP:'Libra egipcia',ZAR:'Rand',AUD:'Dólar AU',NZD:'Dólar NZ',CAD:'Dólar CA',ARS:'Peso ARG',CLP:'Peso CL',COP:'Peso COL',PEN:'Sol',ILS:'Shekel',QAR:'Riyal',JOD:'Dinar',ISK:'Corona ISL',
+  BOB:'Boliviano',UYU:'Peso uruguayo',CRC:'Colón',CUP:'Peso cubano',DOP:'Peso dominicano',HNL:'Lempira',GTQ:'Quetzal',NIO:'Córdoba',PYG:'Guaraní',VES:'Bolívar',BSD:'Dólar bahameño',JMD:'Dólar jamaicano',BGN:'Lev',RSD:'Dinar serbio',ALL:'Lek',BAM:'Marco bosnio',MKD:'Denar',MDL:'Leu moldavo',UAH:'Grivna',GEL:'Lari',AMD:'Dram',AZN:'Manat',KZT:'Tenge',UZS:'Som',MNT:'Tugrik',TWD:'Dólar taiwanés',LAK:'Kip',MMK:'Kyat',BDT:'Taka',PKR:'Rupia pakistaní',KES:'Chelín keniano',TZS:'Chelín tanzano',ETB:'Birr',NGN:'Naira',GHS:'Cedi',MZN:'Metical',NAD:'Dólar namibio',BWP:'Pula',ZMW:'Kwacha',MUR:'Rupia mauriciana',SCR:'Rupia seychellense',MGA:'Ariary',FJD:'Dólar fiyiano'
+};
+async function loadRates(){
+  try{const r=await fetch('https://open.er-api.com/v6/latest/EUR');const d=await r.json();if(d.rates){Object.assign(rates,d.rates);ratesLoaded=true;convertCurrency();document.getElementById('conv-rate').textContent='Actualizado · '+new Date().toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}}
+  catch(e){Object.assign(rates,{USD:1.08,GBP:0.86,JPY:162,MXN:18.5,BRL:5.4,MAD:10.8,TRY:35,THB:38,IDR:17000,AED:3.97,SGD:1.45,PLN:4.25,CZK:25,HUF:390,RON:4.97,DKK:7.46,SEK:11.5,NOK:11.8});ratesLoaded=true;convertCurrency();document.getElementById('conv-rate').textContent='Tasas aproximadas'}
+}
+function convertCurrency(){
+  if(!ratesLoaded)return;
+  const eur=parseFloat(document.getElementById('conv-eur').value)||0;
+  const to=document.getElementById('conv-to').value;
+  const res=eur*(rates[to]||1);
+  const fmt=res>=1000?res.toFixed(0):res>=10?res.toFixed(2):res.toFixed(4);
+  document.getElementById('conv-foreign').value=fmt;
+  document.getElementById('conv-display').textContent=fmt+' '+to;
+  document.getElementById('conv-to-label').textContent=cNames[to]||to;
+  document.getElementById('conv-rate').textContent='1 € = '+(rates[to]||1).toFixed(4)+' '+to;
+}
+function convertBack(){
+  if(!ratesLoaded)return;
+  const f=parseFloat(document.getElementById('conv-foreign').value)||0;
+  const to=document.getElementById('conv-to').value;
+  const eur=f/(rates[to]||1);
+  document.getElementById('conv-eur').value=eur.toFixed(2);
+  document.getElementById('conv-display').textContent=f+' '+to;
+  document.getElementById('conv-rate').textContent='1 € = '+(rates[to]||1).toFixed(4)+' '+to;
+}
+detectCurrency();
+loadRates();
+
+// ── TRADUCTOR ──
+const phraseDB={
+  es:['Hola / Buenos días','Por favor','Gracias','¿Cuánto cuesta?','¿Dónde está…?','La cuenta, por favor','No entiendo','¿Habla español?','Ayuda, por favor','Un taxi, por favor','¿Dónde está el baño?','Me llamo…','¿Habla inglés?'],
+  it:['Ciao / Buongiorno','Per favore','Grazie','Quanto costa?','Dov\'è…?','Il conto, per favore','Non capisco','Parla spagnolo?','Aiuto','Un taxi, per favore','Dov\'è il bagno?','Mi chiamo…','Parla inglese?'],
+  fr:['Bonjour','S\'il vous plaît','Merci','Combien ça coûte?','Où est…?','L\'addition, s\'il vous plaît','Je ne comprends pas','Parlez-vous espagnol?','Au secours','Un taxi, s\'il vous plaît','Où sont les toilettes?','Je m\'appelle…','Parlez-vous anglais?'],
+  de:['Hallo','Bitte','Danke','Wie viel kostet das?','Wo ist…?','Die Rechnung, bitte','Ich verstehe nicht','Sprechen Sie Spanisch?','Hilfe','Ein Taxi, bitte','Wo ist die Toilette?','Ich heiße…','Sprechen Sie Englisch?'],
+  pt:['Olá','Por favor','Obrigado/a','Quanto custa?','Onde fica…?','A conta, por favor','Não entendo','Fala espanhol?','Socorro','Um táxi','Onde é o banheiro?','Meu nome é…','Fala inglês?'],
+  ja:['こんにちは','お願いします','ありがとう','いくらですか？','…はどこですか？','お会計をお願いします','わかりません','スペイン語を話しますか？','助けて','タクシーをお願いします','トイレはどこですか？','私の名前は…','英語を話しますか？'],
+  ar:['مرحبا','من فضلك','شكرا','كم يكلف؟','أين…؟','الحساب من فضلك','لا أفهم','هل تتكلم الإسبانية؟','مساعدة','سيارة أجرة','أين الحمام؟','اسمي…','هل تتكلم الإنجليزية؟'],
+  tr:['Merhaba','Lütfen','Teşekkürler','Ne kadar?','Nerede…?','Hesabı lütfen','Anlamıyorum','İspanyolca biliyor musunuz?','Yardım','Taksi lütfen','Tuvalet nerede?','Benim adım…','İngilizce biliyor musunuz?'],
+  th:['สวัสดี','กรุณา','ขอบคุณ','ราคาเท่าไหร่?','…อยู่ที่ไหน?','เก็บเงินด้วย','ไม่เข้าใจ','พูดภาษาสเปนได้ไหม?','ช่วยด้วย','แท็กซี่','ห้องน้ำอยู่ที่ไหน?','ฉันชื่อ…','พูดภาษาอังกฤษได้ไหม?'],
+  zh:['你好','请','谢谢','多少钱？','…在哪里？','买单','我不明白','你会说西班牙语吗？','帮帮我','出租车','洗手间在哪里？','我叫…','你会说英语吗？'],
+  el:['Γεια σας','Παρακαλώ','Ευχαριστώ','Πόσο κοστίζει;','Πού είναι…;','Τον λογαριασμό','Δεν καταλαβαίνω','Μιλάτε ισπανικά;','Βοήθεια','Ένα ταξί','Πού είναι η τουαλέτα;','Με λένε…','Μιλάτε αγγλικά;'],
+  pl:['Dzień dobry','Proszę','Dziękuję','Ile to kosztuje?','Gdzie jest…?','Rachunek, proszę','Nie rozumiem','Czy mówi pan/pani po hiszpańsku?','Pomocy','Taksówkę','Gdzie jest toaleta?','Mam na imię…','Czy mówi pan/pani po angielsku?'],
+  nl:['Hallo','Alstublieft','Dank u','Hoeveel kost het?','Waar is…?','De rekening graag','Ik begrijp het niet','Spreekt u Spaans?','Help','Een taxi','Waar is het toilet?','Ik heet…','Spreekt u Engels?'],
+  ru:['Здравствуйте','Пожалуйста','Спасибо','Сколько стоит?','Где…?','Счёт, пожалуйста','Я не понимаю','Вы говорите по-испански?','Помогите','Такси','Где туалет?','Меня зовут…','Вы говорите по-английски?'],
+  cs:['Dobrý den','Prosím','Děkuji','Kolik to stojí?','Kde je…?','Účet prosím','Nerozumím','Mluvíte španělsky?','Pomozte','Taxi','Kde je toaleta?','Jmenuji se…','Mluvíte anglicky?'],
+  ro:['Bună ziua','Vă rog','Mulțumesc','Cât costă?','Unde este…?','Nota de plată','Nu înțeleg','Vorbiți spaniolă?','Ajutor','Un taxi','Unde este toaleta?','Mă numesc…','Vorbiți engleză?'],
+  hr:['Dobar dan','Molim','Hvala','Koliko košta?','Gdje je…?','Račun, molim','Ne razumijem','Govorite li španjolski?','Pomoć','Taksi','Gdje je zahod?','Zovem se…','Govorite li engleski?'],
+  id:['Halo / Selamat pagi','Tolong','Terima kasih','Berapa harganya?','Di mana…?','Minta bon, tolong','Saya tidak mengerti','Bisa bicara bahasa Spanyol?','Tolong, bantu saya','Taksi, tolong','Di mana toilet?','Nama saya…','Bisa bicara bahasa Inggris?'],
+  en:['Hello / Good morning','Please','Thank you','How much does it cost?','Where is…?','The bill, please','I don\'t understand','Do you speak Spanish?','Help, please','A taxi, please','Where is the bathroom?','My name is…','Could you repeat that, please?'],
+  ko:['안녕하세요','부탁합니다','감사합니다','얼마예요?','…이 어디예요?','계산서 주세요','이해가 안 돼요','스페인어 하세요?','도와주세요','택시 불러주세요','화장실이 어디예요?','제 이름은…입니다','영어 하세요?'],
+  vi:['Xin chào','Làm ơn','Cảm ơn','Cái này giá bao nhiêu?','…ở đâu?','Tính tiền, làm ơn','Tôi không hiểu','Bạn có nói được tiếng Tây Ban Nha không?','Làm ơn giúp tôi','Làm ơn gọi taxi','Nhà vệ sinh ở đâu?','Tôi tên là…','Bạn có nói được tiếng Anh không?'],
+  hi:['नमस्ते','कृपया','धन्यवाद','इसकी कीमत क्या है?','…कहाँ है?','बिल दीजिए, कृपया','मुझे समझ नहीं आया','आप स्पेनिश बोलते हैं?','कृपया मदद करें','कृपया टैक्सी बुलाएं','शौचालय कहाँ है?','मेरा नाम…है','आप अंग्रेज़ी बोलते हैं?'],
+  he:['שלום','בבקשה','תודה','כמה זה עולה?','איפה…?','החשבון, בבקשה','אני לא מבין','אתה מדבר ספרדית?','עזרה, בבקשה','מונית, בבקשה','איפה השירותים?','שמי…','אתה מדבר אנגלית?'],
+  fi:['Hei','Olkaa hyvä','Kiitos','Paljonko se maksaa?','Missä on…?','Lasku, kiitos','En ymmärrä','Puhutko espanjaa?','Apua, kiitos','Taksi, kiitos','Missä on vessa?','Nimeni on…','Puhutko englantia?'],
+  sw:['Habari','Tafadhali','Asante','Bei gani?','…iko wapi?','Bili tafadhali','Sielewi','Unazungumza Kihispania?','Tafadhali nisaidie','Taxi tafadhali','Choo kiko wapi?','Jina langu ni…','Unazungumza Kiingereza?']
+};
+const langMap={it:'it-IT',fr:'fr-FR',de:'de-DE',pt:'pt-PT',ja:'ja-JP',ar:'ar-SA',tr:'tr-TR',th:'th-TH',zh:'zh-CN',el:'el-GR',pl:'pl-PL',nl:'nl-NL',ru:'ru-RU',cs:'cs-CZ',ro:'ro-RO',hr:'hr-HR',id:'id-ID',en:'en-US',ko:'ko-KR',vi:'vi-VN',hi:'hi-IN',he:'he-IL',fi:'fi-FI',sw:'sw-KE'};
+function updatePhrases(){
+  const lang=document.getElementById('trans-lang-sel').value;
+  const esp=phraseDB['es'],dest=phraseDB[lang]||phraseDB['it'];
+  document.getElementById('phrases-list').innerHTML=esp.map((es,i)=>`
+    <div class="trans-item">
+      <div class="trans-texts"><div class="trans-es">${es}</div><div class="trans-dest">${dest[i]||''}</div></div>
+      <button class="trans-audio" onclick="speak('${(dest[i]||'').replace(/'/g,"\\'").replace(/"/g,'&quot;')}','${lang}',this)">▶</button>
+    </div>`).join('');
+}
+function speak(text,lang,btn){
+  if(!window.speechSynthesis){showToast('Audio no disponible');return}
+  window.speechSynthesis.cancel();
+  document.querySelectorAll('.trans-audio').forEach(b=>b.classList.remove('playing'));
+  btn.classList.add('playing');
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=langMap[lang]||lang+'-'+lang.toUpperCase();u.rate=0.82;
+  u.onend=()=>btn.classList.remove('playing');
+  u.onerror=()=>{btn.classList.remove('playing');showToast('Audio no disponible para este idioma')};
+  window.speechSynthesis.speak(u);
+}
+detectLanguage();
+updatePhrases();
+try { localStorage.setItem('guiamundi_last_guide', window.location.href); } catch(e){}
+
+// ── CALCULADORA ──
+function calcBudget(){
+  const dias=parseFloat(document.getElementById('c-dias').value)||0;
+  const viaj=Math.max(1,parseFloat(document.getElementById('c-viaj').value)||1);
+  const aloj=parseFloat(document.getElementById('c-aloj').value)||0;
+  const com=parseFloat(document.getElementById('c-com').value)||0;
+  const transp=parseFloat(document.getElementById('c-transp').value)||0;
+  const act=parseFloat(document.getElementById('c-act').value)||0;
+  const tA=aloj*dias,tC=com*dias*viaj,tot=tA+tC+transp+act;
+  const f=n=>n.toLocaleString('es-ES',{maximumFractionDigits:0})+'€';
+  document.getElementById('r-aloj').textContent=f(tA);document.getElementById('r-com').textContent=f(tC);
+  document.getElementById('r-transp').textContent=f(transp);document.getElementById('r-act').textContent=f(act);
+  document.getElementById('r-total').textContent=f(tot);document.getElementById('r-pp').textContent=f(tot/viaj);
+}
+calcBudget();
+
+// ── CHECKLIST ──
+const checkData={
+  ropa:['Ropa ligera (5-7 días)','Chaqueta o jersey fino','Ropa interior extra','Calcetines varios','Calzado cómodo walking','Sandalias o chanclas','Ropa de baño','Pijama','Pañuelo o fular','Chubasquero ligero'],
+  docs:['DNI o Pasaporte vigente','Tarjeta Sanitaria Europea','Seguro de viaje','Reservas alojamiento','Confirmación de vuelo','2 tarjetas bancarias','Efectivo moneda local','Carné de conducir','Visado si aplica','Fotos de pasaporte'],
+  tech:['Móvil cargado','Cargador del móvil','Adaptador de enchufe','Power bank','Auriculares','Cámara de fotos','Tarjeta memoria extra','Cable USB extra','Mapas offline','Cargador laptop'],
+  salud:['Protector solar 50+','Repelente mosquitos','Medicación habitual x2','Botiquín básico','Antihistamínico','Ibuprofeno/paracetamol','Tiritas y venda','Pastillas estómago','Mascarillas','Termómetro'],
+  extras:['Botella reutilizable','Guía de conversación','Bolsa tela mercados','Candado equipaje','Funda impermeable móvil','Snacks viaje','Almohada viaje','Antifaz dormir','Tapones oídos','Colonia pequeña'],
+};
+const checkState={};let currentCat='ropa';
+function initCheck(){Object.keys(checkData).forEach(c=>checkState[c]=checkData[c].map(()=>false));renderCheck()}
+function switchCat(btn,cat){document.querySelectorAll('.check-cat-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentCat=cat;renderCheck()}
+function renderCheck(){
+  const items=checkData[currentCat],states=checkState[currentCat];
+  document.getElementById('checklist-items').innerHTML=items.map((item,i)=>`
+    <div class="check-item${states[i]?' done':''}" onclick="toggleCheck('${currentCat}',${i},this)">
+      <div class="check-box">${states[i]?'✓':''}</div>
+      <div class="check-label">${item}</div>
+    </div>`).join('');
+  updateProgress();
+}
+function toggleCheck(cat,idx,el){checkState[cat][idx]=!checkState[cat][idx];el.classList.toggle('done');el.querySelector('.check-box').textContent=checkState[cat][idx]?'✓':'';updateProgress()}
+function updateProgress(){let d=0,t=0;Object.values(checkState).forEach(a=>{t+=a.length;d+=a.filter(Boolean).length});const p=t?Math.round(d/t*100):0;document.getElementById('check-bar').style.width=p+'%';document.getElementById('check-pct').textContent=p+'%'}
+initCheck();
+</script>
+</body>
+</html>
