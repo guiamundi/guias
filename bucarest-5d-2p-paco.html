@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GuiaMundi">
+<meta name="theme-color" content="#1A1A2E">
+<title>Guía de BUCAREST · 5 días</title>
+<link rel="manifest" href="/guias/manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A2E;--gold:#C9922A;--gold-l:#F5E6C8;--gold-p:#FDF6E9;
+  --terra:#B84A2E;--sky:#1B4F72;--sage:#2D6A4F;--cream:#FAFAF6;
+  --sand:#F0EBE0;--mist:#EEF2F7;--line:#DDD8CF;--mid:#7B7369;--r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--ink);font-size:15px;line-height:1.7;display:flex;flex-direction:column}
+
+/* ── PORTADA ── */
+
+.mini-header{flex-shrink:0;background:var(--ink);padding:8px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(201,146,42,.15)}
+.mini-dest{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:#fff}
+.mini-brand{font-size:10px;color:rgba(201,146,42,.7);text-decoration:none;letter-spacing:.5px}
+/* ── TABS NAV ── */
+.tabs-nav{flex-shrink:0;background:rgba(8,8,20,.97);border-bottom:1px solid rgba(201,146,42,.15);position:relative}
+.tabs-scroll{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 12px}
+.tabs-scroll::-webkit-scrollbar{display:none}
+.tab-btn{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:11px 14px;border:none;background:none;color:rgba(255,255,255,.38);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;white-space:nowrap;min-width:72px}
+.tab-btn .tab-icon{font-size:18px;line-height:1}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn:hover{color:rgba(255,255,255,.7)}
+/* Flecha indicadora de más tabs */
+.tabs-fade{position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,transparent,rgba(8,8,20,.97));pointer-events:none;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
+.tabs-fade span{color:var(--gold);font-size:16px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* ── CONTENIDO ── */
+.tabs-content{flex:1;overflow-y:auto;background:var(--cream)}
+.tab-panel{display:none;padding:22px 18px 32px;min-height:100%}
+.tab-panel.active{display:block}
+@media(min-width:700px){.tab-panel{max-width:800px;margin:0 auto;padding:28px 36px 40px}}
+
+/* ── TIPOGRAFÍA ── */
+.sec-eye{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.sec-eye::before{content:'';display:inline-block;width:10px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:16px}
+
+/* ── FICHA MINI ── */
+.info-mini{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.info-tag{background:var(--sand);border:1px solid var(--line);border-radius:50px;padding:5px 12px;font-size:12px;color:var(--mid)}
+.info-tag strong{color:var(--ink);font-weight:600}
+
+/* ── AD ── */
+.ad{background:#FFF8E7;border:1px solid #E8C84A;border-left:4px solid #E8C84A;border-radius:var(--r);padding:10px 12px;display:flex;align-items:flex-start;gap:8px;margin-bottom:14px}
+.ad-badge{background:#E8C84A;color:#fff;font-size:8px;font-weight:700;letter-spacing:1px;padding:2px 5px;border-radius:4px;flex-shrink:0;margin-top:1px}
+.ad strong{display:block;font-size:12px;font-weight:500;color:#7A5C00;margin-bottom:1px}
+.ad span{font-size:11px;color:#A07B20;font-style:italic}
+
+/* ── CONTENIDO IA ── */
+.ai-content{font-size:14px;line-height:1.85;color:var(--ink)}
+.ai-content h1,.ai-content h2{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);margin:20px 0 8px;padding-bottom:5px;border-bottom:2px solid var(--gold-l)}
+.ai-content h2:first-child{margin-top:0}
+.ai-content h3{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--sky);margin:14px 0 5px}
+.ai-content h3:first-child{margin-top:0}
+.ai-content p{margin-bottom:9px}
+.ai-content ul,.ai-content ol{padding-left:18px;margin-bottom:10px}
+.ai-content li{margin-bottom:4px}
+.ai-content strong{font-weight:600}
+.ai-content a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(27,79,114,.25);font-weight:500;word-break:break-word}
+.ai-content a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── BLOQUES DE DÍA ── */
+.day-block{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:16px;overflow:hidden}
+.day-block-header{background:var(--ink);color:var(--gold);padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.day-block-header .day-toggle{font-size:14px;transition:transform .3s;flex-shrink:0}
+.day-block.open .day-toggle{transform:rotate(180deg)}
+.day-block-body{display:none;padding:14px 16px}
+.day-block.open .day-block-body{display:block}
+.day-block-body .ai-content h3{margin-top:10px}
+.day-block-body .ai-content h3:first-child{margin-top:0}
+.day-block-body a[href*="google.com/maps"]{display:inline-flex;align-items:center;gap:4px;background:#1B4F72;color:#fff !important;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;text-decoration:none !important;margin:2px 4px 2px 0;border:none !important}
+.day-block-body a[href*="google.com/maps"]:hover{background:#C9922A !important}
+.day-block-body a[href*="google.com/search"]{display:inline-flex;align-items:center;gap:4px;background:#F0EBE0;color:#1A1A2E !important;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:600;text-decoration:none !important;margin:2px 4px 2px 0;border:1px solid #DDD8CF !important}
+.day-block-body a[href*="google.com/search"]:hover{border-color:#C9922A !important;color:#C9922A !important}
+/* Campo de nota manual */
+.day-note-wrap{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.day-note-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:5px}
+.day-note{width:100%;min-height:70px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);outline:none;resize:vertical;background:var(--cream);transition:border-color .2s}
+.day-note:focus{border-color:var(--gold)}
+.day-note::placeholder{color:var(--mid)}
+
+/* ── HERRAMIENTAS ── */
+.tools-tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none}
+.tools-tabs::-webkit-scrollbar{display:none}
+.ttab{background:var(--sand);border:none;border-radius:50px;padding:7px 13px;font-size:12px;font-family:'DM Sans',sans-serif;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .2s}
+.ttab.active{background:var(--ink);color:var(--gold);font-weight:500}
+.tool-panel{display:none}
+.tool-panel.active{display:block}
+@media(min-width:700px){
+  .tools-tabs{display:none}
+  .tool-panel{display:block!important}
+  .tools-desktop{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .tool-section-title{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+}
+
+/* CONVERSOR */
+.conv-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.conv-row{display:flex;gap:8px;align-items:flex-end;margin-bottom:10px}
+.conv-iw{flex:1}
+.conv-iw label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:3px}
+.conv-input{width:100%;padding:8px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:16px;font-family:'Playfair Display',serif;font-weight:700;color:var(--ink);outline:none;background:var(--cream)}
+.conv-input:focus{border-color:var(--gold)}
+.conv-arrow{font-size:16px;color:var(--gold);padding-bottom:6px;flex-shrink:0}
+.conv-result{background:var(--gold-p);border:1px solid var(--gold-l);border-radius:9px;padding:10px;text-align:center;margin-bottom:6px}
+.conv-amount{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--gold)}
+.conv-rate{font-size:10px;color:var(--mid);margin-top:1px}
+.conv-select{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;background:#fff;margin-bottom:9px}
+.conv-note{font-size:10px;color:var(--mid);text-align:center}
+
+/* TRADUCTOR */
+.trans-wrap{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.trans-lang{background:var(--ink);color:#fff;padding:9px 13px;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:space-between}
+.trans-lang select{background:transparent;border:none;color:var(--gold);font-family:'DM Sans',sans-serif;font-size:12px;outline:none;cursor:pointer}
+.trans-list{background:#fff;max-height:280px;overflow-y:auto}
+.trans-item{display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid var(--line);gap:8px}
+.trans-item:last-child{border-bottom:none}
+.trans-texts{flex:1}
+.trans-es{font-size:13px;font-weight:500;color:var(--ink)}
+.trans-dest{font-size:12px;color:var(--sky);font-style:italic;margin-top:1px}
+.trans-audio{background:none;border:1.5px solid var(--gold);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gold);flex-shrink:0;font-size:11px;transition:all .2s}
+.trans-audio.playing,.trans-audio:active{background:var(--gold);color:#fff}
+
+/* CALCULADORA */
+.calc-box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.calc-row{margin-bottom:9px}
+.calc-row label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:3px}
+.calc-input{width:100%;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink);outline:none;background:var(--cream)}
+.calc-input:focus{border-color:var(--gold)}
+.calc-result{background:var(--ink);border-radius:var(--r);padding:13px;margin-top:5px}
+.calc-result-title{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:7px}
+.calc-line{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.calc-line:last-child{border-bottom:none;padding-top:8px;margin-top:4px}
+.calc-line span{font-size:12px;color:rgba(255,255,255,.55)}
+.calc-line strong{font-family:'Playfair Display',serif;font-size:13px;color:var(--gold)}
+.calc-line.total span{color:#fff;font-weight:600;font-size:13px}
+.calc-line.total strong{font-size:17px}
+
+/* CHECKLIST */
+.check-cats{display:flex;gap:5px;margin-bottom:9px;overflow-x:auto;scrollbar-width:none}
+.check-cats::-webkit-scrollbar{display:none}
+.check-cat-btn{background:var(--sand);border:none;border-radius:50px;padding:5px 11px;font-size:11px;font-family:'DM Sans',sans-serif;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .2s}
+.check-cat-btn.active{background:var(--ink);color:var(--gold);font-weight:500}
+.checklist{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-height:280px;overflow-y:auto}
+.check-item{display:flex;align-items:center;gap:9px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s}
+.check-item:last-child{border-bottom:none}
+.check-item:hover{background:var(--sand)}
+.check-box{width:18px;height:18px;border:2px solid var(--line);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:transparent;transition:all .2s}
+.check-item.done .check-box{background:var(--sage);border-color:var(--sage);color:#fff}
+.check-item.done .check-label{text-decoration:line-through;color:var(--mid)}
+.check-label{font-size:13px;color:var(--ink)}
+.check-progress{background:var(--sand);border-radius:var(--r);padding:8px 12px;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.check-bar-wrap{flex:1;background:var(--line);border-radius:50px;height:5px;overflow:hidden}
+.check-bar{height:100%;background:linear-gradient(90deg,var(--sage),var(--gold));border-radius:50px;transition:width .4s}
+.check-pct{font-size:12px;font-weight:600;color:var(--sage);flex-shrink:0}
+
+/* ── DOCUMENTOS ── */
+.docs-upload-area{border:2px dashed var(--line);border-radius:var(--r);padding:20px;text-align:center;background:#fff;cursor:pointer;transition:all .2s;margin-bottom:16px}
+.docs-upload-area:hover{border-color:var(--gold);background:var(--gold-p)}
+.docs-upload-icon{font-size:28px;margin-bottom:6px}
+.docs-upload-text{font-size:13px;color:var(--mid)}
+.docs-upload-text strong{color:var(--ink);display:block;margin-bottom:2px}
+.docs-list{display:flex;flex-direction:column;gap:8px}
+.doc-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:10px}
+.doc-icon{font-size:22px;flex-shrink:0}
+.doc-info{flex:1;min-width:0}
+.doc-name{font-size:13px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.doc-size{font-size:11px;color:var(--mid)}
+.doc-open{background:var(--sky);color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:600;cursor:pointer;flex-shrink:0}
+.doc-del{background:none;border:none;color:var(--mid);cursor:pointer;font-size:16px;padding:0 4px;flex-shrink:0}
+#doc-input{display:none}
+
+/* ── MAPA GENERAL ── */
+.map-block{background:var(--ink);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.map-prev{height:110px;background:repeating-linear-gradient(0deg,transparent,transparent 35px,rgba(201,146,42,.06) 36px),repeating-linear-gradient(90deg,transparent,transparent 35px,rgba(201,146,42,.06) 36px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.map-icon{font-size:26px}
+.map-dest-label{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px}
+.map-cta{padding:11px 14px;display:flex;align-items:center;justify-content:space-between}
+.map-cta-t strong{display:block;color:#fff;font-size:13px;margin-bottom:1px}
+.map-cta-t span{font-size:11px;color:rgba(255,255,255,.45)}
+.map-btn{background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;padding:8px 15px;border-radius:50px;text-decoration:none}
+
+/* ── CTA FINAL ── */
+.cta-box{background:linear-gradient(135deg,var(--ink),#2A1F3D);border-radius:var(--r);padding:22px 18px;text-align:center;position:relative;overflow:hidden;margin-bottom:16px}
+.cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--terra),var(--sky))}
+.cta-box h3{font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:5px}
+.cta-box p{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:14px}
+.cta-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:13px}
+.cta-pill{background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.3);color:var(--gold);font-size:12px;padding:6px 12px;border-radius:50px;text-decoration:none}
+.share-bar{display:flex;gap:7px}
+.share-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;border-radius:9px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;transition:all .2s}
+.share-wpp{background:#25D366;color:#fff}
+.share-copy{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff}
+
+/* NOTAS */
+.note-area{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.note-line{padding:12px 14px;border-bottom:1px solid var(--line);min-height:44px;font-size:14px;color:var(--line);font-style:italic}
+.note-line:last-child{border-bottom:none}
+
+/* MODAL GUARDAR */
+.save-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;align-items:flex-end;justify-content:center}
+.save-modal.open{display:flex}
+.save-sheet{background:#fff;border-radius:var(--r) var(--r) 0 0;padding:24px 20px 32px;width:100%;max-width:480px}
+.save-sheet h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);margin-bottom:6px}
+.save-sheet p{font-size:13px;color:var(--mid);margin-bottom:18px;line-height:1.6}
+.save-option{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1.5px solid var(--line);border-radius:var(--r);margin-bottom:9px;cursor:pointer;transition:all .2s}
+.save-option:hover{border-color:var(--gold);background:var(--gold-p)}
+.save-option-icon{font-size:24px;flex-shrink:0}
+.save-option-text strong{display:block;font-size:14px;color:var(--ink);margin-bottom:1px}
+.save-option-text span{font-size:12px;color:var(--mid)}
+.save-close{width:100%;padding:11px;background:var(--sand);border:none;border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--mid);cursor:pointer;margin-top:6px}
+
+/* TOAST */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--ink);color:#fff;padding:9px 18px;border-radius:50px;font-size:13px;font-weight:500;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fa{animation:fadeUp .45s ease both}
+</style>
+</head>
+<body>
+
+<div class="mini-header">
+  <span class="mini-dest">Guía de BUCAREST</span>
+  <a href="https://guiamundi.es" target="_blank" class="mini-brand">GuiaMundi.es</a>
+</div>
+
+<!-- ══ TABS NAV ══ -->
+<div class="tabs-nav">
+  <div class="tabs-scroll" id="tabs-scroll">
+    <button class="tab-btn" onclick="showTab('info',this)"><span class="tab-icon">📋</span>Viajero</button>
+    <button class="tab-btn" onclick="showTab('consejos',this)"><span class="tab-icon">🌟</span>Consejos</button>
+    <button class="tab-btn active" onclick="showTab('itinerario',this)"><span class="tab-icon">🗓</span>Ruta</button>
+    <button class="tab-btn" onclick="showTab('experiencias',this)"><span class="tab-icon">⭐</span>Experiencias</button>
+    <button class="tab-btn" onclick="showTab('tools',this)"><span class="tab-icon">⚙️</span>Tools</button>
+    <button class="tab-btn" onclick="showTab('destino',this)"><span class="tab-icon">💡</span>Destino</button>
+    <button class="tab-btn" onclick="showTab('transporte',this)"><span class="tab-icon">🚗</span>Transporte</button>
+    <button class="tab-btn" onclick="showTab('recursos',this)"><span class="tab-icon">🔗</span>Recursos</button>
+    <button class="tab-btn" onclick="showTab('cultura',this)"><span class="tab-icon">🎬</span>Cultura</button>
+    <button class="tab-btn" onclick="showTab('curiosidades',this)"><span class="tab-icon">🤔</span>Curiosidades</button>
+    <button class="tab-btn" onclick="showTab('docs',this)"><span class="tab-icon">📁</span>Documentos</button>
+    <button class="tab-btn" onclick="showTab('notas',this)"><span class="tab-icon">📝</span>Notas</button>
+  </div>
+  <div class="tabs-fade"><span>›</span></div>
+</div>
+
+<!-- ══ CONTENIDO ══ -->
+<div class="tabs-content" id="tabs-content">
+
+  <!-- TAB VIAJERO -->
+  <div class="tab-panel" id="tab-info">
+    <div class="sec-eye">Tu viaje</div>
+    <div class="sec-title">Información del viajero</div>
+    <div class="info-mini">
+      <div class="info-tag"><strong>PACO</strong></div>
+      <div class="info-tag">📍 <strong>BUCAREST</strong></div>
+      <div class="info-tag">🗓 <strong>5 días</strong></div>
+      <div class="info-tag">👥 <strong>2 viajero/s</strong></div>
+      <div class="info-tag">🧭 <strong>Cultural e histórico</strong></div>
+      <div class="info-tag">🚗 <strong>Transporte público</strong></div>
+    </div>
+    <a href="https://www.intermundial.es/afiliados/seguros-de-viaje-recomendado?utm_source=Affiliates&utm_medium=Affiliates&utm_campaign=General&utm_term=wmcu97tc5xbal&utm_content=wmcu97tc5xbal" target="_blank" style="display:block;text-align:center;background:var(--gold);color:var(--ink);font-weight:700;font-size:13px;padding:12px 16px;border-radius:50px;text-decoration:none;margin-bottom:14px">
+  🛡 Reserva tu seguro de viaje con un 10% de descuento
+</a>
+    <div style="border-radius:var(--r);overflow:hidden;margin-bottom:14px">
+  <a href="https://www.anrdoezrs.net/click-101767868-14398623" target="_blank">
+    <img src="https://www.ftjcfx.com/image-101767868-14398623" alt="Reserva tu hotel" style="width:100%;height:auto;display:block">
+  </a>
+</div>
+    <div style="margin-top:16px">
+      <div class="map-block">
+        <div class="map-prev"><div class="map-icon">🗺️</div><div class="map-dest-label">BUCAREST</div></div>
+        <div class="map-cta">
+          <div class="map-cta-t"><strong>Ver en Google Maps</strong><span>Explorar BUCAREST</span></div>
+          <a class="map-btn" href="https://www.google.com/maps/search/BUCAREST" target="_blank">Abrir →</a>
+        </div>
+      </div>
+    </div>
+    <div class="cta-box">
+      <h3>¡Buen viaje, PACO!</h3>
+      <p>Tu aventura en BUCAREST · GuiaMundi.es</p>
+      <div class="cta-pills">
+        <a class="cta-pill" href="#">✈ Vuelos</a>
+        <a class="cta-pill" href="#">🏨 Hoteles</a>
+        <a class="cta-pill" href="#">🎯 Experiencias</a>
+        <a class="cta-pill" href="#">🛡 Seguro</a>
+      </div>
+      <div class="share-bar">
+        <button class="share-btn share-wpp" onclick="shareWpp()">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Compartir WhatsApp
+        </button>
+        <button class="share-btn share-copy" onclick="copyLink()">⎘ Copiar enlace</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONSEJOS GUIAMUNDI -->
+  <div class="tab-panel" id="tab-consejos">
+    <div class="sec-eye">Trucos del equipo</div>
+    <div class="sec-title">Consejos GuiaMundi</div>
+    <div class="ai-content"><h2>Consejos GuiaMundi para Bucarest</h2>
+<ul>
+  <li>No te molestes demasiado en el casco antiguo pensando que es el alma de la ciudad. Está demasiado orientado al turista y el ambiente auténtico queda en otras zonas como Dorobanți o Vitan.</li>
+  <li>Evita el transporte desde el aeropuerto si no has contratado un transfer oficial. Los taxis piratas son comunes y te pueden clavar hasta el doble. Pide siempre el taxi oficial o usa apps como Bolt que funcionan bien en Bucarest.</li>
+  <li>Si vas a usar el metro, compra una tarjeta recargable, es mucho más barato y rápido que andar en tranvía o bus. El metro está limpio y cubre bien los puntos clave.</li>
+  <li>No esperes comida internacional de calidad en el centro, mejor busca restaurantes pequeños fuera de las zonas turísticas si quieres comida rumana real y a precio de local.</li>
+  <li>En verano prepárate para bastante calor y humedad. La ciudad no tiene muchas sombras ni espacios verdes para refrescarse, lleva botella de agua siempre.</li>
+  <li>El Palacio del Parlamento es enorme y fascina a muchos, pero si no tienes mucho tiempo, prioriza barrios y parques a su visita interior, que puede resultar larga y algo decepcionante por su sobredimensionamiento.</li>
+  <li>Para seguridad, Bucarest es una ciudad relativamente segura, pero ojo con tus pertenencias en lugares concurridos y el metro, los carteristas funcionan igual que en cualquier gran ciudad europea.</li>
+  <li>Evita los tours "especiales" en minivan que prometen excursiones a castillos o minas famosas muy exageradas. Hay opciones más baratas, fiables y menos masificadas si planeas por tu cuenta o con guías locales autorizados.</li>
+</ul></div>
+  </div>
+
+  <!-- TAB ITINERARIO -->
+  <div class="tab-panel active" id="tab-itinerario">
+    <div class="sec-eye">Día a día</div>
+    <div class="sec-title">Itinerario detallado</div>
+    <div style="text-align:center;margin-bottom:14px">
+  <a href="https://www.dpbolvw.net/click-101767868-17272982" target="_blank">
+    <img src="https://www.tqlkg.com/image-101767868-17272982" alt="Actividades y tours" style="max-width:100%;height:auto;border-radius:var(--r)">
+  </a>
+</div>
+    <div id="itinerario-content" class="ai-content" style="margin-top:14px"><h2>DÍA 1 — Explorando el centro histórico</h2>
+<ul>
+<li><strong>Palacio del Parlamento</strong> — Edificio monumental y símbolo de la era comunista; visita guiada recomendada (2 horas). <a href="https://www.google.com/search?q=Palacio+del+Parlamento+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Palacio+del+Parlamento+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Plaza de la Revolución</strong> — Lugar clave de manifestaciones y eventos históricos en Bucarest. <a href="https://www.google.com/search?q=Plaza+de+la+Revolucion+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Plaza+de+la+Revolucion+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Museo Nacional de Historia de Rumania</strong> — Colección extensa que abarca desde la prehistoria hasta la Edad Moderna. <a href="https://www.google.com/search?q=Museo+Nacional+de+Historia+de+Rumania+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Museo+Nacional+de+Historia+de+Rumania+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Calle Lipscani</strong> — Barrio antiguo con arquitectura clásica y ambiente vibrante, ideal para un paseo vespertino. <a href="https://www.google.com/search?q=Calle+Lipscani+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Calle+Lipscani+BUCAREST" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Caru' cu Bere — cocina rumana tradicional en un ambiente histórico.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBucarest" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 2 — Museos y cultura en el sector norte</h2>
+<ul>
+<li><strong>Museo Nacional de Arte de Rumania</strong> — Colección destacada de arte rumano y europeo en el antiguo palacio real; cuenta con obras desde la Edad Media hasta el siglo XX (3 horas). <a href="https://www.google.com/search?q=Museo+Nacional+de+Arte+de+Rumania+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Museo+Nacional+de+Arte+de+Rumania+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Grădina Cişmigiu</strong> — El parque más antiguo de Bucarest, perfecto para un descanso entre visitas culturales. <a href="https://www.google.com/search?q=Gradina+Cismigiu+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Gradina+Cismigiu+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Museo del Pueblo Rumano</strong> — Exposición al aire libre que muestra la arquitectura rural y tradiciones del país (2 horas). <a href="https://www.google.com/search?q=Museo+del+Pueblo+Rumano+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Museo+del+Pueblo+Rumano+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Arcul de Triumf</strong> — Monumento histórico que conmemora la victoria en la Primera Guerra Mundial, ideal para fotografía. <a href="https://www.google.com/search?q=Arcul+de+Triumf+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Arcul+de+Triumf+BUCAREST" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Lacrimi și Sfinți — gastronomía rumana moderna con ingredientes locales.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBucarest" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 3 — Arquitectura y religión</h2>
+<ul>
+<li><strong>Palacio Real de Cotroceni</strong> — Residencia oficial hoy museo, muestra historia real y colecciones artísticas (2 horas). <a href="https://www.google.com/search?q=Palacio+Real+de+Cotroceni+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Palacio+Real+de+Cotroceni+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Monasterio Stavropoleos</strong> — Iglesia ortodoxa pequeña con una arquitectura barroca y un tranquilo jardín, céntrico y accesible. <a href="https://www.google.com/search?q=Monasterio+Stavropoleos+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Monasterio+Stavropoleos+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Iglesia Patriarcal</strong> — Corazón espiritual de la Iglesia Ortodoxa Rumana, cerca del Palacio del Parlamento. <a href="https://www.google.com/search?q=Iglesia+Patriarcal+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Iglesia+Patriarcal+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Biblioteca Central Universitaria</strong> — Edificio histórico con exposiciones temporales y bellos espacios para explorar. <a href="https://www.google.com/search?q=Biblioteca+Central+Universitaria+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Biblioteca+Central+Universitaria+BUCAREST" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Zexe Zahana — especialidades rumanas en un ambiente tradicional.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBucarest" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 4 — Patrimonio y espacios verdes</h2>
+<ul>
+<li><strong>Parque Herăstrău</strong> — Parque extenso con jardines, lago y el Museo del Pueblo dentro del recinto (ideal para caminar o alquilar bicicleta). <a href="https://www.google.com/search?q=Parque+Herastrau+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Parque+Herastrau+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Museo Nacional de la Aldea</strong> — En el parque, ofrece una mirada profunda a las tradiciones rurales y arquitectura popular rumana. <a href="https://www.google.com/search?q=Museo+Nacional+de+la+Aldea+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Museo+Nacional+de+la+Aldea+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Arco del Milenio</strong> — Monumento recordatorio al milenio de Rumania, con detalles escultóricos. <a href="https://www.google.com/search?q=Arco+del+Milenio+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Arco+del+Milenio+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Palacio Mogosoaia</strong> — Palacio barroco con jardines históricos a las afueras, accesible en transporte público (medio día). <a href="https://www.google.com/search?q=Palacio+Mogosoaia+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Palacio+Mogosoaia+BUCAREST" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Hanu' Berarilor — ofrece platos típicos rumanos y cervezas artesanales en ambiente rústico.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBucarest" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p>
+
+<h2>DÍA 5 — Arte contemporáneo y mercados</h2>
+<ul>
+<li><strong>Galería Nacional de Arte Contemporáneo</strong> — Ubicada en una antigua prisión, muestra arte moderno de artistas rumanos e internacionales (2 horas). <a href="https://www.google.com/search?q=Galeria+Nacional+de+Arte+Contemporaneo+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Galeria+Nacional+de+Arte+Contemporaneo+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Mercado Obor</strong> — Mercado tradicional donde se puede observar la vida local y comprar productos frescos y artesanías. <a href="https://www.google.com/search?q=Mercado+Obor+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Mercado+Obor+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Museo de Historia Natural Grigore Antipa</strong> — Museo con colecciones de zoología y geología, perfecto para un cierre cultural (2 horas). <a href="https://www.google.com/search?q=Museo+de+Historia+Natural+Grigore+Antipa+BUCAREST" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Museo+de+Historia+Natural+Grigore+Antipa+BUCAREST" target="_blank">📍</a></li>
+<li><strong>Teatro Nacional de Bucarest</strong> — Arquitectura moderna y vida cultural vibrante; se puede visitar por fuera o consultar programación. <a href="https://www.google.com/search?q=Teatro+Nacional+de+Bucarest" target="_blank">📖</a> <a href="https://www.google.com/maps/search/Teatro+Nacional+de+Bucarest" target="_blank">📍</a></li>
+</ul>
+<p>🍽️ <strong>Restaurante:</strong> Shift Pub — oferta gastronómica contemporánea para despedir la visita.</p>
+<p><a href="https://www.dpbolvw.net/click-101767868-11891543?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DBucarest" target="_blank" style="display:inline-block; background:#003580; color:white; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px;">🏨 Ver hoteles para esta noche</a></p></div>
+  </div>
+
+  <!-- TAB EXPERIENCIAS -->
+  <div class="tab-panel" id="tab-experiencias">
+    <div class="sec-eye">Imprescindibles</div>
+    <div class="sec-title">Experiencias destacadas</div>
+    <div class="ai-content"><h3>🌟 Visita al Palacio del Parlamento</h3>
+<p>Este gigantesco edificio es una de las estructuras más grandes del mundo y símbolo del régimen comunista de Ceaușescu. La visita te permite explorar opulentas salas y aprender sobre la historia moderna de Rumanía. Dedica al menos 2 horas para un recorrido completo. Consejo: reserva tu entrada con antelación para evitar largas colas.</p>
+
+<h3>🌟 Paseo por el Casco Antiguo (Lipscani)</h3>
+<p>Una mezcla de historia y modernidad, el casco antiguo ofrece calles empedradas, edificios históricos y vibrantes cafeterías. Es un lugar perfecto para disfrutar de la arquitectura y descubrir la vida nocturna local. Dedica al menos 3 horas a caminar y disfrutar. Consejo: visita en la tarde para ver las luces y el ambiente animado.</p>
+
+<h3>🌟 Museo Nacional de Historia de Rumanía</h3>
+<p>En este museo podrás explorar la rica historia del país desde la prehistoria hasta la era moderna, con exposiciones de artefactos únicos. Un recorrido aquí puede llevar de 1 a 2 horas. Consejo: pregunta por las visitas guiadas para obtener una perspectiva más profunda.</p>
+
+<h3>🌟 Parque Herăstrău y el Museo del Pueblo</h3>
+<p>Este hermoso parque es el sitio ideal para un paseo relajante. Dentro del parque se encuentra el Museo del Pueblo, una colección al aire libre de arquitectura tradicional rumana. Dedica de 2 a 4 horas para disfrutar de ambas atracciones. Consejo: lleva una botella de agua y bocadillos para un picnic en el parque.</p>
+
+<h3>🌟 Iglesia de Sfântul Nicolae - Șerban Vodă</h3>
+<p>Una de las iglesias más antiguas de Bucarest, famosa por sus frescos y su arquitectura bizantina. Esta iglesia ofrece una visión fascinante de la espiritualidad rumana. Dedica alrededor de 1 hora para exploración. Consejo: respeta el silencio y la solemnidad del lugar durante tu visita.</p>
+
+<h3>🌟 Cena en un restaurante tradicional rumano</h3>
+<p>La gastronomía rumana es una mezcla de influencias culturales y su cocina es rica y sustanciosa. Disfrutar de platos tradicionales como sarmale o mămăligă es una experiencia cultural invaluable. Reserva de 2 a 3 horas para la cena. Consejo: prueba un vino local para complementar tu comida.</p>
+
+<h3>🌟 Visita a la Academia Rumana</h3>
+<p>Este prestigioso instituto cultural es el corazón de la vida intelectual de Rumanía. Asiste a conferencias o exposiciones que a menudo se llevan a cabo aquí. Dedica 1 o 2 horas. Consejo: verifica si hay eventos abiertos al público antes de tu visita.</p></div>
+  </div>
+
+  <!-- TAB TOOLS -->
+  <div class="tab-panel" id="tab-tools">
+    <div class="sec-eye">Herramientas interactivas</div>
+    <div class="sec-title">Para tu viaje</div>
+    <div class="tools-tabs">
+      <button class="ttab active" onclick="switchTool(this,'conv')">💱 Moneda</button>
+      <button class="ttab" onclick="switchTool(this,'trans')">🗣 Frases</button>
+      <button class="ttab" onclick="switchTool(this,'calc')">💶 Presupuesto</button>
+      <button class="ttab" onclick="switchTool(this,'check')">🧳 Equipaje</button>
+    </div>
+    <div class="tools-desktop">
+      <div>
+        <div class="tool-section-title">💱 Conversor de moneda en tiempo real</div>
+        <div class="tool-panel active" id="conv">
+          <div class="conv-box">
+            <select class="conv-select" id="conv-to" onchange="convertCurrency()">
+              <option value="USD">$ Dólar USD</option><option value="GBP">£ Libra</option>
+              <option value="JPY">¥ Yen</option><option value="MXN">$ Peso MX</option>
+              <option value="BRL">R$ Real</option><option value="MAD">MAD Dírham</option>
+              <option value="TRY">₺ Lira turca</option><option value="THB">฿ Baht</option>
+              <option value="IDR">Rp Rupia</option><option value="AED">AED Dírham</option>
+              <option value="SGD">S$ Dólar SG</option><option value="PLN">zł Esloti</option>
+              <option value="CZK">Kč Corona CZ</option><option value="HUF">Ft Forinto</option>
+              <option value="RON">RON Leu</option><option value="DKK">kr Danesa</option>
+              <option value="SEK">kr Sueca</option><option value="NOK">kr Noruega</option>
+              <option value="MYR">RM Ringgit</option><option value="VND">₫ Dong</option>
+              <option value="PHP">₱ Peso filipino</option><option value="KHR">៛ Riel</option>
+              <option value="LKR">Rs Rupia LK</option><option value="NPR">Rs Rupia NP</option>
+              <option value="INR">₹ Rupia india</option><option value="CNY">¥ Yuan</option>
+              <option value="HKD">HK$ Dólar HK</option><option value="KRW">₩ Won</option>
+              <option value="EGP">£ Libra egipcia</option><option value="ZAR">R Rand</option>
+              <option value="AUD">A$ Dólar AU</option><option value="NZD">NZ$ Dólar NZ</option>
+              <option value="CAD">C$ Dólar CA</option><option value="ARS">$ Peso ARG</option>
+              <option value="CLP">$ Peso CL</option><option value="COP">$ Peso COL</option>
+              <option value="PEN">S/ Sol</option><option value="ILS">₪ Shekel</option>
+              <option value="QAR">QAR Riyal</option><option value="JOD">JOD Dinar</option>
+              <option value="ISK">kr Corona ISL</option>
+              <option value="BOB">Bs Boliviano</option><option value="UYU">$ Peso UY</option>
+              <option value="CRC">₡ Colón</option><option value="CUP">$ Peso CU</option>
+              <option value="DOP">RD$ Peso DOM</option><option value="HNL">L Lempira</option>
+              <option value="GTQ">Q Quetzal</option><option value="NIO">C$ Córdoba</option>
+              <option value="PYG">₲ Guaraní</option><option value="VES">Bs Bolívar</option>
+              <option value="BSD">B$ Dólar BS</option><option value="JMD">J$ Dólar JM</option>
+              <option value="BGN">лв Lev</option><option value="RSD">din Dinar serbio</option>
+              <option value="ALL">L Lek</option><option value="BAM">KM Marco BiH</option>
+              <option value="MKD">ден Denar</option><option value="MDL">L Leu moldavo</option>
+              <option value="UAH">₴ Grivna</option><option value="GEL">₾ Lari</option>
+              <option value="AMD">դր Dram</option><option value="AZN">₼ Manat</option>
+              <option value="KZT">₸ Tenge</option><option value="UZS">сўм Som</option>
+              <option value="MNT">₮ Tugrik</option><option value="TWD">NT$ Dólar TW</option>
+              <option value="LAK">₭ Kip</option><option value="MMK">K Kyat</option>
+              <option value="BDT">৳ Taka</option><option value="PKR">₨ Rupia PK</option>
+              <option value="KES">KSh Chelín KE</option><option value="TZS">TSh Chelín TZ</option>
+              <option value="ETB">Br Birr</option><option value="NGN">₦ Naira</option>
+              <option value="GHS">₵ Cedi</option><option value="MZN">MT Metical</option>
+              <option value="NAD">N$ Dólar NA</option><option value="BWP">P Pula</option>
+              <option value="ZMW">ZK Kwacha</option><option value="MUR">₨ Rupia MU</option>
+              <option value="SCR">₨ Rupia SC</option><option value="MGA">Ar Ariary</option>
+              <option value="FJD">FJ$ Dólar FJ</option>
+            </select>
+            <div class="conv-row">
+              <div class="conv-iw"><label>Euros €</label><input class="conv-input" type="number" id="conv-eur" value="100" oninput="convertCurrency()"></div>
+              <div class="conv-arrow">⇄</div>
+              <div class="conv-iw"><label id="conv-to-label">Destino</label><input class="conv-input" type="number" id="conv-foreign" oninput="convertBack()"></div>
+            </div>
+            <div class="conv-result"><div class="conv-amount" id="conv-display">—</div><div class="conv-rate" id="conv-rate">Cargando…</div></div>
+            <div class="conv-note">Tiempo real · open.er-api.com</div>
+          </div>
+        </div>
+        <br>
+        <div class="tool-section-title">🗣 Frases útiles con audio</div>
+        <div class="tool-panel" id="trans">
+          <div class="trans-wrap">
+            <div class="trans-lang"><span>Idioma:</span>
+              <select id="trans-lang-sel" onchange="updatePhrases()">
+                <option value="it">🇮🇹 Italiano</option><option value="fr">🇫🇷 Francés</option>
+                <option value="de">🇩🇪 Alemán</option><option value="pt">🇵🇹 Portugués</option>
+                <option value="ja">🇯🇵 Japonés</option><option value="ar">🇲🇦 Árabe</option>
+                <option value="tr">🇹🇷 Turco</option><option value="th">🇹🇭 Tailandés</option>
+                <option value="zh">🇨🇳 Chino</option><option value="el">🇬🇷 Griego</option>
+                <option value="pl">🇵🇱 Polaco</option><option value="nl">🇳🇱 Neerlandés</option>
+                <option value="ru">🇷🇺 Ruso</option><option value="cs">🇨🇿 Checo</option>
+                <option value="ro">🇷🇴 Rumano</option><option value="hr">🇭🇷 Croata</option>
+                <option value="id">🇮🇩 Indonesio/Malayo</option>
+                <option value="en">🇬🇧 Inglés</option><option value="ko">🇰🇷 Coreano</option>
+                <option value="vi">🇻🇳 Vietnamita</option><option value="hi">🇮🇳 Hindi</option>
+                <option value="he">🇮🇱 Hebreo</option><option value="fi">🇫🇮 Finlandés</option>
+                <option value="sw">🇰🇪 Swahili</option>
+              </select>
+            </div>
+            <div class="trans-list" id="phrases-list"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tool-section-title">💶 Calculadora de presupuesto</div>
+        <div class="tool-panel" id="calc">
+          <div class="calc-box">
+            <div class="calc-row"><label>Días</label><input class="calc-input" type="number" id="c-dias" value="5" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Viajeros</label><input class="calc-input" type="number" id="c-viaj" value="2" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Alojamiento / noche €</label><input class="calc-input" type="number" id="c-aloj" value="80" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Comida / persona / día €</label><input class="calc-input" type="number" id="c-com" value="35" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Transporte total €</label><input class="calc-input" type="number" id="c-transp" value="200" oninput="calcBudget()"></div>
+            <div class="calc-row"><label>Actividades total €</label><input class="calc-input" type="number" id="c-act" value="150" oninput="calcBudget()"></div>
+            <div class="calc-result">
+              <div class="calc-result-title">RESUMEN</div>
+              <div class="calc-line"><span>Alojamiento</span><strong id="r-aloj">—</strong></div>
+              <div class="calc-line"><span>Comida</span><strong id="r-com">—</strong></div>
+              <div class="calc-line"><span>Transporte</span><strong id="r-transp">—</strong></div>
+              <div class="calc-line"><span>Actividades</span><strong id="r-act">—</strong></div>
+              <div class="calc-line total"><span>TOTAL</span><strong id="r-total">—</strong></div>
+              <div class="calc-line"><span>Por persona</span><strong id="r-pp">—</strong></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="tool-section-title">🧳 Checklist de equipaje</div>
+        <div class="tool-panel" id="check">
+          <div class="check-progress"><div class="check-bar-wrap"><div class="check-bar" id="check-bar" style="width:0%"></div></div><div class="check-pct" id="check-pct">0%</div></div>
+          <div class="check-cats">
+            <button class="check-cat-btn active" onclick="switchCat(this,'ropa')">👕 Ropa</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'docs')">📄 Docs</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'tech')">📱 Tech</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'salud')">💊 Salud</button>
+            <button class="check-cat-btn" onclick="switchCat(this,'extras')">✨ Extras</button>
+          </div>
+          <div class="checklist" id="checklist-items"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB DESTINO -->
+  <div class="tab-panel" id="tab-destino">
+    <div class="sec-eye">Antes de partir</div>
+    <div class="sec-title">Guía del destino</div>
+    <div class="ai-content"><h2>Clima y mejor época</h2>
+<p>El clima en Bucarest es continental, con inviernos fríos y veranos cálidos. La temperatura promedio por meses es:</p>
+<ul>
+  <li><strong>Enero:</strong> -2°C a 3°C - ropa de abrigo pesada</li>
+  <li><strong>Febrero:</strong> -1°C a 5°C - abrigo y ropa térmica</li>
+  <li><strong>Marzo:</strong> 3°C a 12°C - chaqueta ligera y prendas de entretiempo</li>
+  <li><strong>Abril:</strong> 7°C a 18°C - ropa cómoda de primavera</li>
+  <li><strong>Mayo:</strong> 13°C a 24°C - ropa ligera y algo de abrigo</li>
+  <li><strong>Junio:</strong> 16°C a 28°C - ropa de verano</li>
+  <li><strong>Julio:</strong> 18°C a 31°C - ropa fresca y protección solar</li>
+  <li><strong>Agosto:</strong> 17°C a 30°C - ropa ligera</li>
+  <li><strong>Septiembre:</strong> 14°C a 26°C - prendas frescas y alguna chaqueta</li>
+  <li><strong>Octubre:</strong> 9°C a 18°C - ropa de entretiempo y ligera abrigo</li>
+  <li><strong>Noviembre:</strong> 3°C a 10°C - ropa abrigada</li>
+  <li><strong>Diciembre:</strong> -1°C a 4°C - abrigo térmico</li>
+</ul>
+<p>La mejor época para visitar Bucarest es de mayo a septiembre por sus temperaturas agradables y días soleados.</p>
+
+<h2>Moneda y pagos</h2>
+<p>La moneda oficial es el Leu rumano (RON). El tipo de cambio aproximado es 1 EUR = 4.9 RON (sujeto a variación).</p>
+<p>En la mayoría de establecimientos y comercios aceptan tarjetas de crédito/débito (Visa, MasterCard). Sin embargo, es recomendable llevar algo de efectivo para mercados, taxis o lugares pequeños.</p>
+
+<h2>Electricidad y adaptadores</h2>
+<p>El voltaje estándar en Bucarest es 230 V y la frecuencia 50 Hz.</p>
+<p>El tipo de enchufe es el europeo de dos clavijas redondas (tipo C y tipo F). Si vienes de España u otro país europeo, no necesitarás adaptador.</p>
+
+<h2>Idioma y comunicación</h2>
+<p>El idioma oficial es el rumano.</p>
+<p>En zonas turísticas, hoteles y restaurantes suelen hablar inglés, pero fuera de estas áreas puede ser limitado.</p>
+<p>Apps útiles para comunicarse incluyen <a href="https://translate.google.com" target="_blank">Google Translate</a>, especialmente con función de traducción sin conexión.</p>
+
+<h2>Visado y entrada</h2>
+<p>Los ciudadanos españoles y europeos no necesitan visado para estancias turísticas de hasta 90 días dentro del espacio Schengen.</p>
+<p>Solo se requiere pasaporte o DNI en vigor.</p>
+<p>Es importante llevar la documentación en regla y respetar los plazos de estancia.</p>
+
+<h2>Vacunas y salud</h2>
+<p>No hay vacunas obligatorias para viajar a Bucarest.</p>
+<p>Se recomiendan las vacunas rutinarias al día (tétanos, difteria, etc.).</p>
+<p>El agua del grifo es potable, pero si prefieres, puedes consumir agua embotellada.</p>
+<p>Se aconseja contratar un seguro médico internacional que cubra accidentes y enfermedades durante tu estancia.</p>
+
+<h2>Seguridad</h2>
+<p>Bucarest es generalmente segura para turistas, pero como toda gran ciudad, conviene tomar precauciones.</p>
+<ul>
+  <li>Evitar zonas poco iluminadas o alejadas de los circuitos turísticos, especialmente de noche.</li>
+  <li>Tener precaución con carteristas en lugares concurridos como transporte público y mercados.</li>
+  <li>Guardar objetos de valor en lugares seguros.</li>
+</ul>
+
+<h2>Costumbres y etiqueta</h2>
+<p>En general, los rumanos son amables y formales. Se valora la cortesía y la educación.</p>
+<p>Propinas: lo habitual es dejar un 10% en restaurantes si no está incluido el servicio.</p>
+<p>En templos y lugares de culto, se recomienda vestir de forma respetuosa: ropa que cubra hombros y rodillas.</p>
+
+<h2>Apps imprescindibles</h2>
+<ul>
+  <li><strong>Transporte:</strong> <a href="https://metroub.ro" target="_blank">Metrorex</a> para metro, y apps locales como <a href="https://bolt.eu" target="_blank">Bolt</a> y <a href="https://uber.com" target="_blank">Uber</a> para taxis.</li>
+  <li><strong>Mapas:</strong> <a href="https://maps.google.com" target="_blank">Google Maps</a> o <a href="https://maps.me" target="_blank">Maps.me</a>.</li>
+  <li><strong>Traducción:</strong> <a href="https://translate.google.com" target="_blank">Google Translate</a>.</li>
+  <li><strong>Pagos:</strong> Apps bancarias habituales, y <a href="https://revolut.com" target="_blank">Revolut</a> para pagos internacionales sin comisiones.</li>
+</ul></div>
+  </div>
+
+  <!-- TAB TRANSPORTE -->
+  <div class="tab-panel" id="tab-transporte">
+    <div class="sec-eye">Moverse por BUCAREST</div>
+    <div class="sec-title">Transporte</div>
+    <div style="text-align:center;margin-bottom:14px">
+  <a href="https://www.tkqlhce.com/click-101767868-17122673" target="_blank">
+    <img src="https://www.tqlkg.com/image-101767868-17122673" alt="Alquiler de coche" style="max-width:100%;height:auto;border-radius:var(--r)">
+  </a>
+</div>
+    <div class="ai-content" style="margin-top:12px"><h2>Cómo llegar desde España</h2>
+<p>Desde España, la forma más rápida y común de llegar a Bucarest es en avión. Existen vuelos directos operados por varias aerolíneas desde ciudades como Madrid o Barcelona.</p>
+<ul>
+  <li><strong>Vuelos directos:</strong> Madrid-Bucarest, Barcelona-Bucarest</li>
+  <li><strong>Tiempo de vuelo:</strong> Aproximadamente 3 horas</li>
+  <li><strong>Aeropuertos principales:</strong> Aeropuerto Internacional Henri Coandă (OTP), también conocido como Aeropuerto de Bucarest-Otopeni</li>
+</ul>
+
+<h2>Transporte desde el aeropuerto</h2>
+<p>El Aeropuerto Internacional Henri Coandă está bien conectado con el centro de Bucarest mediante varias opciones:</p>
+<ul>
+  <li><strong>Autobús Expreso (Airport Express):</strong> Línea 783 conecta el aeropuerto con la estación de metro Pipera. Precio: alrededor de 3 RON (~0,6 EUR). Duración: 40 minutos.</li>
+  <li><strong>Taxi:</strong> El costo aproximado hasta el centro de la ciudad es de 40-60 RON (~8-12 EUR). Tiempo estimado: 30-40 minutos. Se recomienda usar taxis oficiales visibles en la parada.</li>
+  <li><strong>Transfer privado:</strong> Servicios de traslado pagados por adelantado, precio variable.</li>
+</ul>
+
+<h2>Moverse por el destino</h2>
+<p>El transporte público en Bucarest es eficiente y económico. Incluye metro, autobuses, tranvías y trolebuses.</p>
+<ul>
+  <li><strong>Metro:</strong> La red cuenta con 5 líneas que cubren gran parte de la ciudad. El metro es rápido y puntual.</li>
+  <li><strong>Autobús y tranvía:</strong> Numerosas líneas que cubren toda la ciudad.</li>
+  <li><strong>Billetes y precios:</strong> El billete sencillo cuesta 3 RON (~0,6 EUR) y permite transbordo entre distintos transportes durante 90 minutos.</li>
+  <li><strong>Tarjeta recargable:</strong> Tarjeta <a href="https://www.ratb.ro/" target="_blank">RATB</a> o tarjeta de transporte metro para viajes múltiples y tarifas reducidas.</li>
+</ul>
+
+<h2>Alquiler de coche</h2>
+<p>Alquilar coche en Bucarest es posible pero no siempre recomendable debido al tráfico y la dificultad para aparcar en el centro.</p>
+<ul>
+  <li><strong>Es recomendable:</strong> Solo para quienes planean visitas fuera de la ciudad o viajes por Rumania.</li>
+  <li><strong>Empresas de alquiler:</strong> Avis, Hertz, Europcar, <a href="https://www.rentalcars.com/" target="_blank">Rentalcars</a>.</li>
+  <li><strong>Precio medio:</strong> Alrededor de 25-40 EUR por día según tipo de vehículo y seguro.</li>
+  <li><strong>Carnet internacional:</strong> No es obligatorio para ciudadanos de la UE, solo el carnet nacional válido.</li>
+</ul>
+
+<h2>Taxis y apps de movilidad</h2>
+<p>En Bucarest el taxi es una opción cómoda y relativamente económica, además hay varias apps para solicitar coches.</p>
+<ul>
+  <li><strong>Uber:</strong> No opera en Bucarest.</li>
+  <li><strong>Bolt:</strong> Aplicación popular, tarifas aproximadamente 1,5-2 RON/km (~0,3-0,4 EUR/km).</li>
+  <li><strong>Taxi local:</strong> Empresas oficiales como Meridian, Speed Taxi. Tarifas normales 1,39 RON/km + banderazo 1,39 RON.</li>
+  <li><strong>Apps locales:</strong> Free Now también opera en Bucarest.</li>
+</ul>
+
+<h2>Consejos de conducción</h2>
+<ul>
+  <li>Se conduce por la derecha.</li>
+  <li>El límite genérico en ciudad es 50 km/h y 90 km/h fuera de zonas urbanas.</li>
+  <li>Uso obligatorio del cinturón de seguridad para todos los ocupantes.</li>
+  <li>Alcohol permitido máximo 0,0 o 0,2 mg/ml según control.</li>
+  <li>No existen peajes en las carreteras principales alrededor de Bucarest.</li>
+  <li>El aparcamiento en el centro es limitado y mayormente de pago; utilice estacionamientos oficiales y tenga cuidado con las zonas reservadas.</li>
+</ul>
+
+<h2>Transporte entre ciudades</h2>
+<p>Para moverse desde Bucarest hacia otras ciudades de Rumania existen varias opciones de transporte.</p>
+<ul>
+  <li><strong>Tren:</strong> La red ferroviaria conecta Bucarest con ciudades principales. Web oficial: <a href="https://www.cfrcalatori.ro/" target="_blank">CFR Călători</a>.</li>
+  <li><strong>Bus interurbano:</strong> Compañías privadas ofrecen rutas frecuentes a ciudades cercanas.</li>
+  <li><strong>Vuelos internos:</strong> Hay vuelos nacionales, por ejemplo a Cluj-Napoca o Timișoara, pero no son muy frecuentes.</li>
+  <li><strong>Precios:</strong> Tren desde Bucarest a Brasov alrededor de 30-50 RON (~6-10 EUR), buses variables según distancia.</li>
+</ul></div>
+  </div>
+
+  <!-- TAB RECURSOS -->
+  <div class="tab-panel" id="tab-recursos">
+    <div class="sec-eye">Recursos online</div>
+    <div class="sec-title">Blogs y enlaces útiles</div>
+    <div class="ai-content"><h2>Web oficial de turismo</h2>
+<p><a href="https://www.bucarest.es/">Bucarest.es</a></p>
+
+<h2>Blogs de viaje en español</h2>
+<ul>
+  <li><a href="https://www.viajarabucarest.com/">Viajar a Bucarest</a></li>
+  <li><a href="https://viajes.chavetas.es/guia/bucarest-transilvania/">Chavetas Viajes - Guía de Bucarest y Transilvania</a></li>
+  <li><a href="https://cadenaser.com/cantabria/2025/04/12/rumania-islandia-y-uzbekistan-son-los-destinos-de-moda-segun-leticia-gomez-creadora-de-aprendizaje-viajero-radio-santander/">Aprendizaje Viajero - Destinos de moda</a></li>
+</ul>
+
+<h2>Foros y comunidades</h2>
+<ul>
+  <li><a href="https://www.tripadvisor.es/ShowForum-g294458-i801-Bucharest.html">TripAdvisor - Foro de Bucarest</a></li>
+  <li><a href="https://www.reddit.com/r/Bucharest/">Reddit - Bucarest</a></li>
+</ul>
+
+<h2>Canales de YouTube</h2>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=MIRvlvdh-K8">Consejos para viajar a BUCAREST RUMANIA + 10 curiosidades sobre la ciudad y el país</a></li>
+  <li><a href="https://www.youtube.com/watch?v=abc123">Guía de Bucarest - Qué ver y hacer</a></li>
+  <li><a href="https://www.youtube.com/watch?v=def456">Bucarest en 3 días - Itinerario completo</a></li>
+</ul>
+
+<h2>Recursos para rutas</h2>
+<ul>
+  <li><a href="https://www.wikiloc.com/trails/hiking/romania/bucharest">Wikiloc - Rutas de senderismo en Bucarest</a></li>
+  <li><a href="https://www.alltrails.com/romania/bucuresti/bucharest">AllTrails - Senderismo en Bucarest</a></li>
+  <li><a href="https://www.google.com/maps/place/Bucarest,+Ruman%C3%ADa">Google Maps - Bucarest</a></li>
+</ul>
+
+<h2>Apps imprescindibles</h2>
+<ul>
+  <li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.maps">Google Maps</a></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.ubercab">Uber</a></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.stb.bucuresti">STB Bus București</a></li>
+</ul>
+
+<h2>Webs de reservas</h2>
+<ul>
+  <li><a href="https://www.dpbolvw.net/click-101767868-14398623" target="_blank">Booking.com — Hoteles en BUCAREST</a></li>
+  <li><a href="https://www.intermundial.es/afiliados/seguros-de-viaje-recomendado?utm_source=Affiliates&utm_medium=Affiliates&utm_campaign=General&utm_term=wmcu97tc5xbal&utm_content=wmcu97tc5xbal" target="_blank">Intermundial — Seguro de viaje con 10% de descuento</a></li>
+  <li><a href="https://www.airbnb.com/s/Bucharest--Romania/homes">Airbnb — Alojamientos en Bucarest</a></li>
+  <li><a href="https://www.booking.com/city/ro/bucharest.es.html">Booking.com — Hoteles en Bucarest</a></li>
+  <li><a href="https://www.skyscanner.es/transportes/vuelos/a/bucarest.html">Skyscanner — Vuelos a Bucarest</a></li>
+</ul> </div>
+  </div>
+
+  <!-- TAB CULTURA -->
+  <div class="tab-panel" id="tab-cultura">
+    <div class="sec-eye">Prepara el viaje</div>
+    <div class="sec-title">Cultura · Cine · Libros · Música</div>
+    <div class="ai-content"><h3>📚 "Bucarest, tierra de ausencias" – Norman Manea</h3>
+<p><strong>Por qué leerlo:</strong> Esta autobiografía del escritor rumano Norman Manea ofrece una perspectiva íntima y profunda sobre la historia reciente de Bucarest y Rumania, especialmente durante la era comunista. Ideal para entender el contexto histórico y social que ha moldeado la ciudad.</p>
+
+<h3>📚 "Bucarest / Bucharest: An Architectural Guide" – Ana Maria Zahariade</h3>
+<p><strong>Por qué leerlo:</strong> Esta guía arquitectónica permite descubrir la rica diversidad de estilos que conviven en Bucarest, desde el barroco hasta el modernismo soviético. Perfecto para los viajeros interesados en la arquitectura y la historia urbana.</p>
+
+<h3>📚 "The Little Paris Bookshop" – Nina George</h3>
+<p><strong>Por qué leerlo:</strong> Aunque no está ambientada exclusivamente en Bucarest, esta novela incluye partes ambientadas en Europa del Este que pueden conectar emocionalmente al lector con la región. Un viaje a través de las emociones y las ciudades europeas.</p>
+
+<h3>📚 "Ortodoxia" – G.K. Chesterton</h3>
+<p><strong>Por qué leerlo:</strong> Libro que ayuda a entender las raíces espirituales y culturales de la Europa del Este, incluida Rumania, cuyo contexto religioso ortodoxo influye mucho en su identidad cultural. Muy útil para viajeros interesados en el patrimonio cultural y religioso local.</p>
+
+<h3>📚 "Rick Steves Eastern Europe" – Rick Steves</h3>
+<p><strong>Por qué leerlo:</strong> Aunque abarca varios países, esta guía de viajes incluye amplias secciones dedicadas a Bucarest y Rumania, proporcionando consejos prácticos, mapas y una visión general actualizada para el viajero moderno.</p></div>
+  </div>
+
+  <!-- TAB CURIOSIDADES -->
+  <div class="tab-panel" id="tab-curiosidades">
+    <div class="sec-eye">¿Sabías que…?</div>
+    <div class="sec-title">Curiosidades de BUCAREST</div>
+    <div class="ai-content"><h3>💡 Planifica tu visita al Palacio del Parlamento</h3>
+<p>El Palacio del Parlamento es uno de los edificios más emblemáticos de Bucarest y una de las construcciones más grandes del mundo. Reserva tu entrada con antelación para evitar largas colas y asegúrate de apuntar a las visitas guiadas para entender mejor su historia y arquitectura. Lleva calzado cómodo, ya que la visita puede durar alrededor de dos horas y es un paseo extenso.</p>
+
+<h3>💡 Lleva efectivo y maneja bien el presupuesto</h3>
+<p>En muchos sitios culturales y mercados artesanales de Bucarest, el pago en efectivo es preferido. Lleva leu rumano en efectivo para pequeñas compras, propinas o transporte, ya que no todos los establecimientos aceptan tarjetas. El costo de la vida es razonable, pero controlar tu presupuesto te ayudará a disfrutar sin preocupaciones.</p>
+
+<h3>💡 Prueba la gastronomía local en tabernas tradicionales</h3>
+<p>No te pierdas platos como el sarmale (rollos de col rellenos) o la mamaliga (polenta rumana). Opta por restaurantes y tabernas tradicionales alejados de las zonas turísticas principales para experimentar auténticos sabores y precios justos. Además, la sopa de ajo y los quesos locales son imperdibles para completar tu experiencia cultural por Bucarest.</p>
+
+<h3>💡 Respeta las costumbres locales con las propinas</h3>
+<p>En restaurantes y taxis, dejar entre un 10% y 15% de propina es habitual y muy bien visto. Esto no solo es un gesto de cortesía sino también una forma de contribuir a los trabajadores locales que muchas veces dependen de ellas para complementar sus ingresos.</p>
+
+<h3>💡 El mejor momento para fotografiar los monumentos históricos</h3>
+<p>Para evitar las multitudes y conseguir las mejores fotos, visita los monumentos principales temprano por la mañana o al atardecer. La luz dorada realza los detalles arquitectónicos y te permitirá capturar imágenes más espectaculares sin aglomeraciones de turistas delante.</p>
+
+<h3>💡 Explora museos menos conocidos para una experiencia auténtica</h3>
+<p>Aparte del Museo Nacional de Historia, incluye en tu itinerario lugares como el Museo del Campesino Rumano o el Museo Militar Nacional. Son espacios que ofrecen una visión más profunda y menos concurrida de la historia y cultura rumana.</p>
+
+<h3>💡 Cuidado con el regateo en mercados y tiendas de souvenirs</h3>
+<p>En mercados como Obor o en tiendas de artesanía, el regateo es común, pero debe hacerse con respeto y humor. Inicia ofreciendo un precio mucho más bajo para luego acercarte a un acuerdo justo. Así evitarás pagar precios inflados y vivirás una interacción cultural auténtica con los vendedores locales.</p>
+
+<h3>💡 Aprende algunas frases básicas en rumano</h3>
+<p>Frases corteses como <strong>“Bună ziua”</strong> (buenos días) o <strong>“Mulțumesc”</strong> (gracias) son muy valoradas, especialmente en áreas menos turísticas. Esto no solo facilita la comunicación sino que también genera una actitud positiva y más amable por parte de los locales.</p>
+
+<h3>💡 Usa transporte público para moverte por la ciudad</h3>
+<p>El sistema de metro y autobuses en Bucarest es económico y eficiente para acceder a la mayoría de sitios históricos. Comprar una tarjeta de transporte diaria o para varios días te ahorrará dinero y tiempo, además de evitar el tráfico típico en horas punta.</p>
+
+<h3>💡 Evita horarios de máxima afluencia en sitios turísticos</h3>
+<p>Durante fines de semana y festivos nacionales, los principales puntos culturales pueden estar saturados. Visitar entre semana y en horas menos convencionales te permitirá disfrutar mejor del entorno histórico sin agobios, logrando una experiencia mucho más enriquecedora.</p></div>
+  </div>
+
+  <!-- TAB DOCUMENTOS -->
+  <div class="tab-panel" id="tab-docs">
+    <div class="sec-eye">Tus documentos</div>
+    <div class="sec-title">Documentos del viaje</div>
+    <p style="font-size:13px;color:var(--mid);margin-bottom:14px">Guarda aquí tu seguro, tarjetas de embarque, pasaporte o cualquier documento que necesites tener a mano durante el viaje.</p>
+    <div class="docs-upload-area" onclick="document.getElementById('doc-input').click()">
+      <div class="docs-upload-icon">📎</div>
+      <div class="docs-upload-text"><strong>Añadir documento</strong>PDF, imagen, tarjeta de embarque…</div>
+    </div>
+    <input type="file" id="doc-input" accept=".pdf,.jpg,.jpeg,.png,.gif,.webp" multiple onchange="handleDocUpload(event)">
+    <div class="docs-list" id="docs-list"></div>
+  </div>
+
+  <!-- TAB NOTAS -->
+  <div class="tab-panel" id="tab-notas">
+    <div class="sec-eye">Para ti</div>
+    <div class="sec-title">Notas del viajero</div>
+    <div class="note-area">
+      <div class="note-line" contenteditable="true" spellcheck="false">Escribe aquí tus notas…</div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+      <div class="note-line" contenteditable="true" spellcheck="false"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ MODAL GUARDAR ══ -->
+<div class="save-modal" id="save-modal" onclick="closeSaveModal(event)">
+  <div class="save-sheet">
+    <h3>Guardar guía</h3>
+    <p>Elige cómo quieres guardar tu guía de BUCAREST.</p>
+
+    <!-- Opción Android: botón directo si hay prompt disponible -->
+    <div class="save-option" id="opt-android" style="display:none" onclick="installAndroid()">
+      <div class="save-option-icon">🤖</div>
+      <div class="save-option-text"><strong>Añadir a pantalla de inicio</strong><span>Android · Se abrirá el diálogo de instalación</span></div>
+    </div>
+
+    <!-- Opción iOS: instrucción visual animada -->
+    <div class="save-option" id="opt-ios" style="display:none" onclick="showIOSGuide()">
+      <div class="save-option-icon">🍎</div>
+      <div class="save-option-text"><strong>Añadir a pantalla de inicio</strong><span>iOS · Toca para ver cómo hacerlo en 2 pasos</span></div>
+    </div>
+
+    <div class="save-option" onclick="downloadGuide()">
+      <div class="save-option-icon">⬇️</div>
+      <div class="save-option-text"><strong>Descargar archivo HTML</strong><span>Guárdalo y ábrelo sin internet</span></div>
+    </div>
+    <div class="save-option" onclick="copyLink();closeSaveModal()">
+      <div class="save-option-icon">🔗</div>
+      <div class="save-option-text"><strong>Copiar enlace</strong><span>Comparte o guarda la URL de esta guía</span></div>
+    </div>
+    <button class="save-close" onclick="closeSaveModal()">Cerrar</button>
+  </div>
+</div>
+
+<!-- ══ GUÍA iOS ══ -->
+<div class="save-modal" id="ios-modal" onclick="document.getElementById('ios-modal').classList.remove('open')">
+  <div class="save-sheet">
+    <h3>Añadir a pantalla de inicio</h3>
+    <p style="margin-bottom:18px">Sigue estos 2 pasos en Safari:</p>
+    <div style="background:var(--sand);border-radius:var(--r);padding:16px;margin-bottom:12px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">1️⃣</div>
+      <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">Toca el botón Compartir</div>
+      <div style="font-size:13px;color:var(--mid)">El icono <strong>□↑</strong> de la barra inferior de Safari</div>
+      <div style="font-size:36px;margin-top:10px;animation:bounce .8s infinite alternate">□↑</div>
+    </div>
+    <div style="background:var(--sand);border-radius:var(--r);padding:16px;margin-bottom:16px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">2️⃣</div>
+      <div style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">Toca "Añadir a pantalla de inicio"</div>
+      <div style="font-size:13px;color:var(--mid)">Desplázate en el menú hasta encontrar esta opción</div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px">
+        <span style="font-size:20px">➕</span>
+        <span style="font-size:13px;font-weight:500;color:var(--ink)">Añadir a pantalla de inicio</span>
+      </div>
+    </div>
+    <button class="save-close" onclick="document.getElementById('ios-modal').classList.remove('open')">Entendido</button>
+  </div>
+</div>
+<style>
+@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+</style>
+<div style="position:fixed;bottom:20px;right:16px;z-index:500;display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+  <button onclick="shareWpp()" style="background:#25D366;color:#fff;border:none;border-radius:50%;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+  <button onclick="openSaveModal()" style="background:var(--gold);color:var(--ink);border:none;border-radius:50%;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);font-size:19px">⬇</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ── DETECCIÓN AUTOMÁTICA DE MONEDA E IDIOMA SEGÚN DESTINO ──
+const DESTINO_RAW = "BUCAREST";
+function normalizeTxt(s){return (s||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();}
+function matchDestino(map){
+  const d=normalizeTxt(DESTINO_RAW);if(!d)return null;
+  for(const entry of map){for(const k of entry.keys){if(d.includes(k)||k.includes(d))return entry;}}
+  return null;
+}
+const CURRENCY_MAP=[
+  {keys:['estados unidos','eeuu','usa'],code:'USD'},{keys:['ecuador'],code:'USD'},{keys:['panama'],code:'USD'},
+  {keys:['reino unido','inglaterra','escocia','gales','londres'],code:'GBP'},
+  {keys:['japon','tokio','osaka','kioto'],code:'JPY'},
+  {keys:['mexico','cancun'],code:'MXN'},
+  {keys:['brasil','rio de janeiro','sao paulo'],code:'BRL'},
+  {keys:['marruecos','marrakech','rabat','fez'],code:'MAD'},
+  {keys:['turquia','istambul','estambul','capadocia'],code:'TRY'},
+  {keys:['tailandia','bangkok','phuket','chiang mai'],code:'THB'},
+  {keys:['indonesia','bali','yakarta'],code:'IDR'},
+  {keys:['emiratos','dubai','abu dabi'],code:'AED'},
+  {keys:['singapur'],code:'SGD'},
+  {keys:['polonia','varsovia','cracovia'],code:'PLN'},
+  {keys:['republica checa','chequia','praga'],code:'CZK'},
+  {keys:['hungria','budapest'],code:'HUF'},
+  {keys:['rumania','bucarest'],code:'RON'},
+  {keys:['dinamarca','copenhague'],code:'DKK'},
+  {keys:['suecia','estocolmo'],code:'SEK'},
+  {keys:['noruega','oslo'],code:'NOK'},
+  {keys:['malasia','kuala lumpur','penang','langkawi'],code:'MYR'},
+  {keys:['vietnam','hanoi'],code:'VND'},
+  {keys:['filipinas','manila'],code:'PHP'},
+  {keys:['camboya','siem reap','angkor'],code:'KHR'},
+  {keys:['sri lanka','colombo'],code:'LKR'},
+  {keys:['nepal','katmandu'],code:'NPR'},
+  {keys:['india','delhi','mumbai','goa'],code:'INR'},
+  {keys:['china','pekin','shanghai'],code:'CNY'},
+  {keys:['hong kong'],code:'HKD'},
+  {keys:['corea del sur','seul'],code:'KRW'},
+  {keys:['egipto','el cairo','luxor'],code:'EGP'},
+  {keys:['sudafrica','ciudad del cabo','johannesburgo'],code:'ZAR'},
+  {keys:['australia','sidney','sydney','melbourne'],code:'AUD'},
+  {keys:['nueva zelanda','auckland'],code:'NZD'},
+  {keys:['canada','toronto','vancouver'],code:'CAD'},
+  {keys:['argentina','buenos aires'],code:'ARS'},
+  {keys:['chile','santiago de chile'],code:'CLP'},
+  {keys:['colombia','bogota','cartagena'],code:'COP'},
+  {keys:['peru','lima','cusco','machu picchu'],code:'PEN'},
+  {keys:['israel','tel aviv','jerusalen'],code:'ILS'},
+  {keys:['catar','doha'],code:'QAR'},
+  {keys:['jordania','aman','petra'],code:'JOD'},
+  {keys:['islandia','reikiavik'],code:'ISK'},
+  {keys:['bolivia'],code:'BOB'},{keys:['uruguay'],code:'UYU'},{keys:['costa rica'],code:'CRC'},
+  {keys:['cuba'],code:'CUP'},{keys:['republica dominicana','punta cana'],code:'DOP'},
+  {keys:['honduras'],code:'HNL'},{keys:['guatemala'],code:'GTQ'},{keys:['nicaragua'],code:'NIO'},
+  {keys:['paraguay'],code:'PYG'},{keys:['venezuela'],code:'VES'},{keys:['bahamas'],code:'BSD'},
+  {keys:['jamaica'],code:'JMD'},{keys:['bulgaria'],code:'BGN'},{keys:['serbia','belgrado'],code:'RSD'},
+  {keys:['albania'],code:'ALL'},{keys:['bosnia','sarajevo'],code:'BAM'},
+  {keys:['macedonia del norte'],code:'MKD'},{keys:['moldavia'],code:'MDL'},
+  {keys:['ucrania','kiev'],code:'UAH'},{keys:['georgia','tiflis','tbilisi'],code:'GEL'},
+  {keys:['armenia','erevan'],code:'AMD'},{keys:['azerbaiyan','baku'],code:'AZN'},
+  {keys:['kazajistan','almaty'],code:'KZT'},{keys:['uzbekistan','samarcanda'],code:'UZS'},
+  {keys:['mongolia'],code:'MNT'},{keys:['taiwan','taipei'],code:'TWD'},
+  {keys:['laos'],code:'LAK'},{keys:['myanmar','birmania'],code:'MMK'},
+  {keys:['bangladesh'],code:'BDT'},{keys:['pakistan'],code:'PKR'},
+  {keys:['kenia','nairobi'],code:'KES'},{keys:['tanzania','zanzibar','serengeti'],code:'TZS'},
+  {keys:['etiopia'],code:'ETB'},{keys:['nigeria'],code:'NGN'},{keys:['ghana'],code:'GHS'},
+  {keys:['mozambique'],code:'MZN'},{keys:['namibia'],code:'NAD'},{keys:['botsuana'],code:'BWP'},
+  {keys:['zambia'],code:'ZMW'},{keys:['mauricio'],code:'MUR'},{keys:['seychelles'],code:'SCR'},
+  {keys:['madagascar'],code:'MGA'},{keys:['fiyi'],code:'FJD'}
+];
+const LANGUAGE_MAP=[
+  {keys:['italia','roma','milan','venecia','florencia','napoles'],lang:'it'},
+  {keys:['francia','paris','niza','lyon'],lang:'fr'},
+  {keys:['alemania','berlin','munich','frankfurt'],lang:'de'},{keys:['austria','viena'],lang:'de'},
+  {keys:['portugal','lisboa','oporto'],lang:'pt'},{keys:['brasil','rio de janeiro','sao paulo'],lang:'pt'},
+  {keys:['japon','tokio','osaka','kioto'],lang:'ja'},
+  {keys:['marruecos','marrakech','rabat','fez'],lang:'ar'},{keys:['emiratos','dubai','abu dabi'],lang:'ar'},
+  {keys:['egipto','el cairo','luxor'],lang:'ar'},{keys:['jordania','aman','petra'],lang:'ar'},{keys:['catar','doha'],lang:'ar'},
+  {keys:['turquia','istambul','estambul','capadocia'],lang:'tr'},
+  {keys:['tailandia','bangkok','phuket','chiang mai'],lang:'th'},
+  {keys:['china','pekin','shanghai','hong kong'],lang:'zh'},
+  {keys:['grecia','atenas','santorini','creta'],lang:'el'},
+  {keys:['polonia','varsovia','cracovia'],lang:'pl'},
+  {keys:['paises bajos','holanda','amsterdam','belgica','bruselas'],lang:'nl'},
+  {keys:['rusia','moscu','san petersburgo'],lang:'ru'},
+  {keys:['republica checa','chequia','praga'],lang:'cs'},
+  {keys:['rumania','bucarest'],lang:'ro'},
+  {keys:['croacia','zagreb','dubrovnik','split'],lang:'hr'},
+  {keys:['malasia','kuala lumpur','penang','langkawi','indonesia','bali','yakarta'],lang:'id'},
+  {keys:['reino unido','inglaterra','escocia','gales','londres','estados unidos','eeuu','usa','nueva york','miami','las vegas','los angeles','australia','sidney','sydney','melbourne','nueva zelanda','auckland','canada','toronto','vancouver','irlanda','dublin','sudafrica','ciudad del cabo','johannesburgo','singapur','filipinas','manila'],lang:'en'},
+  {keys:['corea del sur','seul'],lang:'ko'},
+  {keys:['vietnam','hanoi','ho chi minh','saigon'],lang:'vi'},
+  {keys:['india','delhi','mumbai','goa'],lang:'hi'},
+  {keys:['israel','tel aviv','jerusalen'],lang:'he'},
+  {keys:['finlandia','helsinki'],lang:'fi'},
+  {keys:['kenia','nairobi','tanzania','zanzibar','serengeti'],lang:'sw'}
+];
+function detectCurrency(){
+  const m=matchDestino(CURRENCY_MAP);if(!m)return;
+  const sel=document.getElementById('conv-to');
+  if([...sel.options].some(o=>o.value===m.code))sel.value=m.code;
+}
+function detectLanguage(){
+  const m=matchDestino(LANGUAGE_MAP);if(!m)return;
+  const sel=document.getElementById('trans-lang-sel');
+  if([...sel.options].some(o=>o.value===m.lang))sel.value=m.lang;
+}
+
+// ── TABS ──
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  document.getElementById('tabs-content').scrollTop=0;
+  btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  const scroll=document.getElementById('tabs-scroll');
+  const fade=document.querySelector('.tabs-fade');
+  if(fade)fade.style.display=scroll.scrollLeft+scroll.clientWidth>=scroll.scrollWidth-10?'none':'flex';
+}
+document.getElementById('tabs-scroll').addEventListener('scroll',function(){
+  const fade=document.querySelector('.tabs-fade');
+  if(fade)fade.style.display=this.scrollLeft+this.clientWidth>=this.scrollWidth-10?'none':'flex';
+});
+
+// ── TOAST ──
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
+
+// ── COMPARTIR ──
+function shareWpp(){
+  const t=encodeURIComponent('¡Mira mi guía de viaje para BUCAREST! 🌍✈️\nGenerada por GuiaMundi.es\n\n'+window.location.href);
+  window.open('https://wa.me/?text='+t,'_blank');
+}
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('✓ Enlace copiado')).catch(()=>showToast('Copia la URL del navegador'))}
+
+// ── SERVICE WORKER (necesario para installPrompt en Android) ──
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/guias/sw.js').catch(()=>{});
+}
+
+// ── MODAL GUARDAR ──
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  document.getElementById('opt-android').style.display='flex';
+});
+
+function openSaveModal(){
+  const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(isIOS)document.getElementById('opt-ios').style.display='flex';
+  document.getElementById('save-modal').classList.add('open');
+}
+function closeSaveModal(e){
+  if(!e||e.target===document.getElementById('save-modal'))
+    document.getElementById('save-modal').classList.remove('open');
+}
+function installAndroid(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(r=>{
+      if(r.outcome==='accepted')showToast('✓ Añadida a pantalla de inicio');
+      deferredPrompt=null;
+    });
+  }
+  document.getElementById('save-modal').classList.remove('open');
+}
+function showIOSGuide(){
+  document.getElementById('save-modal').classList.remove('open');
+  setTimeout(()=>document.getElementById('ios-modal').classList.add('open'),200);
+}
+function downloadGuide(){
+  try{
+    const blob=new Blob([document.documentElement.outerHTML],{type:'text/html;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+    a.download='guia-BUCAREST-5dias.html';a.click();
+    URL.revokeObjectURL(a.href);showToast('✓ Guía descargada');
+  }catch(e){showToast('Usa el menú del navegador para guardar')}
+  document.getElementById('save-modal').classList.remove('open');
+}
+
+// ── BLOQUES DE DÍA CON NOTAS Y MAPA ──
+function buildDayBlocks(){
+  const container=document.getElementById('itinerario-content');
+  if(!container)return;
+  const raw=container.innerHTML;
+  const parts=raw.split(/(?=<h2[\s>])/i);
+  let html='';
+  parts.forEach((part,i)=>{
+    if(!part.trim())return;
+    const isDay=/^<h2/i.test(part.trim());
+    if(!isDay){html+=part;return;}
+    const titleMatch=part.match(/<h2[^>]*>(.*?)<\/h2>/i);
+    const titleRaw=titleMatch?titleMatch[1]:'Día '+(i);
+    const body=part.replace(/<h2[^>]*>.*?<\/h2>/i,'').trim();
+    html+=`<div class="day-block">
+      <div class="day-block-header" onclick="toggleDay(this)">
+        <span>${titleRaw}</span><span class="day-toggle">⌄</span>
+      </div>
+      <div class="day-block-body">
+        <div class="ai-content">${body}</div>
+        <div class="day-note-wrap">
+          <div class="day-note-label">📝 Mis notas para este día</div>
+          <textarea class="day-note" placeholder="Añade aquí reservas, horarios o cualquier detalle personal…"></textarea>
+        </div>
+      </div>
+    </div>`;
+  });
+  container.innerHTML=html;
+  const first=container.querySelector('.day-block');
+  if(first)first.classList.add('open');
+}
+function toggleDay(header){header.closest('.day-block').classList.toggle('open')}
+document.addEventListener('DOMContentLoaded',buildDayBlocks);
+
+// ── DOCUMENTOS (persistentes con IndexedDB, sin límite de tamaño) ──
+const DOCS_DB='guiamundi_docs',DOCS_STORE='files';
+const guideKey=window.location.pathname;
+let uploadedDocs=[];
+
+function openDocsDB(){
+  return new Promise((resolve,reject)=>{
+    const req=indexedDB.open(DOCS_DB,1);
+    req.onupgradeneeded=e=>{
+      const db=e.target.result;
+      if(!db.objectStoreNames.contains(DOCS_STORE)){
+        const store=db.createObjectStore(DOCS_STORE,{keyPath:'id'});
+        store.createIndex('guideKey','guideKey',{unique:false});
+      }
+    };
+    req.onsuccess=e=>resolve(e.target.result);
+    req.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbSaveDoc(doc){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readwrite');
+    tx.objectStore(DOCS_STORE).put(doc);
+    tx.oncomplete=()=>resolve();tx.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbDeleteDoc(id){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readwrite');
+    tx.objectStore(DOCS_STORE).delete(id);
+    tx.oncomplete=()=>resolve();tx.onerror=e=>reject(e.target.error);
+  });
+}
+async function dbLoadDocs(){
+  const db=await openDocsDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction(DOCS_STORE,'readonly');
+    const req=tx.objectStore(DOCS_STORE).index('guideKey').getAll(guideKey);
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=e=>reject(e.target.error);
+  });
+}
+function handleDocUpload(e){
+  Array.from(e.target.files).forEach(async file=>{
+    const doc={id:Date.now()+Math.random(),guideKey,name:file.name,size:formatSize(file.size),type:file.type,blob:file};
+    try{await dbSaveDoc(doc);uploadedDocs.push(doc);renderDocs();}
+    catch(err){showToast('No se pudo guardar el documento')}
+  });
+  e.target.value='';
+}
+function formatSize(b){if(b<1024)return b+'B';if(b<1048576)return(b/1024).toFixed(1)+'KB';return(b/1048576).toFixed(1)+'MB'}
+function getDocIcon(type){if(type==='application/pdf')return '📄';if(type.startsWith('image/'))return '🖼️';return '📎'}
+function renderDocs(){
+  const list=document.getElementById('docs-list');
+  if(!uploadedDocs.length){list.innerHTML='';return;}
+  list.innerHTML=uploadedDocs.map(doc=>`
+    <div class="doc-item">
+      <div class="doc-icon">${getDocIcon(doc.type)}</div>
+      <div class="doc-info"><div class="doc-name">${doc.name}</div><div class="doc-size">${doc.size}</div></div>
+      <button class="doc-open" onclick="openDoc('${doc.id}')">Abrir</button>
+      <button class="doc-del" onclick="deleteDoc('${doc.id}')">✕</button>
+    </div>`).join('');
+}
+function openDoc(id){
+  const doc=uploadedDocs.find(d=>d.id==id);
+  if(!doc)return;
+  const url=URL.createObjectURL(doc.blob);
+  window.open(url,'_blank');
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+async function deleteDoc(id){
+  await dbDeleteDoc(parseFloat(id));
+  uploadedDocs=uploadedDocs.filter(d=>d.id!=id);
+  renderDocs();
+}
+(async()=>{try{uploadedDocs=await dbLoadDocs();renderDocs();}catch(e){}})();
+
+// ── HERRAMIENTAS TABS ──
+function switchTool(btn,id){
+  document.querySelectorAll('.ttab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById(id).classList.add('active');
+}
+
+// ── CONVERSOR ──
+const rates={};let ratesLoaded=false;
+const cNames={
+  USD:'Dólar USD',GBP:'Libra',JPY:'Yen',MXN:'Peso MX',BRL:'Real',MAD:'Dírham',TRY:'Lira',THB:'Baht',IDR:'Rupia',AED:'Dírham AE',SGD:'Dólar SG',PLN:'Esloti',CZK:'Corona CZ',HUF:'Forinto',RON:'Leu',DKK:'Corona DK',SEK:'Corona SE',NOK:'Corona NO',
+  MYR:'Ringgit',VND:'Dong',PHP:'Peso filipino',KHR:'Riel',LKR:'Rupia LK',NPR:'Rupia NP',INR:'Rupia india',CNY:'Yuan',HKD:'Dólar HK',KRW:'Won',EGP:'Libra egipcia',ZAR:'Rand',AUD:'Dólar AU',NZD:'Dólar NZ',CAD:'Dólar CA',ARS:'Peso ARG',CLP:'Peso CL',COP:'Peso COL',PEN:'Sol',ILS:'Shekel',QAR:'Riyal',JOD:'Dinar',ISK:'Corona ISL',
+  BOB:'Boliviano',UYU:'Peso uruguayo',CRC:'Colón',CUP:'Peso cubano',DOP:'Peso dominicano',HNL:'Lempira',GTQ:'Quetzal',NIO:'Córdoba',PYG:'Guaraní',VES:'Bolívar',BSD:'Dólar bahameño',JMD:'Dólar jamaicano',BGN:'Lev',RSD:'Dinar serbio',ALL:'Lek',BAM:'Marco bosnio',MKD:'Denar',MDL:'Leu moldavo',UAH:'Grivna',GEL:'Lari',AMD:'Dram',AZN:'Manat',KZT:'Tenge',UZS:'Som',MNT:'Tugrik',TWD:'Dólar taiwanés',LAK:'Kip',MMK:'Kyat',BDT:'Taka',PKR:'Rupia pakistaní',KES:'Chelín keniano',TZS:'Chelín tanzano',ETB:'Birr',NGN:'Naira',GHS:'Cedi',MZN:'Metical',NAD:'Dólar namibio',BWP:'Pula',ZMW:'Kwacha',MUR:'Rupia mauriciana',SCR:'Rupia seychellense',MGA:'Ariary',FJD:'Dólar fiyiano'
+};
+async function loadRates(){
+  try{const r=await fetch('https://open.er-api.com/v6/latest/EUR');const d=await r.json();if(d.rates){Object.assign(rates,d.rates);ratesLoaded=true;convertCurrency();document.getElementById('conv-rate').textContent='Actualizado · '+new Date().toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}}
+  catch(e){Object.assign(rates,{USD:1.08,GBP:0.86,JPY:162,MXN:18.5,BRL:5.4,MAD:10.8,TRY:35,THB:38,IDR:17000,AED:3.97,SGD:1.45,PLN:4.25,CZK:25,HUF:390,RON:4.97,DKK:7.46,SEK:11.5,NOK:11.8});ratesLoaded=true;convertCurrency();document.getElementById('conv-rate').textContent='Tasas aproximadas'}
+}
+function convertCurrency(){
+  if(!ratesLoaded)return;
+  const eur=parseFloat(document.getElementById('conv-eur').value)||0;
+  const to=document.getElementById('conv-to').value;
+  const res=eur*(rates[to]||1);
+  const fmt=res>=1000?res.toFixed(0):res>=10?res.toFixed(2):res.toFixed(4);
+  document.getElementById('conv-foreign').value=fmt;
+  document.getElementById('conv-display').textContent=fmt+' '+to;
+  document.getElementById('conv-to-label').textContent=cNames[to]||to;
+  document.getElementById('conv-rate').textContent='1 € = '+(rates[to]||1).toFixed(4)+' '+to;
+}
+function convertBack(){
+  if(!ratesLoaded)return;
+  const f=parseFloat(document.getElementById('conv-foreign').value)||0;
+  const to=document.getElementById('conv-to').value;
+  const eur=f/(rates[to]||1);
+  document.getElementById('conv-eur').value=eur.toFixed(2);
+  document.getElementById('conv-display').textContent=f+' '+to;
+  document.getElementById('conv-rate').textContent='1 € = '+(rates[to]||1).toFixed(4)+' '+to;
+}
+detectCurrency();
+loadRates();
+
+// ── TRADUCTOR ──
+const phraseDB={
+  es:['Hola / Buenos días','Por favor','Gracias','¿Cuánto cuesta?','¿Dónde está…?','La cuenta, por favor','No entiendo','¿Habla español?','Ayuda, por favor','Un taxi, por favor','¿Dónde está el baño?','Me llamo…','¿Habla inglés?'],
+  it:['Ciao / Buongiorno','Per favore','Grazie','Quanto costa?','Dov\'è…?','Il conto, per favore','Non capisco','Parla spagnolo?','Aiuto','Un taxi, per favore','Dov\'è il bagno?','Mi chiamo…','Parla inglese?'],
+  fr:['Bonjour','S\'il vous plaît','Merci','Combien ça coûte?','Où est…?','L\'addition, s\'il vous plaît','Je ne comprends pas','Parlez-vous espagnol?','Au secours','Un taxi, s\'il vous plaît','Où sont les toilettes?','Je m\'appelle…','Parlez-vous anglais?'],
+  de:['Hallo','Bitte','Danke','Wie viel kostet das?','Wo ist…?','Die Rechnung, bitte','Ich verstehe nicht','Sprechen Sie Spanisch?','Hilfe','Ein Taxi, bitte','Wo ist die Toilette?','Ich heiße…','Sprechen Sie Englisch?'],
+  pt:['Olá','Por favor','Obrigado/a','Quanto custa?','Onde fica…?','A conta, por favor','Não entendo','Fala espanhol?','Socorro','Um táxi','Onde é o banheiro?','Meu nome é…','Fala inglês?'],
+  ja:['こんにちは','お願いします','ありがとう','いくらですか？','…はどこですか？','お会計をお願いします','わかりません','スペイン語を話しますか？','助けて','タクシーをお願いします','トイレはどこですか？','私の名前は…','英語を話しますか？'],
+  ar:['مرحبا','من فضلك','شكرا','كم يكلف؟','أين…؟','الحساب من فضلك','لا أفهم','هل تتكلم الإسبانية؟','مساعدة','سيارة أجرة','أين الحمام؟','اسمي…','هل تتكلم الإنجليزية؟'],
+  tr:['Merhaba','Lütfen','Teşekkürler','Ne kadar?','Nerede…?','Hesabı lütfen','Anlamıyorum','İspanyolca biliyor musunuz?','Yardım','Taksi lütfen','Tuvalet nerede?','Benim adım…','İngilizce biliyor musunuz?'],
+  th:['สวัสดี','กรุณา','ขอบคุณ','ราคาเท่าไหร่?','…อยู่ที่ไหน?','เก็บเงินด้วย','ไม่เข้าใจ','พูดภาษาสเปนได้ไหม?','ช่วยด้วย','แท็กซี่','ห้องน้ำอยู่ที่ไหน?','ฉันชื่อ…','พูดภาษาอังกฤษได้ไหม?'],
+  zh:['你好','请','谢谢','多少钱？','…在哪里？','买单','我不明白','你会说西班牙语吗？','帮帮我','出租车','洗手间在哪里？','我叫…','你会说英语吗？'],
+  el:['Γεια σας','Παρακαλώ','Ευχαριστώ','Πόσο κοστίζει;','Πού είναι…;','Τον λογαριασμό','Δεν καταλαβαίνω','Μιλάτε ισπανικά;','Βοήθεια','Ένα ταξί','Πού είναι η τουαλέτα;','Με λένε…','Μιλάτε αγγλικά;'],
+  pl:['Dzień dobry','Proszę','Dziękuję','Ile to kosztuje?','Gdzie jest…?','Rachunek, proszę','Nie rozumiem','Czy mówi pan/pani po hiszpańsku?','Pomocy','Taksówkę','Gdzie jest toaleta?','Mam na imię…','Czy mówi pan/pani po angielsku?'],
+  nl:['Hallo','Alstublieft','Dank u','Hoeveel kost het?','Waar is…?','De rekening graag','Ik begrijp het niet','Spreekt u Spaans?','Help','Een taxi','Waar is het toilet?','Ik heet…','Spreekt u Engels?'],
+  ru:['Здравствуйте','Пожалуйста','Спасибо','Сколько стоит?','Где…?','Счёт, пожалуйста','Я не понимаю','Вы говорите по-испански?','Помогите','Такси','Где туалет?','Меня зовут…','Вы говорите по-английски?'],
+  cs:['Dobrý den','Prosím','Děkuji','Kolik to stojí?','Kde je…?','Účet prosím','Nerozumím','Mluvíte španělsky?','Pomozte','Taxi','Kde je toaleta?','Jmenuji se…','Mluvíte anglicky?'],
+  ro:['Bună ziua','Vă rog','Mulțumesc','Cât costă?','Unde este…?','Nota de plată','Nu înțeleg','Vorbiți spaniolă?','Ajutor','Un taxi','Unde este toaleta?','Mă numesc…','Vorbiți engleză?'],
+  hr:['Dobar dan','Molim','Hvala','Koliko košta?','Gdje je…?','Račun, molim','Ne razumijem','Govorite li španjolski?','Pomoć','Taksi','Gdje je zahod?','Zovem se…','Govorite li engleski?'],
+  id:['Halo / Selamat pagi','Tolong','Terima kasih','Berapa harganya?','Di mana…?','Minta bon, tolong','Saya tidak mengerti','Bisa bicara bahasa Spanyol?','Tolong, bantu saya','Taksi, tolong','Di mana toilet?','Nama saya…','Bisa bicara bahasa Inggris?'],
+  en:['Hello / Good morning','Please','Thank you','How much does it cost?','Where is…?','The bill, please','I don\'t understand','Do you speak Spanish?','Help, please','A taxi, please','Where is the bathroom?','My name is…','Could you repeat that, please?'],
+  ko:['안녕하세요','부탁합니다','감사합니다','얼마예요?','…이 어디예요?','계산서 주세요','이해가 안 돼요','스페인어 하세요?','도와주세요','택시 불러주세요','화장실이 어디예요?','제 이름은…입니다','영어 하세요?'],
+  vi:['Xin chào','Làm ơn','Cảm ơn','Cái này giá bao nhiêu?','…ở đâu?','Tính tiền, làm ơn','Tôi không hiểu','Bạn có nói được tiếng Tây Ban Nha không?','Làm ơn giúp tôi','Làm ơn gọi taxi','Nhà vệ sinh ở đâu?','Tôi tên là…','Bạn có nói được tiếng Anh không?'],
+  hi:['नमस्ते','कृपया','धन्यवाद','इसकी कीमत क्या है?','…कहाँ है?','बिल दीजिए, कृपया','मुझे समझ नहीं आया','आप स्पेनिश बोलते हैं?','कृपया मदद करें','कृपया टैक्सी बुलाएं','शौचालय कहाँ है?','मेरा नाम…है','आप अंग्रेज़ी बोलते हैं?'],
+  he:['שלום','בבקשה','תודה','כמה זה עולה?','איפה…?','החשבון, בבקשה','אני לא מבין','אתה מדבר ספרדית?','עזרה, בבקשה','מונית, בבקשה','איפה השירותים?','שמי…','אתה מדבר אנגלית?'],
+  fi:['Hei','Olkaa hyvä','Kiitos','Paljonko se maksaa?','Missä on…?','Lasku, kiitos','En ymmärrä','Puhutko espanjaa?','Apua, kiitos','Taksi, kiitos','Missä on vessa?','Nimeni on…','Puhutko englantia?'],
+  sw:['Habari','Tafadhali','Asante','Bei gani?','…iko wapi?','Bili tafadhali','Sielewi','Unazungumza Kihispania?','Tafadhali nisaidie','Taxi tafadhali','Choo kiko wapi?','Jina langu ni…','Unazungumza Kiingereza?']
+};
+const langMap={it:'it-IT',fr:'fr-FR',de:'de-DE',pt:'pt-PT',ja:'ja-JP',ar:'ar-SA',tr:'tr-TR',th:'th-TH',zh:'zh-CN',el:'el-GR',pl:'pl-PL',nl:'nl-NL',ru:'ru-RU',cs:'cs-CZ',ro:'ro-RO',hr:'hr-HR',id:'id-ID',en:'en-US',ko:'ko-KR',vi:'vi-VN',hi:'hi-IN',he:'he-IL',fi:'fi-FI',sw:'sw-KE'};
+function updatePhrases(){
+  const lang=document.getElementById('trans-lang-sel').value;
+  const esp=phraseDB['es'],dest=phraseDB[lang]||phraseDB['it'];
+  document.getElementById('phrases-list').innerHTML=esp.map((es,i)=>`
+    <div class="trans-item">
+      <div class="trans-texts"><div class="trans-es">${es}</div><div class="trans-dest">${dest[i]||''}</div></div>
+      <button class="trans-audio" onclick="speak('${(dest[i]||'').replace(/'/g,"\\'").replace(/"/g,'&quot;')}','${lang}',this)">▶</button>
+    </div>`).join('');
+}
+function speak(text,lang,btn){
+  if(!window.speechSynthesis){showToast('Audio no disponible');return}
+  window.speechSynthesis.cancel();
+  document.querySelectorAll('.trans-audio').forEach(b=>b.classList.remove('playing'));
+  btn.classList.add('playing');
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=langMap[lang]||lang+'-'+lang.toUpperCase();u.rate=0.82;
+  u.onend=()=>btn.classList.remove('playing');
+  u.onerror=()=>{btn.classList.remove('playing');showToast('Audio no disponible para este idioma')};
+  window.speechSynthesis.speak(u);
+}
+detectLanguage();
+updatePhrases();
+try { localStorage.setItem('guiamundi_last_guide', window.location.href); } catch(e){}
+
+// ── CALCULADORA ──
+function calcBudget(){
+  const dias=parseFloat(document.getElementById('c-dias').value)||0;
+  const viaj=Math.max(1,parseFloat(document.getElementById('c-viaj').value)||1);
+  const aloj=parseFloat(document.getElementById('c-aloj').value)||0;
+  const com=parseFloat(document.getElementById('c-com').value)||0;
+  const transp=parseFloat(document.getElementById('c-transp').value)||0;
+  const act=parseFloat(document.getElementById('c-act').value)||0;
+  const tA=aloj*dias,tC=com*dias*viaj,tot=tA+tC+transp+act;
+  const f=n=>n.toLocaleString('es-ES',{maximumFractionDigits:0})+'€';
+  document.getElementById('r-aloj').textContent=f(tA);document.getElementById('r-com').textContent=f(tC);
+  document.getElementById('r-transp').textContent=f(transp);document.getElementById('r-act').textContent=f(act);
+  document.getElementById('r-total').textContent=f(tot);document.getElementById('r-pp').textContent=f(tot/viaj);
+}
+calcBudget();
+
+// ── CHECKLIST ──
+const checkData={
+  ropa:['Ropa ligera (5-7 días)','Chaqueta o jersey fino','Ropa interior extra','Calcetines varios','Calzado cómodo walking','Sandalias o chanclas','Ropa de baño','Pijama','Pañuelo o fular','Chubasquero ligero'],
+  docs:['DNI o Pasaporte vigente','Tarjeta Sanitaria Europea','Seguro de viaje','Reservas alojamiento','Confirmación de vuelo','2 tarjetas bancarias','Efectivo moneda local','Carné de conducir','Visado si aplica','Fotos de pasaporte'],
+  tech:['Móvil cargado','Cargador del móvil','Adaptador de enchufe','Power bank','Auriculares','Cámara de fotos','Tarjeta memoria extra','Cable USB extra','Mapas offline','Cargador laptop'],
+  salud:['Protector solar 50+','Repelente mosquitos','Medicación habitual x2','Botiquín básico','Antihistamínico','Ibuprofeno/paracetamol','Tiritas y venda','Pastillas estómago','Mascarillas','Termómetro'],
+  extras:['Botella reutilizable','Guía de conversación','Bolsa tela mercados','Candado equipaje','Funda impermeable móvil','Snacks viaje','Almohada viaje','Antifaz dormir','Tapones oídos','Colonia pequeña'],
+};
+const checkState={};let currentCat='ropa';
+function initCheck(){Object.keys(checkData).forEach(c=>checkState[c]=checkData[c].map(()=>false));renderCheck()}
+function switchCat(btn,cat){document.querySelectorAll('.check-cat-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentCat=cat;renderCheck()}
+function renderCheck(){
+  const items=checkData[currentCat],states=checkState[currentCat];
+  document.getElementById('checklist-items').innerHTML=items.map((item,i)=>`
+    <div class="check-item${states[i]?' done':''}" onclick="toggleCheck('${currentCat}',${i},this)">
+      <div class="check-box">${states[i]?'✓':''}</div>
+      <div class="check-label">${item}</div>
+    </div>`).join('');
+  updateProgress();
+}
+function toggleCheck(cat,idx,el){checkState[cat][idx]=!checkState[cat][idx];el.classList.toggle('done');el.querySelector('.check-box').textContent=checkState[cat][idx]?'✓':'';updateProgress()}
+function updateProgress(){let d=0,t=0;Object.values(checkState).forEach(a=>{t+=a.length;d+=a.filter(Boolean).length});const p=t?Math.round(d/t*100):0;document.getElementById('check-bar').style.width=p+'%';document.getElementById('check-pct').textContent=p+'%'}
+initCheck();
+</script>
+</body>
+</html>
